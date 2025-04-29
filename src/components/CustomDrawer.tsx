@@ -29,7 +29,7 @@ const CustomDrawer = (props:any) => {
           />
         </View>
         
-        {/* Default drawer items */}
+        {/* Default drawer items    */}
         <DrawerItemList {...props} />
         
      
