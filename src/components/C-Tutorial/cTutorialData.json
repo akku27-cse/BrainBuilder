@@ -1,0 +1,356 @@
+{
+    "C HOME": {
+      "icon": "home",
+      "description": "Welcome to the C Programming Tutorial. This is your starting point for learning the C programming language, one of the most fundamental and widely used programming languages in computer science.",
+      "notes": "Explore the different sections to learn about C programming concepts, syntax, and best practices."
+    },
+    "C Intro": {
+      "icon": "information",
+      "description": "C is a general-purpose, procedural computer programming language developed in 1972 by Dennis Ritchie at Bell Labs. It is one of the most widely used programming languages of all time.",
+      "explanation": "Key features of C:\n1. Low-level access to memory\n2. Simple set of keywords\n3. Clean style\n4. Efficient language\n5. Portable (works on many platforms)\n6. Structured language\n7. Produces efficient programs",
+      "notes": "C is often called the 'mother of all languages' because many other languages have been based on it."
+    },
+    "C Get Started": {
+      "icon": "rocket-launch",
+      "description": "To start programming in C, you'll need a C compiler installed on your computer. Popular compilers include GCC (GNU Compiler Collection), Clang, and Microsoft Visual C++.",
+      "syntax": "gcc program.c -o program\n./program",
+      "example": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello World!\");\n    return 0;\n}",
+      "output": "Hello World!",
+      "explanation": "1. Write your code in a file with .c extension\n2. Compile with a C compiler\n3. Run the executable\n4. See the output",
+      "notes": "Most IDEs (like Code::Blocks, Eclipse, Visual Studio) come with built-in compilers."
+    },
+    "C Syntax": {
+      "icon": "code-braces",
+      "description": "The syntax of the C programming language is the set of rules governing writing of software in C. It is designed to allow for programs that are extremely terse, have a close relationship with the resulting object code, and yet provide relatively high-level data abstraction.",
+      "syntax": "#include <stdio.h>\n\nint main() {\n   // code goes here\n   return 0;\n}",
+      "example": "#include <stdio.h>\n\nint main() {\n   printf(\"Hello, World!\");\n   return 0;\n}",
+      "output": "Hello, World!",
+      "explanation": "1. #include <stdio.h> is a header file library that lets us work with input/output functions.\n2. int main() is the main function where program execution begins.\n3. printf() is used to output text to the screen.\n4. return 0 ends the main() function and returns the value 0.",
+      "notes": "Every C program must have a main() function. The curly braces {} indicate the beginning and end of a function."
+    },
+    "C Output": {
+      "icon": "console",
+      "description": "In C programming, output refers to data produced by the program and displayed to the user, typically on the screen. The standard output function in C is printf().",
+      "syntax": "printf(\"format string\", arguments);",
+      "example": "#include <stdio.h>\n\nint main() {\n    printf(\"Welcome to C programming!\");\n    return 0;\n}",
+      "output": "Welcome to C programming!",
+      "explanation": "1. printf() is declared in stdio.h\n2. It prints the formatted string to stdout\n3. Format specifiers like %d, %f, %c can be used to print variables\n4. \\n is used for new line",
+      "notes": "Always include stdio.h for input/output functions."
+    },
+    "C Comments": {
+      "icon": "comment-text",
+      "description": "Comments in C are explanatory statements that you can include in the code to make it more readable. Comments are ignored by the compiler.",
+      "syntax": "// Single-line comment\n\n/* Multi-line\n   comment */",
+      "example": "#include <stdio.h>\n\n/* This is a multi-line\n   comment explaining the program */\nint main() {\n    // This is a single-line comment\n    printf(\"Hello World!\");\n    return 0;\n}",
+      "output": "Hello World!",
+      "explanation": "1. Single-line comments start with //\n2. Multi-line comments are between /* and */\n3. Comments are ignored during compilation\n4. Good for documenting code",
+      "notes": "Use comments to explain complex logic, but don't over-comment obvious code."
+    },
+    "C Variables": {
+      "icon": "variable",
+      "description": "Variables are containers for storing data values. In C, there are different types of variables (defined with different keywords), for example: int, float, char, etc.",
+      "syntax": "type variableName = value;",
+      "example": "int myNum = 15;\nfloat myFloat = 5.99;\nchar myLetter = 'D';",
+      "output": "",
+      "explanation": "1. int stores integers (whole numbers)\n2. float stores floating point numbers (with decimals)\n3. char stores single characters\n\nVariables must be declared before use.",
+      "notes": "You can also declare a variable without assigning a value, and assign the value later."
+    },
+    "C Data Types": {
+      "icon": "database",
+      "description": "Data types in C specify the type of data that a variable can store. The basic data types in C are int, float, double, and char.",
+      "syntax": "int myNum = 5;\nfloat myFloat = 5.99;\ndouble myDouble = 9.98;\nchar myLetter = 'D';",
+      "example": "#include <stdio.h>\n\nint main() {\n    int integer = 5;\n    float floating = 3.14;\n    char character = 'A';\n    \n    printf(\"%d\\n%f\\n%c\", integer, floating, character);\n    return 0;\n}",
+      "output": "5\n3.140000\nA",
+      "explanation": "Basic data types:\n1. int - whole numbers\n2. float - single precision floating point\n3. double - double precision floating point\n4. char - single character",
+      "notes": "The size of these types may vary depending on the system architecture."
+    },
+    "C Constants": {
+      "icon": "lock",
+      "description": "Constants in C are fixed values that cannot be altered during program execution. They are also called literals. Constants can be of any of the basic data types.",
+      "syntax": "const type VARIABLE_NAME = value;\n#define CONSTANT_NAME value",
+      "example": "#include <stdio.h>\n#define PI 3.14159\n\nint main() {\n    const int DAYS = 7;\n    printf(\"Value of PI: %f\\n\", PI);\n    printf(\"Days in week: %d\", DAYS);\n    return 0;\n}",
+      "output": "Value of PI: 3.141590\nDays in week: 7",
+      "explanation": "1. const keyword creates read-only variables\n2. #define creates macro constants\n3. Constants cannot be changed after definition\n4. Conventionally written in uppercase",
+      "notes": "Use constants for values that shouldn't change, like mathematical constants or configuration values."
+    },
+    "C Operators": {
+      "icon": "calculator-variant",
+      "description": "Operators in C are symbols that tell the compiler to perform specific mathematical or logical operations. C has a rich set of operators including arithmetic, relational, logical, bitwise, and more.",
+      "syntax": "result = operand1 operator operand2;",
+      "example": "#include <stdio.h>\n\nint main() {\n    int a = 10, b = 20;\n    printf(\"Sum: %d\\n\", a + b);\n    printf(\"Comparison: %d\", a > b);\n    return 0;\n}",
+      "output": "Sum: 30\nComparison: 0",
+      "explanation": "Main operator types:\n1. Arithmetic: +, -, *, /, %\n2. Relational: ==, !=, >, <, >=, <=\n3. Logical: &&, ||, !\n4. Assignment: =, +=, -=, etc.\n5. Bitwise: &, |, ^, ~, <<, >>",
+      "notes": "Operator precedence determines the order of operations when multiple operators are present."
+    },
+    "C Booleans": {
+      "icon": "check-circle",
+      "description": "In C, boolean values are represented using integers, where 0 is false and any non-zero value is true. C99 introduced the _Bool type and stdbool.h header for true/false support.",
+      "syntax": "#include <stdbool.h>\nbool variable = true;",
+      "example": "#include <stdio.h>\n#include <stdbool.h>\n\nint main() {\n    bool isTrue = true;\n    bool isFalse = false;\n    \n    printf(\"%d %d\", isTrue, isFalse);\n    return 0;\n}",
+      "output": "1 0",
+      "explanation": "1. Before C99, integers were used (0 = false, non-zero = true)\n2. stdbool.h defines bool, true, and false\n3. Logical operators return boolean values\n4. Conditionals evaluate boolean expressions",
+      "notes": "For maximum compatibility, include stdbool.h when working with booleans."
+    },
+    "C User Input": {
+      "icon": "keyboard",
+      "description": "In C programming, scanf() is the standard function to get input from the user via keyboard. It reads formatted input from stdin (standard input).",
+      "syntax": "scanf(\"format string\", &variable);",
+      "example": "#include <stdio.h>\n\nint main() {\n    int age;\n    printf(\"Enter your age: \");\n    scanf(\"%d\", &age);\n    printf(\"You are %d years old.\", age);\n    return 0;\n}",
+      "output": "Enter your age: 25\nYou are 25 years old.",
+      "explanation": "1. scanf() reads input according to format specifiers\n2. & is the address-of operator (except for strings)\n3. Common format specifiers:\n   - %d for int\n   - %f for float\n   - %c for char\n   - %s for string",
+      "notes": "Always check the return value of scanf() to verify successful input."
+    },
+    "C Memory Address": {
+      "icon": "memory",
+      "description": "In C, each variable is stored at a unique memory address. The address-of operator (&) can be used to get the memory address of a variable, which is essential for pointers.",
+      "syntax": "&variable",
+      "example": "#include <stdio.h>\n\nint main() {\n    int num = 42;\n    printf(\"Value: %d\\n\", num);\n    printf(\"Memory address: %p\", &num);\n    return 0;\n}",
+      "output": "Value: 42\nMemory address: 0x7ffd4f3a5a4c",
+      "explanation": "1. Every variable has a memory address\n2. & operator returns the address\n3. %p is the format specifier for pointers/addresses\n4. Addresses are typically in hexadecimal",
+      "notes": "Memory addresses are crucial for understanding pointers in C."
+    },
+    "C If...Else": {
+        "icon": "code-braces",
+        "description": "The if...else statement in C is used to perform conditional operations based on whether an expression evaluates to true or false.",
+        "syntax": "if (condition) {\n    // code if condition is true\n} else {\n    // code if condition is false\n}",
+        "example": "#include <stdio.h>\n\nint main() {\n    int num = 10;\n    if (num > 0) {\n        printf(\"Positive number\");\n    } else {\n        printf(\"Non-positive number\");\n    }\n    return 0;\n}",
+        "output": "Positive number",
+        "explanation": "1. if checks the condition\n2. If condition is true, executes first block\n3. else executes if condition is false\n4. You can add else if for multiple conditions",
+        "notes": "Always use braces {} to clearly define the blocks, even for single-line statements."
+      },
+      "C Switch": {
+        "icon": "swap-vertical",
+        "description": "The switch statement in C is used to execute one block of code among many options, based on the value of an expression.",
+        "syntax": "switch(expression) {\n    case value1:\n        // code\n        break;\n    case value2:\n        // code\n        break;\n    default:\n        // default code\n}",
+        "example": "#include <stdio.h>\n\nint main() {\n    int day = 3;\n    switch (day) {\n        case 1:\n            printf(\"Monday\");\n            break;\n        case 2:\n            printf(\"Tuesday\");\n            break;\n        case 3:\n            printf(\"Wednesday\");\n            break;\n        default:\n            printf(\"Another day\");\n    }\n    return 0;\n}",
+        "output": "Wednesday",
+        "explanation": "1. switch evaluates the expression\n2. case matches a constant value\n3. break stops the execution\n4. default executes if no case matches",
+        "notes": "Always use break to avoid fall-through unless intentional."
+      },
+      "C While Loop": {
+        "icon": "reload",
+        "description": "The while loop in C is used to repeat a block of code as long as a specified condition is true.",
+        "syntax": "while (condition) {\n    // code to execute\n}",
+        "example": "#include <stdio.h>\n\nint main() {\n    int i = 1;\n    while (i <= 5) {\n        printf(\"%d\\n\", i);\n        i++;\n    }\n    return 0;\n}",
+        "output": "1\n2\n3\n4\n5",
+        "explanation": "1. Checks condition before each iteration\n2. Executes code block if true\n3. Loop ends when condition becomes false",
+        "notes": "Ensure the loop updates the condition to prevent infinite loops."
+      },
+      "C For Loop": {
+        "icon": "repeat-once",
+        "description": "The for loop in C provides a concise way of writing the loop structure, with initialization, condition, and increment in one line.",
+        "syntax": "for (initialization; condition; increment) {\n    // code to execute\n}",
+        "example": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 5; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
+        "output": "1\n2\n3\n4\n5",
+        "explanation": "1. Initialization: sets loop counter\n2. Condition: checked before each iteration\n3. Increment: updates loop counter\n4. Code block runs as long as condition is true",
+        "notes": "Use for loop when the number of iterations is known beforehand."
+      },
+      "C Break/Continue": {
+        "icon": "exit-run",
+        "description": "The break and continue statements are used to alter the flow of loops. break exits the loop, while continue skips the current iteration.",
+        "syntax": "break;\ncontinue;",
+        "example": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 5; i++) {\n        if (i == 3) continue;\n        if (i == 5) break;\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
+        "output": "1\n2\n4",
+        "explanation": "1. break exits the loop entirely\n2. continue skips the rest of current loop and goes to next iteration\n3. Useful for loop control based on conditions",
+        "notes": "Avoid overusing break/continue as it can make loops harder to understand."
+      },
+      "C Arrays": {
+    "icon": "code-array",
+    "description": "Arrays in C are used to store multiple values of the same type in a single variable. Instead of declaring separate variables for each value, you can use an array to group related data.",
+    "syntax": "type arrayName[size];",
+    "example": "#include <stdio.h>\n\nint main() {\n    int numbers[5] = {1, 2, 3, 4, 5};\n    printf(\"First element: %d\", numbers[0]);\n    return 0;\n}",
+    "output": "First element: 1",
+    "explanation": "1. Arrays hold elements of the same data type\n2. Indexing starts from 0 (e.g., first element is array[0])\n3. Fixed size defined at declaration\n4. Access elements using indices",
+    "notes": "The size of an array must be known at compile time unless using dynamic memory."
+  },
+  "C Strings": {
+    "icon": "format-letter-case",
+    "description": "Strings in C are arrays of characters terminated by a null character ('\\0'). They are used to store and manipulate text.",
+    "syntax": "char stringName[] = \"Text\";",
+    "example": "#include <stdio.h>\n\nint main() {\n    char greeting[] = \"Hello\";\n    printf(\"%s\", greeting);\n    return 0;\n}",
+    "output": "Hello",
+    "explanation": "1. Strings are character arrays ending with '\\0'\n2. %s is used in printf to print strings\n3. Strings can be declared as arrays or with pointers\n4. String manipulation functions are in string.h",
+    "notes": "Always ensure the string has enough space to hold the null terminator."
+  },
+  "C Pointers": {
+    "icon": "cursor-pointer",
+    "description": "Pointers in C are variables that store memory addresses. They are powerful tools for memory management and are widely used in dynamic memory allocation, arrays, functions, and structures.",
+    "syntax": "type *pointerName;",
+    "example": "#include <stdio.h>\n\nint main() {\n    int num = 10;\n    int *ptr = &num;\n    printf(\"Value: %d\\n\", *ptr);\n    return 0;\n}",
+    "output": "Value: 10",
+    "explanation": "1. * is the dereference operator (access value at address)\n2. & is the address-of operator (get memory address)\n3. Pointers allow indirect access to variables\n4. Pointers are essential in dynamic memory and function parameters",
+    "notes": "Always initialize pointers before use. Uninitialized pointers can lead to undefined behavior."
+  },
+  "C Functions": {
+    "icon": "function",
+    "description": "Functions in C are blocks of code that perform a specific task. They help make programs modular, reusable, and easier to manage.",
+    "syntax": "returnType functionName(parameters) {\n    // code\n}",
+    "example": "#include <stdio.h>\n\nvoid greet() {\n    printf(\"Hello from function!\");\n}\n\nint main() {\n    greet();\n    return 0;\n}",
+    "output": "Hello from function!",
+    "explanation": "1. Functions can be defined once and called multiple times\n2. Improves modularity and code reuse\n3. Syntax includes return type, function name, and parameters\n4. Must be declared before use or defined earlier",
+    "notes": "Use functions to separate concerns and improve readability."
+  },
+  "C Function Parameters": {
+    "icon": "code-parentheses",
+    "description": "Function parameters are variables passed to a function to provide input data. C supports passing parameters by value (default) or by reference using pointers.",
+    "syntax": "void functionName(int param1, float param2) {\n    // code\n}",
+    "example": "#include <stdio.h>\n\nvoid displayAge(int age) {\n    printf(\"Age: %d\", age);\n}\n\nint main() {\n    displayAge(25);\n    return 0;\n}",
+    "output": "Age: 25",
+    "explanation": "1. Parameters provide input to functions\n2. Pass-by-value copies the value\n3. Use pointers for pass-by-reference behavior\n4. Function signatures define parameter types and order",
+    "notes": "Always ensure correct parameter types and order in function calls."
+  },
+  "C Scope": {
+    "icon": "eye-circle",
+    "description": "Scope in C refers to the visibility and lifetime of variables. C supports block scope, function scope, file scope, and function prototype scope.",
+    "syntax": "{ int a = 5; // block scope }",
+    "example": "#include <stdio.h>\n\nint global = 10;\n\nint main() {\n    int local = 20;\n    printf(\"%d %d\", global, local);\n    return 0;\n}",
+    "output": "10 20",
+    "explanation": "1. Global variables have file scope\n2. Local variables have block/function scope\n3. Scope determines accessibility of variables\n4. Variables declared inside a block are not accessible outside",
+    "notes": "Minimize global scope to avoid unintended side effects."
+  },
+  "C Function Declaration": {
+    "icon": "script-text",
+    "description": "A function declaration (or prototype) tells the compiler about a function’s name, return type, and parameters before its actual definition.",
+    "syntax": "returnType functionName(parameterTypes);",
+    "example": "#include <stdio.h>\n\nvoid greet(); // function declaration\n\nint main() {\n    greet();\n    return 0;\n}\n\nvoid greet() {\n    printf(\"Hi!\");\n}",
+    "output": "Hi!",
+    "explanation": "1. Declarations allow function usage before definition\n2. Placed at the top or in a header file\n3. Must match the actual function definition\n4. Helps avoid compilation errors",
+    "notes": "Always declare functions if they are defined after the main function."
+  },
+  "C Recursion": {
+    "icon": "repeat-variant",
+    "description": "Recursion in C is when a function calls itself to solve smaller instances of the same problem, typically used in mathematical and divide-and-conquer algorithms.",
+    "syntax": "returnType functionName() {\n    if (base_condition)\n        return result;\n    else\n        return functionName();\n}",
+    "example": "#include <stdio.h>\n\nint factorial(int n) {\n    if (n == 0) return 1;\n    else return n * factorial(n - 1);\n}\n\nint main() {\n    printf(\"%d\", factorial(5));\n    return 0;\n}",
+    "output": "120",
+    "explanation": "1. Recursive functions call themselves\n2. Must have a base condition to avoid infinite loops\n3. Stack memory is used for each function call\n4. Useful in problems like factorial, Fibonacci, etc.",
+    "notes": "Use recursion with care—deep recursion can lead to stack overflow."
+  },
+  "C Math Functions": {
+    "icon": "calculator",
+    "description": "C provides standard math functions in the math.h library for performing common mathematical operations like square root, power, trigonometry, etc.",
+    "syntax": "#include <math.h>\nresult = function(argument);",
+    "example": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n    double result = sqrt(25);\n    printf(\"Square root: %.2f\", result);\n    return 0;\n}",
+    "output": "Square root: 5.00",
+    "explanation": "1. math.h provides functions like sqrt(), pow(), sin(), cos(), etc.\n2. Link with -lm when compiling (e.g., gcc file.c -lm)\n3. Most functions return double\n4. Arguments and return types often need casting",
+    "notes": "Always include math.h and link with the math library during compilation."
+  },
+  "C Create Files": {
+    "icon": "file-plus",
+    "description": "In C, files can be created using the `fopen()` function in write (`w`), append (`a`), or binary (`wb`, `ab`) modes.",
+    "syntax": "FILE *fptr = fopen(\"filename.txt\", \"w\");",
+    "example": "#include <stdio.h>\n\nint main() {\n    FILE *fptr = fopen(\"file.txt\", \"w\");\n    if (fptr == NULL) {\n        printf(\"Error creating file.\");\n        return 1;\n    }\n    fprintf(fptr, \"Hello, File!\");\n    fclose(fptr);\n    return 0;\n}",
+    "output": "",
+    "explanation": "1. `fopen()` opens or creates a file\n2. `w` mode creates the file if it doesn't exist\n3. `fprintf()` writes formatted output to file\n4. Always `fclose()` to release resources",
+    "notes": "Always check if `fopen()` returns NULL before performing file operations."
+  },
+  "C Write To Files": {
+    "icon": "file-edit",
+    "description": "C uses functions like `fprintf()` and `fputs()` to write data to files.",
+    "syntax": "fprintf(filePointer, \"formatted text\", variables);",
+    "example": "#include <stdio.h>\n\nint main() {\n    FILE *fptr = fopen(\"data.txt\", \"w\");\n    fprintf(fptr, \"Name: John\\nAge: 30\");\n    fclose(fptr);\n    return 0;\n}",
+    "output": "",
+    "explanation": "1. `fprintf()` writes formatted strings\n2. `fputs()` writes plain strings\n3. Data is written to file not the console",
+    "notes": "Opening a file in `w` mode overwrites its contents if it already exists."
+  },
+  "C Read Files": {
+    "icon": "file-document",
+    "description": "In C, `fscanf()` and `fgets()` are used to read data from files.",
+    "syntax": "fscanf(filePointer, \"format\", &variables);",
+    "example": "#include <stdio.h>\n\nint main() {\n    FILE *fptr = fopen(\"data.txt\", \"r\");\n    char line[100];\n    while (fgets(line, sizeof(line), fptr)) {\n        printf(\"%s\", line);\n    }\n    fclose(fptr);\n    return 0;\n}",
+    "output": "Name: John\nAge: 30",
+    "explanation": "1. `fscanf()` reads formatted data\n2. `fgets()` reads a line at a time\n3. Always check file pointer before reading",
+    "notes": "Use `feof(file)` or `fgets()` to detect end-of-file."
+  },
+  "C Structures": {
+    "icon": "code-brackets",
+    "description": "Structures in C are user-defined data types that group related variables of different types under one name.",
+    "syntax": "struct StructName {\n    type member1;\n    type member2;\n};",
+    "example": "#include <stdio.h>\n\nstruct Person {\n    char name[50];\n    int age;\n};\n\nint main() {\n    struct Person p1 = {\"Alice\", 25};\n    printf(\"%s is %d years old.\", p1.name, p1.age);\n    return 0;\n}",
+    "output": "Alice is 25 years old.",
+    "explanation": "1. Structures allow combining variables\n2. Useful for grouping related data\n3. Access members using dot operator",
+    "notes": "Use `typedef` with `struct` to simplify structure usage."
+  },
+  "C Enums": {
+    "icon": "numeric",
+    "description": "An enum in C is a user-defined type consisting of a set of named integer constants.",
+    "syntax": "enum Day {SUNDAY, MONDAY, TUESDAY};",
+    "example": "#include <stdio.h>\n\nenum Day {SUNDAY, MONDAY, TUESDAY};\n\nint main() {\n    enum Day today = MONDAY;\n    printf(\"Day: %d\", today);\n    return 0;\n}",
+    "output": "Day: 1",
+    "explanation": "1. Enum values start from 0 by default\n2. Can assign specific values\n3. Improves code readability",
+    "notes": "Use enums to represent limited sets of related values."
+  },
+  "C Memory Management": {
+    "icon": "memory",
+    "description": "C provides dynamic memory management using malloc(), calloc(), realloc(), and free().",
+    "syntax": "ptr = (castType*) malloc(size);",
+    "example": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n    int *arr = (int*) malloc(5 * sizeof(int));\n    for (int i = 0; i < 5; i++) arr[i] = i * 2;\n    for (int i = 0; i < 5; i++) printf(\"%d \", arr[i]);\n    free(arr);\n    return 0;\n}",
+    "output": "0 2 4 6 8",
+    "explanation": "1. malloc() allocates memory\n2. free() deallocates memory\n3. Always free memory to avoid leaks",
+    "notes": "Check for NULL after memory allocation to avoid segmentation faults."
+  },
+  "C Reference": {
+    "icon": "book-open",
+    "description": "C reference materials include keywords, standard libraries, functions, and syntax rules essential for programming.",
+    "syntax": "",
+    "example": "",
+    "output": "",
+    "explanation": "1. Refer to documentation for function details\n2. Standard libraries provide many utilities\n3. Use man pages or online docs",
+    "notes": "Refer to official documentation like cppreference.com or ISO C standards for accuracy."
+  },
+  "C Keywords": {
+    "icon": "key-variant",
+    "description": "Keywords in C are reserved words that have special meaning to the compiler and cannot be used as identifiers.",
+    "syntax": "int, return, void, if, else, while, for, break, continue, etc.",
+    "example": "int main() {\n    int a = 10;\n    if (a > 5) return 1;\n    return 0;\n}",
+    "output": "",
+    "explanation": "1. C has 32 reserved keywords\n2. Each has a specific purpose\n3. Case-sensitive and predefined",
+    "notes": "Avoid using keywords as variable or function names."
+  },
+  "C <stdio.h>": {
+    "icon": "file-code",
+    "description": "`<stdio.h>` is the standard input/output library in C. It provides functions like printf(), scanf(), fopen(), etc.",
+    "syntax": "#include <stdio.h>",
+    "example": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, World!\");\n    return 0;\n}",
+    "output": "Hello, World!",
+    "explanation": "1. Includes functions for input/output\n2. Required for printf, scanf, etc.",
+    "notes": "Always include stdio.h when using I/O functions."
+  },
+  "C <stdlib.h>": {
+    "icon": "file-code",
+    "description": "`<stdlib.h>` provides general utility functions including memory allocation, process control, and conversions.",
+    "syntax": "#include <stdlib.h>",
+    "example": "#include <stdlib.h>\n\nint main() {\n    int *ptr = (int*) malloc(10 * sizeof(int));\n    free(ptr);\n    return 0;\n}",
+    "output": "",
+    "explanation": "1. Includes malloc(), free(), atoi(), exit(), etc.",
+    "notes": "Use when performing dynamic memory operations or conversions."
+  },
+  "C <string.h>": {
+    "icon": "file-code",
+    "description": "`<string.h>` contains functions for manipulating C strings and arrays.",
+    "syntax": "#include <string.h>",
+    "example": "#include <string.h>\n#include <stdio.h>\n\nint main() {\n    char str[20] = \"Hello\";\n    strcat(str, \" World\");\n    printf(\"%s\", str);\n    return 0;\n}",
+    "output": "Hello World",
+    "explanation": "1. Functions: strcpy(), strlen(), strcat(), strcmp(), etc.",
+    "notes": "Ensure destination arrays are large enough to hold results."
+  },
+  "C <math.h>": {
+    "icon": "file-code",
+    "description": "`<math.h>` provides mathematical functions such as sqrt(), pow(), sin(), cos(), etc.",
+    "syntax": "#include <math.h>",
+    "example": "#include <math.h>\n#include <stdio.h>\n\nint main() {\n    printf(\"Square root of 16 is %.1f\", sqrt(16));\n    return 0;\n}",
+    "output": "Square root of 16 is 4.0",
+    "explanation": "1. Requires linking with -lm (on some systems)\n2. Returns double values",
+    "notes": "Include math.h and use -lm when compiling with GCC."
+  },
+  "C <ctype.h>": {
+    "icon": "file-code",
+    "description": "`<ctype.h>` contains functions for character classification and conversion.",
+    "syntax": "#include <ctype.h>",
+    "example": "#include <ctype.h>\n#include <stdio.h>\n\nint main() {\n    char c = 'a';\n    printf(\"%c to upper: %c\", c, toupper(c));\n    return 0;\n}",
+    "output": "a to upper: A",
+    "explanation": "1. Functions: isalpha(), isdigit(), toupper(), tolower(), etc.",
+    "notes": "Use these functions to validate or convert characters easily."
+  }
+  }
+  

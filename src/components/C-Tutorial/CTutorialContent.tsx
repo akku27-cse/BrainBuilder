@@ -6,141 +6,85 @@ import * as Animatable from 'react-native-animatable';
 const { width } = Dimensions.get('window');
 
 const CTutorialContent = ({ navigation }: any) => {
-  // Expanded C tutorial topics with more categories and items
+  // Updated C tutorial topics with combined Basic and Fundamentals
+  
   const topics = [
     {
-      category: 'Getting Started',
+      category: 'Basic',
       items: [
-        { title: 'Introduction to C', icon: 'alpha-i-circle' },
-        { title: 'History of C', icon: 'history' },
-        { title: 'Features of C', icon: 'star-circle' },
-        { title: 'Setting Up Environment', icon: 'tools' },
-        { title: 'First C Program', icon: 'numeric-1-circle' },
-        { title: 'Compilation Process', icon: 'cog-sync' },
-      ]
-    },
-    {
-      category: 'Basic Concepts',
-      items: [
-        { title: 'Variables and Constants', icon: 'variable' },
-        { title: 'Data Types', icon: 'database' },
-        { title: 'Keywords and Identifiers', icon: 'key-variant' },
-        { title: 'Input/Output Functions', icon: 'console' },
-        { title: 'Comments', icon: 'comment-text' },
-        { title: 'Type Conversion', icon: 'autorenew' },
-      ]
-    },
-    {
-      category: 'Operators and Expressions',
-      items: [
-        { title: 'Arithmetic Operators', icon: 'plus-minus' },
-        { title: 'Relational Operators', icon: 'equal' },
-        { title: 'Logical Operators', icon: 'logic-and' },
-        { title: 'Bitwise Operators', icon: 'bitcoin' },
-        { title: 'Assignment Operators', icon: 'arrow-right-bold' },
-        { title: 'Operator Precedence', icon: 'sort-numeric-ascending' },
+        { title: 'C HOME', icon: 'home' },
+        { title: 'C Intro', icon: 'information' },
+        { title: 'C Get Started', icon: 'rocket-launch' },
+        { title: 'C Syntax', icon: 'code-braces' },
+        { title: 'C Output', icon: 'console' },
+        { title: 'C Comments', icon: 'comment-text' },
+        { title: 'C Variables', icon: 'variable' },
+        { title: 'C Data Types', icon: 'database' },
+        { title: 'C Constants', icon: 'lock' },
+        { title: 'C Operators', icon: 'calculator-variant' },
+        { title: 'C Booleans', icon: 'check-circle' },
+        { title: 'C User Input', icon: 'keyboard' },
+        { title: 'C Memory Address', icon: 'memory' },
       ]
     },
     {
       category: 'Control Flow',
       items: [
-        { title: 'If-else Statements', icon: 'code-braces' },
-        { title: 'Switch Case', icon: 'swap-vertical' },
-        { title: 'While Loop', icon: 'reload' },
-        { title: 'Do-while Loop', icon: 'repeat' },
-        { title: 'For Loop', icon: 'repeat-once' },
-        { title: 'Break and Continue', icon: 'exit-run' },
-        { title: 'Goto Statement', icon: 'arrow-decision' },
-      ]
-    },
-    {
-      category: 'Functions',
-      items: [
-        { title: 'Function Basics', icon: 'function' },
-        { title: 'Function Declaration', icon: 'script-text' },
-        { title: 'Function Parameters', icon: 'code-parentheses' },
-        { title: 'Return Statement', icon: 'keyboard-return' },
-        { title: 'Recursion', icon: 'repeat-variant' },
-        { title: 'Storage Classes', icon: 'warehouse' },
-        { title: 'Variable Scope', icon: 'eye-circle' },
-      ]
-    },
-    {
-      category: 'Arrays and Strings',
-      items: [
-        { title: 'Array Basics', icon: 'code-array' },
-        { title: 'Multi-dimensional Arrays', icon: 'grid' },
-        { title: 'Passing Arrays to Functions', icon: 'swap-horizontal' },
-        { title: 'String Basics', icon: 'format-letter-case' },
-        { title: 'String Functions', icon: 'format-letter-matches' },
-        { title: 'Character Arrays', icon: 'alphabetical-variant' },
-      ]
-    },
-    {
-      category: 'Pointers',
-      items: [
-        { title: 'Pointer Basics', icon: 'cursor-pointer' },
-        { title: 'Pointer Arithmetic', icon: 'calculator-variant' },
-        { title: 'Pointers and Arrays', icon: 'code-braces' },
-        { title: 'Pointers to Pointers', icon: 'cursor-move' },
-        { title: 'Pointers to Functions', icon: 'function-variant' },
-        { title: 'Void Pointers', icon: 'help-circle' },
-      ]
-    },
-    {
-      category: 'Structures and Unions',
-      items: [
-        { title: 'Structure Basics', icon: 'code-brackets' },
-        { title: 'Nested Structures', icon: 'nested' },
-        { title: 'Arrays of Structures', icon: 'view-grid' },
-        { title: 'Pointers to Structures', icon: 'cursor-default-click' },
-        { title: 'Union Basics', icon: 'code-parentheses' },
-        { title: 'Difference with Structures', icon: 'not-equal-variant' },
-      ]
-    },
-    {
-      category: 'File Handling',
-      items: [
-        { title: 'File Operations', icon: 'file-document' },
-        { title: 'Opening/Closing Files', icon: 'folder-open' },
-        { title: 'Reading/Writing Files', icon: 'file-edit' },
-        { title: 'Binary Files', icon: 'file-binary' },
-        { title: 'File Positioning', icon: 'cursor-move' },
-        { title: 'Error Handling', icon: 'alert-circle' },
-      ]
-    },
-    {
-      category: 'Advanced Concepts',
-      items: [
-        { title: 'Dynamic Memory Allocation', icon: 'memory' },
-        { title: 'Memory Management', icon: 'chip' },
-        { title: 'Preprocessor Directives', icon: 'code-tags' },
-        { title: 'Macros', icon: 'code-greater-than' },
-        { title: 'Command Line Arguments', icon: 'console-line' },
-        { title: 'Variable Arguments', icon: 'dots-horizontal' },
-        { title: 'Bit Fields', icon: 'bitcoin' },
+        { title: 'C If...Else', icon: 'code-braces' },
+        { title: 'C Switch', icon: 'swap-vertical' },
+        { title: 'C While Loop', icon: 'reload' },
+        { title: 'C For Loop', icon: 'repeat-once' },
+        { title: 'C Break/Continue', icon: 'exit-run' },
       ]
     },
     {
       category: 'Data Structures',
       items: [
-        { title: 'Linked Lists', icon: 'link-variant' },
-        { title: 'Stacks', icon: 'stack-overflow' },
-        { title: 'Queues', icon: 'timeline' },
-        { title: 'Trees', icon: 'graph-outline' },
-        { title: 'Graphs', icon: 'graphql' },
-        { title: 'Hash Tables', icon: 'table' },
+        { title: 'C Arrays', icon: 'code-array' },
+        { title: 'C Strings', icon: 'format-letter-case' },
+        { title: 'C Pointers', icon: 'cursor-pointer' },
       ]
     },
     {
-      category: 'Algorithms',
+      category: 'Functions',
       items: [
-        { title: 'Sorting Algorithms', icon: 'sort-alphabetical-ascending' },
-        { title: 'Searching Algorithms', icon: 'magnify' },
-        { title: 'Recursive Algorithms', icon: 'repeat-variant' },
-        { title: 'Complexity Analysis', icon: 'chart-line' },
+        { title: 'C Functions', icon: 'function' },
+        { title: 'C Function Parameters', icon: 'code-parentheses' },
+        { title: 'C Scope', icon: 'eye-circle' },
+        { title: 'C Function Declaration', icon: 'script-text' },
+        { title: 'C Recursion', icon: 'repeat-variant' },
+        { title: 'C Math Functions', icon: 'calculator' },
       ]
-    }
+    },
+    {
+      category: 'File Handling',
+      items: [
+        { title: 'C Create Files', icon: 'file-plus' },
+        { title: 'C Write To Files', icon: 'file-edit' },
+        { title: 'C Read Files', icon: 'file-document' },
+      ]
+    },
+    {
+      category: 'Advanced Topics',
+      items: [
+        { title: 'C Structures', icon: 'code-brackets' },
+        { title: 'C Enums', icon: 'numeric' },
+        { title: 'C Memory Management', icon: 'memory' },
+      ]
+    },
+    {
+      category: 'References',
+      items: [
+        { title: 'C Reference', icon: 'book-open' },
+        { title: 'C Keywords', icon: 'key-variant' },
+        { title: 'C <stdio.h>', icon: 'file-code' },
+        { title: 'C <stdlib.h>', icon: 'file-code' },
+        { title: 'C <string.h>', icon: 'file-code' },
+        { title: 'C <math.h>', icon: 'file-code' },
+        { title: 'C <ctype.h>', icon: 'file-code' },
+      ]
+    },
+   
   ];
 
   const handleTopicPress = (topic: string) => {
@@ -150,8 +94,8 @@ const CTutorialContent = ({ navigation }: any) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>C Tutorial Topics</Text>
-        <Text style={styles.headerSubtitle}>Comprehensive C Programming Guide</Text>
+        <Text style={styles.headerTitle}>C Programming Tutorial</Text>
+        <Text style={styles.headerSubtitle}>Learn C step by step</Text>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
