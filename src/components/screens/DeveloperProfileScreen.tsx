@@ -59,7 +59,7 @@ export class DeveloperProfileScreen extends Component {
           <Animatable.Image
             animation="bounceIn"
             duration={1500}
-            source={require('../../assets/ProfilePic.png')}
+            source={require('../../assets/profileimage.png')}
             style={styles.profileImage}
           />
           <Animatable.Text 
