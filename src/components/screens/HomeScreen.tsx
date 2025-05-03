@@ -17,7 +17,7 @@ const CARD_WIDTH = (width - 40) / 2 - 10;
 
 const languages = [
     { name: 'C Tutorial', icon: 'language-c', iconSet: 'MaterialCommunityIcons', color: '#6495ED', screen: 'CTutorial' },
-  { name: 'C++ Tutorial', icon: 'language-cpp', iconSet: 'MaterialCommunityIcons', color: '#00599C' },
+  { name: 'C++ Tutorial', icon: 'language-cpp', iconSet: 'MaterialCommunityIcons', color: '#00599C',screen: 'CppTutorial' },
   { name: 'Java Tutorial', icon: 'language-java', iconSet: 'MaterialCommunityIcons', color: '#007396' },
   { name: 'Python Tutorial', icon: 'language-python', iconSet: 'MaterialCommunityIcons', color: '#3776AB' },
   { name: 'JavaScript Tutorial', icon: 'language-javascript', iconSet: 'MaterialCommunityIcons', color: '#F7DF1E' },
