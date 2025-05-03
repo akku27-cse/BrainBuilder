@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteProp } from '@react-navigation/native';
-import { View, Text, StyleSheet, ScrollView, Linking } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import cTutorialData from './cTutorialData.json';
 import { RootStackParamList } from '../../App';
@@ -9,10 +9,16 @@ type CTopicDetailRouteProp = RouteProp<RootStackParamList, 'CTopicDetail'>;
 
 interface CTopicDetailProps {
   route: CTopicDetailRouteProp;
+  navigation: any;
 }
-const CTopicDetail = ({ route }: CTopicDetailProps) => {
+
+const CTopicDetail = ({ route, navigation }: CTopicDetailProps) => {
   const { topic } = route.params;
   const topicData = cTutorialData[topic as keyof typeof cTutorialData];
+
+  const handleHomePress = () => {
+    navigation.navigate('NotificationSplash');
+  };
 
   if (!topicData) {
     return (
@@ -26,13 +32,18 @@ const CTopicDetail = ({ route }: CTopicDetailProps) => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
-        <MaterialCommunityIcons 
-          name={topicData.icon || 'code-braces'} 
-          size={28} 
-          color="#6495ED" 
-          style={styles.icon}
-        />
-        <Text style={styles.title}>{topic}</Text>
+        <View style={styles.headerLeft}>
+          <MaterialCommunityIcons 
+            name={topicData.icon || 'code-braces'} 
+            size={28} 
+            color="#6495ED" 
+            style={styles.icon}
+          />
+          <Text style={styles.title}>{topic}</Text>
+        </View>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <MaterialCommunityIcons name="home" size={34} color="#6495ED" />
+        </TouchableOpacity>
       </View>
       
       <View style={styles.content}>
@@ -94,7 +105,12 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
     marginBottom: 20,
+  },
+  headerLeft: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   icon: {
     marginRight: 10,
@@ -103,6 +119,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     color: '#333',
+  },
+  homeButton: {
+    padding: 5,
   },
   content: {
     marginBottom: 30,

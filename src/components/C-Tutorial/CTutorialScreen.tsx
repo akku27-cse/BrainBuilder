@@ -35,10 +35,19 @@ const CTutorialScreen = ({ navigation }: any) => {
     navigation.navigate(screenName);
   };
 
+  const handleHomePress = () => {
+    navigation.navigate('NotificationSplash');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>C Tutorial</Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerTitle}>C Tutorial</Text>
+        </View>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <MaterialCommunityIcons name="home" size={34} color="#fff" />
+        </TouchableOpacity>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -80,11 +89,21 @@ const styles = StyleSheet.create({
   header: {
     padding: 20,
     backgroundColor: '#6495ED',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerTextContainer: {
+    flex: 1,
   },
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
+  },
+  homeButton: {
+    padding: 5,
+    marginLeft: 10,
   },
   scrollContent: {
     padding: 20,
