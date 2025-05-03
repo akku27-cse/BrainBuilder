@@ -91,11 +91,20 @@ const CTutorialContent = ({ navigation }: any) => {
     navigation.navigate('CTopicDetail', { topic });
   };
 
+  const handleHomePress = () => {
+    navigation.navigate('NotificationSplash');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>C Programming Tutorial</Text>
-        <Text style={styles.headerSubtitle}>Learn C step by step</Text>
+        <View style={styles.headerTextContainer}>
+          <Text style={styles.headerTitle}>C Programming Tutorial</Text>
+          <Text style={styles.headerSubtitle}>Learn C step by step</Text>
+        </View>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <MaterialCommunityIcons name="home" size={34} color="#fff" />
+        </TouchableOpacity>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent}>
@@ -146,6 +155,12 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: '#6495ED',
     paddingBottom: 25,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerTextContainer: {
+    flex: 1,
   },
   headerTitle: {
     fontSize: 24,
@@ -156,6 +171,10 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#e6e6e6',
     marginTop: 5,
+  },
+  homeButton: {
+    padding: 5,
+    marginLeft: 10,
   },
   scrollContent: {
     padding: 15,

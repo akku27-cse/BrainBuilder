@@ -35,6 +35,10 @@ const CPracticeListScreen = () => {
     navigation.navigate('CPracticeDetail', { problemId });
   };
 
+  const handleHomePress = () => {
+    navigation.navigate('NotificationSplash');
+  };
+
   if (loading) {
     return (
       <View style={styles.container}>
@@ -45,9 +49,17 @@ const CPracticeListScreen = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Practice Programs</Text>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <MaterialCommunityIcons name="home" size={24} color="#fff" />
+        </TouchableOpacity>
+      </View>
+
       <FlatList
         data={problems}
         keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={styles.listContent}
         renderItem={({ item }) => (
           <TouchableOpacity 
             style={styles.problemCard}
@@ -75,8 +87,25 @@ const CPracticeListScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
     backgroundColor: '#f5f5f5',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 16,
+    backgroundColor: '#6495ED',
+  },
+  headerTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+  },
+  homeButton: {
+    padding: 5,
+  },
+  listContent: {
+    padding: 16,
   },
   problemCard: {
     backgroundColor: 'white',

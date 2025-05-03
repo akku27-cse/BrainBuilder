@@ -64,8 +64,9 @@ const App = () => {
           name="CTopicDetail" 
           component={CTopicDetail} 
           options={({ route }) => ({ 
-            title: route.params.topic,
+             headerShown: false,
             headerBackTitle: 'Back',
+            
           })}
         />
 
@@ -85,7 +86,7 @@ const App = () => {
   name="CPractice" 
   component={CPracticeListScreen} 
   options={{ 
-    title: 'Practice Programs',
+    headerShown: false,
     headerStyle: {
       backgroundColor: '#3498db',
     },
@@ -96,7 +97,7 @@ const App = () => {
   name="CPracticeDetail" 
   component={CPracticeDetailScreen} 
   options={{ 
-    title: 'Program Details',
+    headerShown: false,
     headerStyle: {
       backgroundColor: '#3498db',
     },
