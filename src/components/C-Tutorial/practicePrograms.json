@@ -1,0 +1,976 @@
+[
+    {
+      "id": 1,
+      "title": "Hello World",
+      "description": "Write a program to print 'Hello, World!'",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  printf(\"Hello, World!\\n\");\n  return 0;\n}",
+      "explanation": "This is the simplest C program that prints a greeting message to the console using the printf function."
+    },
+    {
+      "id": 2,
+      "title": "Add Two Integers",
+      "description": "Write a program to add two integers and display the result.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  int a = 10, b = 20, sum;\n  sum = a + b;\n  printf(\"Sum: %d\\n\", sum);\n  return 0;\n}",
+      "explanation": "The program adds two integers using the + operator and stores the result in the variable 'sum', which is then printed."
+    },
+    {
+      "id": 3,
+      "title": "Check Even/Odd",
+      "description": "Write a program to check whether a number is even or odd using if-else.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  int num = 7;\n  if(num % 2 == 0)\n    printf(\"%d is Even\\n\", num);\n  else\n    printf(\"%d is Odd\\n\", num);\n  return 0;\n}",
+      "explanation": "This program checks the remainder when the number is divided by 2. If it's 0, the number is even; otherwise, it's odd."
+    },
+    {
+      "id": 4,
+      "title": "Swap Two Numbers",
+      "description": "Write a program to swap two numbers with and without using a temporary variable.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  int a = 5, b = 10, temp;\n\n  // Using temporary variable\n  temp = a;\n  a = b;\n  b = temp;\n  printf(\"After swap with temp: a = %d, b = %d\\n\", a, b);\n\n  // Without using temporary variable\n  a = a + b;\n  b = a - b;\n  a = a - b;\n  printf(\"After swap without temp: a = %d, b = %d\\n\", a, b);\n\n  return 0;\n}",
+      "explanation": "First, a temporary variable is used to swap the values. Then, the same is done using arithmetic operations to swap without a temporary variable."
+    },
+    {
+      "id": 5,
+      "title": "Find Area of Circle",
+      "description": "Write a program to calculate the area of a circle using the PI constant.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n#define PI 3.14159\n\nint main() {\n  float radius = 5.0;\n  float area = PI * radius * radius;\n  printf(\"Area of Circle: %.2f\\n\", area);\n  return 0;\n}",
+      "explanation": "The program calculates the area using the formula πr², where PI is defined as a constant macro."
+    },
+    {
+      "id": 6,
+      "title": "Convert Celsius to Fahrenheit",
+      "description": "Write a program to convert temperature from Celsius to Fahrenheit.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  float celsius = 25.0, fahrenheit;\n  fahrenheit = (celsius * 9/5) + 32;\n  printf(\"%.2f Celsius = %.2f Fahrenheit\\n\", celsius, fahrenheit);\n  return 0;\n}",
+      "explanation": "This program converts Celsius to Fahrenheit using the formula (C * 9/5) + 32."
+    },
+    {
+      "id": 7,
+      "title": "Simple Calculator",
+      "description": "Write a program to implement a simple calculator that can perform basic arithmetic operations.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  char operator;\n  float num1, num2;\n  printf(\"Enter operator (+, -, *, /): \");\n  scanf(\" %c\", &operator);\n  printf(\"Enter two operands: \");\n  scanf(\"%f %f\", &num1, &num2);\n\n  switch(operator) {\n    case '+':\n      printf(\"%.2f + %.2f = %.2f\\n\", num1, num2, num1 + num2);\n      break;\n    case '-':\n      printf(\"%.2f - %.2f = %.2f\\n\", num1, num2, num1 - num2);\n      break;\n    case '*':\n      printf(\"%.2f * %.2f = %.2f\\n\", num1, num2, num1 * num2);\n      break;\n    case '/':\n      if(num2 != 0)\n        printf(\"%.2f / %.2f = %.2f\\n\", num1, num2, num1 / num2);\n      else\n        printf(\"Error: Division by zero!\\n\");\n      break;\n    default:\n      printf(\"Invalid operator\\n\");\n  }\n  return 0;\n}",
+      "explanation": "This program takes an operator and two operands from the user and performs the specified operation using a switch statement."
+    },
+    {
+      "id": 8,
+      "title": "Check Leap Year",
+      "description": "Write a program to check whether a given year is a leap year.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  int year = 2024;\n  if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))\n    printf(\"%d is a leap year.\\n\", year);\n  else\n    printf(\"%d is not a leap year.\\n\", year);\n  return 0;\n}",
+      "explanation": "This program applies leap year logic: a year divisible by 4 and not 100, or divisible by 400, is a leap year."
+    },
+    {
+      "id": 9,
+      "title": "Find Largest Among Three Numbers",
+      "description": "Write a program to find the largest of three numbers using nested if-else.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  int a = 15, b = 25, c = 20;\n  if(a > b) {\n    if(a > c)\n      printf(\"%d is the largest\\n\", a);\n    else\n      printf(\"%d is the largest\\n\", c);\n  } else {\n    if(b > c)\n      printf(\"%d is the largest\\n\", b);\n    else\n      printf(\"%d is the largest\\n\", c);\n  }\n  return 0;\n}",
+      "explanation": "This program uses nested if-else conditions to compare three values and print the largest one."
+    },
+    {
+      "id": 10,
+      "title": "Check Alphabet",
+      "description": "Write a program to check whether a character is an alphabet.",
+      "difficulty": "easy",
+      "category": "basic",
+      "solution": "#include <stdio.h>\n\nint main() {\n  char ch = 'G';\n  if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))\n    printf(\"%c is an alphabet.\\n\", ch);\n  else\n    printf(\"%c is not an alphabet.\\n\", ch);\n  return 0;\n}",
+      "explanation": "This program checks if a character is within the alphabet ranges A-Z or a-z."
+    },
+    {
+        "id": 11,
+        "title": "Positive/Negative/Zero Check",
+        "description": "Check if a number is positive, negative, or zero.",
+        "difficulty": "easy",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num;\n  printf(\"Enter a number: \");\n  scanf(\"%d\", &num);\n\n  if (num > 0)\n    printf(\"Positive number\\n\");\n  else if (num < 0)\n    printf(\"Negative number\\n\");\n  else\n    printf(\"Zero\\n\");\n\n  return 0;\n}",
+        "explanation": "The program checks if the entered number is greater than 0, less than 0, or zero using if-else conditions."
+      },
+      {
+        "id": 12,
+        "title": "Vowel/Consonant Check",
+        "description": "Check whether an entered character is a vowel or consonant.",
+        "difficulty": "easy",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char c;\n  printf(\"Enter a character: \");\n  scanf(\" %c\", &c);\n\n  if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {\n    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||\n        c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')\n      printf(\"Vowel\\n\");\n    else\n      printf(\"Consonant\\n\");\n  } else {\n    printf(\"Not an alphabet\\n\");\n  }\n  return 0;\n}",
+        "explanation": "The program checks if the character is an alphabet, and if it is, it verifies whether it is a vowel using multiple OR conditions."
+      },
+      {
+        "id": 13,
+        "title": "Day Name from Number",
+        "description": "Print the name of the day based on number input (1-7).",
+        "difficulty": "easy",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int day;\n  printf(\"Enter day number (1-7): \");\n  scanf(\"%d\", &day);\n\n  if (day == 1) printf(\"Sunday\\n\");\n  else if (day == 2) printf(\"Monday\\n\");\n  else if (day == 3) printf(\"Tuesday\\n\");\n  else if (day == 4) printf(\"Wednesday\\n\");\n  else if (day == 5) printf(\"Thursday\\n\");\n  else if (day == 6) printf(\"Friday\\n\");\n  else if (day == 7) printf(\"Saturday\\n\");\n  else printf(\"Invalid input\\n\");\n\n  return 0;\n}",
+        "explanation": "Each number from 1 to 7 is mapped to a weekday using nested if-else conditions."
+      },
+      {
+        "id": 14,
+        "title": "Month Name from Number",
+        "description": "Print the name of the month based on number input (1-12).",
+        "difficulty": "easy",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int month;\n  printf(\"Enter month number (1-12): \");\n  scanf(\"%d\", &month);\n\n  if (month == 1) printf(\"January\\n\");\n  else if (month == 2) printf(\"February\\n\");\n  else if (month == 3) printf(\"March\\n\");\n  else if (month == 4) printf(\"April\\n\");\n  else if (month == 5) printf(\"May\\n\");\n  else if (month == 6) printf(\"June\\n\");\n  else if (month == 7) printf(\"July\\n\");\n  else if (month == 8) printf(\"August\\n\");\n  else if (month == 9) printf(\"September\\n\");\n  else if (month == 10) printf(\"October\\n\");\n  else if (month == 11) printf(\"November\\n\");\n  else if (month == 12) printf(\"December\\n\");\n  else printf(\"Invalid input\\n\");\n\n  return 0;\n}",
+        "explanation": "This uses a series of if-else statements to print the corresponding month name for a number from 1 to 12."
+      },
+      {
+        "id": 15,
+        "title": "Student Grade Calculator",
+        "description": "Calculate the grade based on percentage using conditions.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  float marks;\n  printf(\"Enter marks percentage: \");\n  scanf(\"%f\", &marks);\n\n  if (marks >= 90) printf(\"Grade A\\n\");\n  else if (marks >= 75) printf(\"Grade B\\n\");\n  else if (marks >= 60) printf(\"Grade C\\n\");\n  else if (marks >= 40) printf(\"Grade D\\n\");\n  else printf(\"Grade F (Fail)\\n\");\n\n  return 0;\n}",
+        "explanation": "The program uses cascading if-else conditions to assign grades based on percentage."
+      },
+      {
+        "id": 16,
+        "title": "Profit/Loss Calculation",
+        "description": "Calculate profit or loss based on cost price and selling price.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  float costPrice, sellingPrice;\n  printf(\"Enter Cost Price: \");\n  scanf(\"%f\", &costPrice);\n  printf(\"Enter Selling Price: \");\n  scanf(\"%f\", &sellingPrice);\n\n  if (sellingPrice > costPrice)\n    printf(\"Profit: %.2f\\n\", sellingPrice - costPrice);\n  else if (sellingPrice < costPrice)\n    printf(\"Loss: %.2f\\n\", costPrice - sellingPrice);\n  else\n    printf(\"No Profit No Loss\\n\");\n\n  return 0;\n}",
+        "explanation": "This program compares selling price and cost price to determine if the result is a profit, loss, or neither."
+      },
+      {
+        "id": 17,
+        "title": "Electricity Bill Calculator (Slab rates)",
+        "description": "Calculate electricity bill based on usage slabs.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int units;\n  float bill;\n  printf(\"Enter total units consumed: \");\n  scanf(\"%d\", &units);\n\n  if (units <= 50)\n    bill = units * 0.5;\n  else if (units <= 150)\n    bill = 50 * 0.5 + (units - 50) * 0.75;\n  else if (units <= 250)\n    bill = 50 * 0.5 + 100 * 0.75 + (units - 150) * 1.2;\n  else\n    bill = 50 * 0.5 + 100 * 0.75 + 100 * 1.2 + (units - 250) * 1.5;\n\n  bill = bill + (bill * 0.2); // 20% surcharge\n  printf(\"Total bill: %.2f\\n\", bill);\n  return 0;\n}",
+        "explanation": "The bill is calculated based on slab rates with an additional 20% surcharge. Each slab has a different rate per unit."
+      },
+      {
+        "id": 18,
+        "title": "Body Mass Index (BMI) Calculator",
+        "description": "Calculate BMI and classify the weight category.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  float weight, height, bmi;\n  printf(\"Enter weight in kg: \");\n  scanf(\"%f\", &weight);\n  printf(\"Enter height in meters: \");\n  scanf(\"%f\", &height);\n\n  bmi = weight / (height * height);\n  printf(\"BMI = %.2f\\n\", bmi);\n\n  if (bmi < 18.5)\n    printf(\"Underweight\\n\");\n  else if (bmi < 24.9)\n    printf(\"Normal weight\\n\");\n  else if (bmi < 29.9)\n    printf(\"Overweight\\n\");\n  else\n    printf(\"Obese\\n\");\n\n  return 0;\n}",
+        "explanation": "This program calculates BMI and determines the user's weight category using standard BMI ranges."
+      },
+      {
+        "id": 19,
+        "title": "Check Triangle Validity (Given sides)",
+        "description": "Check if three sides can form a valid triangle.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int a, b, c;\n  printf(\"Enter three sides of triangle: \");\n  scanf(\"%d %d %d\", &a, &b, &c);\n\n  if (a + b > c && a + c > b && b + c > a)\n    printf(\"Valid Triangle\\n\");\n  else\n    printf(\"Invalid Triangle\\n\");\n\n  return 0;\n}",
+        "explanation": "The triangle inequality theorem is used to check if the sum of any two sides is greater than the third."
+      },
+      {
+        "id": 20,
+        "title": "Quadratic Equation Roots",
+        "description": "Find the roots of a quadratic equation using the discriminant.",
+        "difficulty": "medium",
+        "category": "if-else",
+        "solution": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n  float a, b, c, discriminant, root1, root2;\n  printf(\"Enter coefficients a, b and c: \");\n  scanf(\"%f %f %f\", &a, &b, &c);\n\n  discriminant = b * b - 4 * a * c;\n\n  if (discriminant > 0) {\n    root1 = (-b + sqrt(discriminant)) / (2 * a);\n    root2 = (-b - sqrt(discriminant)) / (2 * a);\n    printf(\"Real and distinct roots: %.2f and %.2f\\n\", root1, root2);\n  } else if (discriminant == 0) {\n    root1 = root2 = -b / (2 * a);\n    printf(\"Real and equal roots: %.2f\\n\", root1);\n  } else {\n    float real = -b / (2 * a);\n    float imag = sqrt(-discriminant) / (2 * a);\n    printf(\"Complex roots: %.2f + %.2fi and %.2f - %.2fi\\n\", real, imag, real, imag);\n  }\n  return 0;\n}",
+        "explanation": "The program uses the discriminant to classify the roots as real and distinct, real and equal, or complex, and computes them accordingly."
+      },
+      {
+        "id": 21,
+        "title": "Factorial Using Function",
+        "description": "Recursive and iterative",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "// Recursive\n#include <stdio.h>\n\nlong long factorialRecursive(int n) {\n  if (n == 0)\n    return 1;\n  else\n    return n * factorialRecursive(n - 1);\n}\n\n// Iterative\nlong long factorialIterative(int n) {\n  long long result = 1;\n  for (int i = 1; i <= n; i++)\n    result *= i;\n  return result;\n}\n\nint main() {\n  int num = 6;\n  printf(\"Factorial of %d (recursive): %lld\\n\", num, factorialRecursive(num));\n  printf(\"Factorial of %d (iterative): %lld\\n\", num, factorialIterative(num));\n  return 0;\n}",
+        "explanation": "This program calculates the factorial of a number using two approaches: recursion and iteration. The `factorialRecursive()` function calls itself with a smaller value of `n` until it reaches the base case (n=0). The `factorialIterative()` function uses a loop to multiply numbers from 1 to `n`."
+      },
+      {
+        "id": 22,
+        "title": "Check Prime Number",
+        "description": "Function returning boolean",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n#include <stdbool.h>\n#include <math.h>\n\nbool isPrime(int n) {\n  if (n <= 1)\n    return false;\n  for (int i = 2; i <= sqrt(n); i++) {\n    if (n % i == 0)\n      return false;\n  }\n  return true;\n}\n\nint main() {\n  int num = 17;\n  if (isPrime(num))\n    printf(\"%d is a prime number.\\n\", num);\n  else\n    printf(\"%d is not a prime number.\\n\", num);\n  return 0;\n}",
+        "explanation": "The `isPrime()` function checks if a given integer `n` is a prime number. It returns `true` if `n` is prime and `false` otherwise. It optimizes the check by only iterating up to the square root of `n`. Numbers less than or equal to 1 are not prime."
+      },
+      {
+        "id": 23,
+        "title": "Print All Primes in Range",
+        "description": "Using isPrime() helper",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n#include <stdbool.h>\n#include <math.h>\n\nbool isPrime(int n) {\n  if (n <= 1)\n    return false;\n  for (int i = 2; i <= sqrt(n); i++) {\n    if (n % i == 0)\n      return false;\n  }\n  return true;\n}\n\nint main() {\n  int start = 10, end = 50;\n  printf(\"Prime numbers between %d and %d are: \\n\", start, end);\n  for (int i = start; i <= end; i++) {\n    if (isPrime(i))\n      printf(\"%d \", i);\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+        "explanation": "This program utilizes the `isPrime()` function (defined in the previous example) to find and print all prime numbers within a specified range (from `start` to `end`). It iterates through the range and calls `isPrime()` for each number."
+      },
+      {
+        "id": 24,
+        "title": "Fibonacci Series",
+        "description": "Recursive solution",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n\nint fibonacciRecursive(int n) {\n  if (n <= 1)\n    return n;\n  else\n    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);\n}\n\nint main() {\n  int n = 10;\n  printf(\"Fibonacci Series (recursive) up to %d terms: \\n\", n);\n  for (int i = 0; i < n; i++) {\n    printf(\"%d \", fibonacciRecursive(i));\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+        "explanation": "This program generates the Fibonacci sequence up to a specified number of terms (`n`) using a recursive function `fibonacciRecursive()`. The function defines the base cases for n=0 and n=1 and then recursively calls itself to calculate subsequent terms."
+      },
+      {
+        "id": 25,
+        "title": "Power of Number",
+        "description": "Using recursion",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n\nlong long powerRecursive(int base, int exp) {\n  if (exp == 0)\n    return 1;\n  else if (exp > 0)\n    return base * powerRecursive(base, exp - 1);\n  else // exp < 0\n    return 1.0 / powerRecursive(base, -exp);\n}\n\nint main() {\n  int base = 2, exp = 5;\n  printf(\"%d raised to the power of %d is: %lld\\n\", base, exp, powerRecursive(base, exp));\n  base = 3, exp = -2;\n  printf(\"%d raised to the power of %d is: %lf\\n\", base, exp, (double)powerRecursive(base, exp));\n  return 0;\n}",
+        "explanation": "The `powerRecursive()` function calculates the power of a given `base` raised to the exponent `exp` using recursion. It handles positive, negative, and zero exponents. The base case is when the exponent is 0, in which case it returns 1."
+      },
+      {
+        "id": 26,
+        "title": "GCD of Two Numbers",
+        "description": "Euclidean algorithm",
+        "difficulty": "easy",
+        "category": "function",
+        "solution": "#include <stdio.h>\n\nint gcd(int a, int b) {\n  if (b == 0)\n    return a;\n  else\n    return gcd(b, a % b);\n}\n\nint main() {\n  int num1 = 48, num2 = 18;\n  printf(\"GCD of %d and %d is: %d\\n\", num1, num2, gcd(num1, num2));\n  return 0;\n}",
+        "explanation": "This program calculates the Greatest Common Divisor (GCD) of two numbers using the Euclidean algorithm. The `gcd()` function recursively calls itself with `b` and the remainder of `a` divided by `b` until `b` becomes 0. At that point, `a` is the GCD."
+      },
+      {
+        "id": 27,
+        "title": "LCM of Two Numbers",
+        "description": "Using GCD",
+        "difficulty": "easy",
+        "category": "function",
+        "solution": "#include <stdio.h>\n\nint gcd(int a, int b) {\n  if (b == 0)\n    return a;\n  else\n    return gcd(b, a % b);\n}\n\nint lcm(int a, int b) {\n  return (a * b) / gcd(a, b);\n}\n\nint main() {\n  int num1 = 12, num2 = 18;\n  printf(\"LCM of %d and %d is: %d\\n\", num1, num2, lcm(num1, num2));\n  return 0;\n}",
+        "explanation": "This program calculates the Least Common Multiple (LCM) of two numbers. It utilizes the `gcd()` function and the formula: LCM(a, b) = (a × b) / GCD(a, b)."
+      },
+      {
+        "id": 28,
+        "title": "Reverse a Number",
+        "description": "Function returning reversed number",
+        "difficulty": "easy",
+        "category": "function",
+        "solution": "#include <stdio.h>\n\nint reverseNumber(int n) {\n  int reversed = 0;\n  while (n > 0) {\n    reversed = reversed * 10 + n % 10;\n    n = n / 10;\n  }\n  return reversed;\n}\n\nint main() {\n  int num = 12345;\n  printf(\"Reverse of %d is: %d\\n\", num, reverseNumber(num));\n  return 0;\n}",
+        "explanation": "The `reverseNumber()` function takes an integer `n` and returns its reversed value. It iteratively extracts the last digit of `n` using the modulo operator (`%`), appends it to the `reversed` number, and then removes the last digit from `n` using integer division (`/`)."
+      },
+      {
+        "id": 29,
+        "title": "Palindrome Check",
+        "description": "For numbers and strings",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\n#include <ctype.h>\n\n// Palindrome check for numbers\nbool isPalindromeNumber(int n) {\n  int original = n;\n  int reversed = 0;\n  while (n > 0) {\n    reversed = reversed * 10 + n % 10;\n    n = n / 10;\n  }\n  return original == reversed;\n}\n\n// Palindrome check for strings\nbool isPalindromeString(char str[]) {\n  int left = 0;\n  int right = strlen(str) - 1;\n  while (left < right) {\n    while (!isalnum(str[left]) && left < right) left++;\n    while (!isalnum(str[right]) && left < right) right--;\n    if (tolower(str[left]) != tolower(str[right])) {\n      return false;\n    }\n    left++;\n    right--;\n  }\n  return true;\n}\n\nint main() {\n  int num = 121;\n  if (isPalindromeNumber(num))\n    printf(\"%d is a palindrome number.\\n\", num);\n  else\n    printf(\"%d is not a palindrome number.\\n\", num);\n\n  char str[] = \"Racecar\";\n  if (isPalindromeString(str))\n    printf(\"%s is a palindrome string.\\n\", str);\n  else\n    printf(\"%s is not a palindrome string.\\n\", str);\n\n  char str2[] = \"A man, a plan, a canal: Panama\";\n  if (isPalindromeString(str2))\n    printf(\"%s is a palindrome string.\\n\", str2);\n  else\n    printf(\"%s is not a palindrome string.\\n\", str2);\n\n  return 0;\n}",
+        "explanation": "This program provides two functions to check for palindromes. `isPalindromeNumber()` reverses an integer and compares it to the original. `isPalindromeString()` iterates through a string from both ends, ignoring non-alphanumeric characters and case, to check if it reads the same forwards and backward."
+      },
+      {
+        "id": 30,
+        "title": "Armstrong Number Check",
+        "description": "Sum of cubes of digits",
+        "difficulty": "medium",
+        "category": "function",
+        "solution": "#include <stdio.h>\n#include <math.h>\n#include <stdbool.h>\n\nbool isArmstrong(int num) {\n  int originalNum = num;\n  int sum = 0;\n  int digits = 0;\n\n  // Count the number of digits\n  int temp = num;\n  while (temp != 0) {\n    temp /= 10;\n    digits++;\n  }\n\n  // Calculate the sum of cubes of digits\n  temp = num;\n  while (temp != 0) {\n    int remainder = temp % 10;\n    sum += pow(remainder, digits);\n    temp /= 10;\n  }\n\n  return sum == originalNum;\n}\n\nint main() {\n  int num = 153;\n  if (isArmstrong(num))\n    printf(\"%d is an Armstrong number.\\n\", num);\n  else\n    printf(\"%d is not an Armstrong number.\\n\", num);\n\n  num = 1634;\n  if (isArmstrong(num))\n    printf(\"%d is an Armstrong number.\\n\", num);\n  else\n    printf(\"%d is not an Armstrong number.\\n\", num);\n\n  return 0;\n}",
+        "explanation": "The `isArmstrong()` function checks if a given number is an Armstrong number. An Armstrong number is a number such that the sum of the cubes of its digits is equal to the original number (e.g., 153 = 1^3 + 5^3 + 3^3). The function first counts the number of digits and then calculates the sum of each digit raised to the power of the number of digits."
+      },
+      {
+        "id": 31,
+        "title": "Multiplication Table",
+        "description": "Print multiplication table for a number",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num = 5;\n  for (int i = 1; i <= 10; i++) {\n    printf(\"%d x %d = %d\\n\", num, i, num * i);\n  }\n  return 0;\n}",
+        "explanation": "This program prints the multiplication table of a given number using a simple for loop iterating from 1 to 10."
+      },
+      {
+        "id": 32,
+        "title": "Sum of Natural Numbers",
+        "description": "Sum of first N natural numbers using loop",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int n = 10, sum = 0;\n  for (int i = 1; i <= n; i++) {\n    sum += i;\n  }\n  printf(\"Sum of first %d natural numbers is: %d\\n\", n, sum);\n  return 0;\n}",
+        "explanation": "This program calculates the sum of the first N natural numbers using a for loop and accumulates the result in a `sum` variable."
+      },
+      {
+        "id": 33,
+        "title": "Factorial Without Recursion",
+        "description": "Calculate factorial using iteration",
+        "difficulty": "easy-medium",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num = 5;\n  long long factorial = 1;\n  for (int i = 1; i <= num; i++) {\n    factorial *= i;\n  }\n  printf(\"Factorial of %d is: %lld\\n\", num, factorial);\n  return 0;\n}",
+        "explanation": "This program uses a loop to compute the factorial of a number, multiplying each number from 1 to `num`."
+      },
+      {
+        "id": 34,
+        "title": "Fibonacci Without Recursion",
+        "description": "Generate Fibonacci sequence using loop",
+        "difficulty": "easy-medium",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int n = 10;\n  int a = 0, b = 1, next;\n  printf(\"Fibonacci Series: %d %d \", a, b);\n  for (int i = 2; i < n; i++) {\n    next = a + b;\n    printf(\"%d \", next);\n    a = b;\n    b = next;\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+        "explanation": "This program generates the first N terms of the Fibonacci series using iteration, storing previous two terms in variables."
+      },
+      {
+        "id": 35,
+        "title": "Count Digits in Number",
+        "description": "Count total digits in a given number",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num = 123456, count = 0;\n  while (num != 0) {\n    num /= 10;\n    count++;\n  }\n  printf(\"Total digits: %d\\n\", count);\n  return 0;\n}",
+        "explanation": "This program counts the number of digits in a number by repeatedly dividing it by 10 until it becomes 0."
+      },
+      {
+        "id": 36,
+        "title": "Sum of Digits",
+        "description": "Calculate sum of digits of a number",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num = 12345, sum = 0;\n  while (num != 0) {\n    sum += num % 10;\n    num /= 10;\n  }\n  printf(\"Sum of digits: %d\\n\", sum);\n  return 0;\n}",
+        "explanation": "This program calculates the sum of digits in a number by extracting the last digit with modulo and adding it to a running sum."
+      },
+      {
+        "id": 37,
+        "title": "Reverse Number (Using loop)",
+        "description": "Reverse a number using loop",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int num = 12345, reversed = 0;\n  while (num != 0) {\n    reversed = reversed * 10 + num % 10;\n    num /= 10;\n  }\n  printf(\"Reversed number: %d\\n\", reversed);\n  return 0;\n}",
+        "explanation": "This program reverses the digits of an integer using a loop and constructs the reversed number step-by-step."
+      },
+      {
+        "id": 38,
+        "title": "Print Alphabets (A-Z)",
+        "description": "Print all uppercase alphabets using loop",
+        "difficulty": "easy",
+        "category": "loop",
+        "solution": "#include <stdio.h>\n\nint main() {\n  for (char ch = 'A'; ch <= 'Z'; ch++) {\n    printf(\"%c \", ch);\n  }\n  printf(\"\\n\");\n  return 0;\n}",
+        "explanation": "This program prints all uppercase English alphabets from A to Z using a character variable in a loop."
+      },
+      {
+        "id": 39,
+        "title": "Number Pattern 1 (Right triangle)",
+        "description": "Print right-angled triangle number pattern",
+        "difficulty": "easy-medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int rows = 5;\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= i; j++) {\n      printf(\"%d \", j);\n    }\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+        "explanation": "This program prints a right-angled triangle pattern of numbers using nested loops. Each row prints numbers from 1 up to the row number."
+      },
+      {
+        "id": 40,
+        "title": "Number Pattern 2 (Pyramid)",
+        "description": "Print number pyramid pattern",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int rows = 5;\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= rows - i; j++) {\n      printf(\" \");\n    }\n    for (int j = 1; j <= 2 * i - 1; j++) {\n      printf(\"%d \", j);\n    }\n    printf(\"\\n\");\n  }\n  return 0;\n}",
+        "explanation": "This program prints a centered pyramid number pattern using nested loops. Spaces are added to align the numbers symmetrically in the shape of a pyramid."
+      },
+      {
+        "id": 41,
+        "title": "Array Sum/Average",
+        "description": "Calculate the sum and average of elements in an array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nvoid calculateSumAverage(int arr[], int size, int *sum, float *average) {\n  *sum = 0;\n  for (int i = 0; i < size; i++) {\n    *sum += arr[i];\n  }\n  if (size > 0) {\n    *average = (float)*sum / size;\n  } else {\n    *average = 0;\n  }\n}\n\nint main() {\n  int arr[] = {1, 2, 3, 4, 5};\n  int size = sizeof(arr) / sizeof(arr[0]);\n  int sum;\n  float average;\n\n  calculateSumAverage(arr, size, &sum, &average);\n\n  printf(\"Sum of the array: %d\\n\", sum);\n  printf(\"Average of the array: %.2f\\n\", average);\n\n  return 0;\n}",
+        "explanation": "This program calculates the sum and average of the elements in an integer array. The `calculateSumAverage` function iterates through the array, summing the elements. It then calculates the average by dividing the sum by the number of elements. Pointers are used to pass the sum and average back to the `main` function."
+      },
+      {
+        "id": 42,
+        "title": "Search Element in Array",
+        "description": "Find the index of a given element in an array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nint searchElement(int arr[], int size, int key) {\n  for (int i = 0; i < size; i++) {\n    if (arr[i] == key) {\n      return i; // Element found at index i\n    }\n  }\n  return -1; // Element not found\n}\n\nint main() {\n  int arr[] = {10, 20, 30, 40, 50};\n  int size = sizeof(arr) / sizeof(arr[0]);\n  int key = 30;\n  int index = searchElement(arr, size, key);\n\n  if (index != -1) {\n    printf(\"%d found at index %d\\n\", key, index);\n  } else {\n    printf(\"%d not found in the array.\\n\", key);\n  }\n\n  return 0;\n}",
+        "explanation": "The `searchElement` function performs a linear search on the array to find the given `key`. It iterates through the array, and if the `key` is found, it returns the index of the element. If the loop completes without finding the `key`, it returns -1."
+      },
+      {
+        "id": 43,
+        "title": "Count Occurrences in Array",
+        "description": "Count how many times a specific element appears in an array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nint countOccurrences(int arr[], int size, int key) {\n  int count = 0;\n  for (int i = 0; i < size; i++) {\n    if (arr[i] == key) {\n      count++;\n    }\n  }\n  return count;\n}\n\nint main() {\n  int arr[] = {5, 2, 8, 2, 9, 2, 4};\n  int size = sizeof(arr) / sizeof(arr[0]);\n  int key = 2;\n  int occurrences = countOccurrences(arr, size, key);\n\n  printf(\"The element %d appears %d times in the array.\\n\", key, occurrences);\n\n  return 0;\n}",
+        "explanation": "The `countOccurrences` function iterates through the array and increments a counter each time the current element matches the given `key`. Finally, it returns the total count of occurrences."
+      },
+      {
+        "id": 44,
+        "title": "Reverse an Array",
+        "description": "Reverse the order of elements in an array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nvoid reverseArray(int arr[], int size) {\n  int start = 0;\n  int end = size - 1;\n  while (start < end) {\n    // Swap arr[start] and arr[end]\n    int temp = arr[start];\n    arr[start] = arr[end];\n    arr[end] = temp;\n    start++;\n    end--;\n  }\n}\n\nint main() {\n  int arr[] = {1, 2, 3, 4, 5};\n  int size = sizeof(arr) / sizeof(arr[0]);\n\n  printf(\"Original array: \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  reverseArray(arr, size);\n\n  printf(\"Reversed array: \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  return 0;\n}",
+        "explanation": "The `reverseArray` function reverses the elements of an array in place. It uses two pointers, `start` and `end`, initialized to the beginning and end of the array, respectively. It swaps the elements at these pointers and moves the pointers towards the center until they meet or cross."
+      },
+      {
+        "id": 45,
+        "title": "Merge Two Arrays",
+        "description": "Merge two sorted arrays into a single sorted array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint* mergeArrays(int arr1[], int size1, int arr2[], int size2, int *mergedSize) {\n  *mergedSize = size1 + size2;\n  int *mergedArray = (int*)malloc(sizeof(int) * (*mergedSize));\n  if (mergedArray == NULL) {\n    perror(\"Memory allocation failed\");\n    exit(EXIT_FAILURE);\n  }\n\n  int i = 0, j = 0, k = 0;\n  while (i < size1 && j < size2) {\n    if (arr1[i] <= arr2[j]) {\n      mergedArray[k++] = arr1[i++];\n    } else {\n      mergedArray[k++] = arr2[j++];\n    }\n  }\n\n  while (i < size1) {\n    mergedArray[k++] = arr1[i++];\n  }\n\n  while (j < size2) {\n    mergedArray[k++] = arr2[j++];\n  }\n\n  return mergedArray;\n}\n\nint main() {\n  int arr1[] = {1, 3, 5, 7};\n  int size1 = sizeof(arr1) / sizeof(arr1[0]);\n  int arr2[] = {2, 4, 6, 8, 10};\n  int size2 = sizeof(arr2) / sizeof(arr2[0]);\n  int mergedSize;\n\n  int *mergedArray = mergeArrays(arr1, size1, arr2, size2, &mergedSize);\n\n  printf(\"Merged and sorted array: \");\n  for (int i = 0; i < mergedSize; i++) {\n    printf(\"%d \", mergedArray[i]);\n  }\n  printf(\"\\n\");\n\n  free(mergedArray);\n  return 0;\n}",
+        "explanation": "The `mergeArrays` function merges two sorted arrays (`arr1` and `arr2`) into a new sorted array (`mergedArray`). It uses three pointers (`i`, `j`, and `k`) to iterate through the input arrays and the merged array, respectively. It compares elements from both input arrays and adds the smaller element to the merged array. The function dynamically allocates memory for the merged array, which should be freed by the caller."
+      },
+      {
+        "id": 46,
+        "title": "Remove Duplicates from Array",
+        "description": "Create a new array containing only the unique elements from the original array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint* removeDuplicates(int arr[], int size, int *newSize) {\n  if (size == 0) {\n    *newSize = 0;\n    return NULL;\n  }\n\n  // Sort the array to easily identify duplicates\n  for (int i = 0; i < size - 1; i++) {\n    for (int j = 0; j < size - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        int temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n      }\n    }\n  }\n\n  int *uniqueArray = (int*)malloc(sizeof(int) * size); // Maximum possible size\n  if (uniqueArray == NULL) {\n    perror(\"Memory allocation failed\");\n    exit(EXIT_FAILURE);\n  }\n\n  uniqueArray[0] = arr[0];\n  *newSize = 1;\n\n  for (int i = 1; i < size; i++) {\n    if (arr[i] != arr[i - 1]) {\n      uniqueArray[(*newSize)++] = arr[i];\n    }\n  }\n\n  uniqueArray = (int*)realloc(uniqueArray, sizeof(int) * (*newSize));\n  return uniqueArray;\n}\n\nint main() {\n  int arr[] = {1, 2, 2, 3, 4, 4, 5};\n  int size = sizeof(arr) / sizeof(arr[0]);\n  int newSize;\n\n  int *uniqueArray = removeDuplicates(arr, size, &newSize);\n\n  printf(\"Array with unique elements: \");\n  for (int i = 0; i < newSize; i++) {\n    printf(\"%d \", uniqueArray[i]);\n  }\n  printf(\"\\n\");\n\n  free(uniqueArray);\n  return 0;\n}",
+        "explanation": "The `removeDuplicates` function creates a new array containing only the unique elements from the input array. It first sorts the input array to group duplicate elements together. Then, it iterates through the sorted array, adding an element to the `uniqueArray` only if it is different from the previous element. The function dynamically allocates memory and reallocates it to the exact size of the unique elements."
+      },
+      {
+        "id": 47,
+        "title": "Second Largest in Array",
+        "description": "Find the second largest element in an array.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n#include <limits.h>\n\nint findSecondLargest(int arr[], int size) {\n  if (size < 2) {\n    return INT_MIN; // Or handle error appropriately\n  }\n\n  int largest = INT_MIN;\n  int secondLargest = INT_MIN;\n\n  for (int i = 0; i < size; i++) {\n    if (arr[i] > largest) {\n      secondLargest = largest;\n      largest = arr[i];\n    } else if (arr[i] > secondLargest && arr[i] != largest) {\n      secondLargest = arr[i];\n    }\n  }\n\n  return secondLargest;\n}\n\nint main() {\n  int arr[] = {10, 5, 25, 15, 20};\n  int size = sizeof(arr) / sizeof(arr[0]);\n  int secondLargest = findSecondLargest(arr, size);\n\n  if (secondLargest != INT_MIN) {\n    printf(\"The second largest element is: %d\\n\", secondLargest);\n  } else {\n    printf(\"Array size is less than 2, or all elements are the same.\\n\");\n  }\n\n  return 0;\n}",
+        "explanation": "The `findSecondLargest` function finds the second largest element in an array. It initializes `largest` and `secondLargest` to the smallest possible integer value. It iterates through the array, updating `largest` and `secondLargest` accordingly. If a new largest element is found, the current `largest` becomes the `secondLargest`. If an element is greater than `secondLargest` but not equal to `largest`, it becomes the new `secondLargest`."
+      },
+      {
+        "id": 48,
+        "title": "Sort Array (Bubble Sort)",
+        "description": "Sort an array using the Bubble Sort algorithm.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nvoid bubbleSort(int arr[], int size) {\n  for (int i = 0; i < size - 1; i++) {\n    // Last i elements are already in place\n    for (int j = 0; j < size - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        // Swap arr[j] and arr[j+1]\n        int temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n      }\n    }\n  }\n}\n\nint main() {\n  int arr[] = {64, 34, 25, 12, 22, 11, 90};\n  int size = sizeof(arr) / sizeof(arr[0]);\n\n  printf(\"Unsorted array: \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  bubbleSort(arr, size);\n\n  printf(\"Sorted array (Bubble Sort): \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  return 0;\n}",
+        "explanation": "The `bubbleSort` function implements the Bubble Sort algorithm. It repeatedly iterates through the array, compares adjacent elements, and swaps them if they are in the wrong order. Larger elements \"bubble\" to the end of the array with each pass. The outer loop controls the number of passes, and the inner loop performs the comparisons and swaps."
+      },
+      {
+        "id": 49,
+        "title": "Sort Array (Selection Sort)",
+        "description": "Sort an array using the Selection Sort algorithm.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nvoid selectionSort(int arr[], int size) {\n  int i, j, min_index;\n\n  // One by one move boundary of unsorted subarray\n  for (i = 0; i < size - 1; i++) {\n    // Find the minimum element in unsorted array\n    min_index = i;\n    for (j = i + 1; j < size; j++) {\n      if (arr[j] < arr[min_index]) {\n        min_index = j;\n      }\n    }\n\n    // Swap the found minimum element with the first element of the unsorted subarray\n    if (min_index != i) {\n      int temp = arr[i];\n      arr[i] = arr[min_index];\n      arr[min_index] = temp;\n    }\n  }\n}\n\nint main() {\n  int arr[] = {64, 34, 25, 12, 22, 11, 90};\n  int size = sizeof(arr) / sizeof(arr[0]);\n\n  printf(\"Unsorted array: \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  selectionSort(arr, size);\n\n  printf(\"Sorted array (Selection Sort): \");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  return 0;\n}",
+        "explanation": "The `selectionSort` function implements the Selection Sort algorithm. It divides the array into a sorted and an unsorted subarray. In each iteration, it finds the minimum element from the unsorted subarray and swaps it with the first element of the unsorted subarray. This minimum element then becomes part of the sorted subarray."
+      },
+      {
+        "id": 50,
+        "title": "Matrix Addition",
+        "description": "Add two matrices of the same dimensions.",
+        "difficulty": "medium",
+        "category": "array",
+        "solution": "#include <stdio.h>\n\nvoid addMatrices(int rows, int cols, int mat1[][cols], int mat2[][cols], int result[][cols]) {\n  for (int i = 0; i < rows; i++) {\n    for (int j = 0; j < cols; j++) {\n      result[i][j] = mat1[i][j] + mat2[i][j];\n    }\n  }\n}\n\nvoid printMatrix(int rows, int cols, int mat[][cols]) {\n  for (int i = 0; i < rows; i++) {\n    for (int j = 0; j < cols; j++) {\n      printf(\"%d\\t\", mat[i][j]);\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int rows = 2, cols = 3;\n  int mat1[2][3] = {{1, 2, 3}, {4, 5, 6}};\n  int mat2[2][3] = {{7, 8, 9}, {10, 11, 12}};\n  int sum[2][3];\n\n  addMatrices(rows, cols, mat1, mat2, sum);\n\n  printf(\"Matrix 1:\\n\");\n  printMatrix(rows, cols, mat1);\n\n  printf(\"Matrix 2:\\n\");\n  printMatrix(rows, cols, mat2);\n\n  printf(\"Sum of the matrices:\\n\");\n  printMatrix(rows, cols, sum);\n\n  return 0;\n}",
+        "explanation": "The `addMatrices` function takes two matrices (`mat1` and `mat2`) of the same dimensions and adds their corresponding elements, storing the result in the `result` matrix. The `printMatrix` function is used to display the matrices. The `main` function initializes two sample matrices and calls `addMatrices` to compute their sum."
+      },
+      {
+        "id": 51,
+        "title": "String Length Without strlen()",
+        "description": "Find the length of a string without using strlen() function",
+        "difficulty": "easy",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str[] = \"Hello\";\n  int length = 0;\n  while (str[length] != '\\0') {\n    length++;\n  }\n  printf(\"Length of string: %d\\n\", length);\n  return 0;\n}",
+        "explanation": "This program counts the number of characters in a string manually by iterating through it until the null character is encountered."
+      },
+      {
+        "id": 52,
+        "title": "String Concatenation",
+        "description": "Concatenate two strings without using strcat()",
+        "difficulty": "easy",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str1[100] = \"Hello \";\n  char str2[] = \"World\";\n  int i = 0, j = 0;\n  while (str1[i] != '\\0') i++;\n  while (str2[j] != '\\0') {\n    str1[i++] = str2[j++];\n  }\n  str1[i] = '\\0';\n  printf(\"Concatenated string: %s\\n\", str1);\n  return 0;\n}",
+        "explanation": "This program appends the characters of the second string to the first string one by one without using `strcat()`."
+      },
+      {
+        "id": 53,
+        "title": "String Copy Without strcpy()",
+        "description": "Copy a string into another without using strcpy()",
+        "difficulty": "easy",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char src[] = \"Hello\", dest[100];\n  int i = 0;\n  while (src[i] != '\\0') {\n    dest[i] = src[i];\n    i++;\n  }\n  dest[i] = '\\0';\n  printf(\"Copied string: %s\\n\", dest);\n  return 0;\n}",
+        "explanation": "This program copies characters from the source string to the destination string one by one until the null terminator is found."
+      },
+      {
+        "id": 54,
+        "title": "String Reverse",
+        "description": "Reverse a string without using strrev()",
+        "difficulty": "easy-medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n  char str[] = \"Hello\";\n  int len = strlen(str);\n  for (int i = 0; i < len / 2; i++) {\n    char temp = str[i];\n    str[i] = str[len - i - 1];\n    str[len - i - 1] = temp;\n  }\n  printf(\"Reversed string: %s\\n\", str);\n  return 0;\n}",
+        "explanation": "This program reverses a string by swapping characters from both ends moving toward the center."
+      },
+      {
+        "id": 55,
+        "title": "Check Palindrome String",
+        "description": "Check if a string is palindrome",
+        "difficulty": "medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n  char str[] = \"madam\";\n  int len = strlen(str);\n  int isPalindrome = 1;\n  for (int i = 0; i < len / 2; i++) {\n    if (str[i] != str[len - i - 1]) {\n      isPalindrome = 0;\n      break;\n    }\n  }\n  if (isPalindrome)\n    printf(\"Palindrome\\n\");\n  else\n    printf(\"Not a Palindrome\\n\");\n  return 0;\n}",
+        "explanation": "This program checks if a string reads the same forwards and backwards by comparing characters from both ends."
+      },
+      {
+        "id": 56,
+        "title": "Count Vowels/Consonants",
+        "description": "Count number of vowels and consonants in a string",
+        "difficulty": "medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str[] = \"Hello World\";\n  int vowels = 0, consonants = 0;\n  for (int i = 0; str[i] != '\\0'; i++) {\n    char ch = str[i];\n    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {\n      ch = (ch >= 'A' && ch <= 'Z') ? ch + 32 : ch;\n      if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')\n        vowels++;\n      else\n        consonants++;\n    }\n  }\n  printf(\"Vowels: %d\\nConsonants: %d\\n\", vowels, consonants);\n  return 0;\n}",
+        "explanation": "This program iterates through the string and counts alphabetic characters as vowels or consonants based on character matching."
+      },
+      {
+        "id": 57,
+        "title": "Count Words in String",
+        "description": "Count total number of words in a string",
+        "difficulty": "medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str[] = \"Hello World from C\";\n  int words = 0, inWord = 0;\n  for (int i = 0; str[i] != '\\0'; i++) {\n    if (str[i] != ' ' && str[i] != '\\n' && str[i] != '\\t') {\n      if (!inWord) {\n        inWord = 1;\n        words++;\n      }\n    } else {\n      inWord = 0;\n    }\n  }\n  printf(\"Total words: %d\\n\", words);\n  return 0;\n}",
+        "explanation": "This program uses a flag to count transitions from non-word to word characters to count words in a sentence."
+      },
+      {
+        "id": 58,
+        "title": "Remove Characters Except Alphabets",
+        "description": "Remove all characters except alphabets from a string",
+        "difficulty": "medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str[] = \"He!!o W0r1d!\", cleanStr[100];\n  int j = 0;\n  for (int i = 0; str[i] != '\\0'; i++) {\n    if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z')) {\n      cleanStr[j++] = str[i];\n    }\n  }\n  cleanStr[j] = '\\0';\n  printf(\"Cleaned string: %s\\n\", cleanStr);\n  return 0;\n}",
+        "explanation": "This program builds a new string by copying only alphabetic characters from the original string."
+      },
+      {
+        "id": 59,
+        "title": "Sort String Characters",
+        "description": "Sort characters in a string in ascending order",
+        "difficulty": "medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n  char str[] = \"dcba\";\n  int len = strlen(str);\n  for (int i = 0; i < len - 1; i++) {\n    for (int j = i + 1; j < len; j++) {\n      if (str[i] > str[j]) {\n        char temp = str[i];\n        str[i] = str[j];\n        str[j] = temp;\n      }\n    }\n  }\n  printf(\"Sorted string: %s\\n\", str);\n  return 0;\n}",
+        "explanation": "This program uses a simple bubble sort algorithm to sort the characters of a string in ascending order."
+      },
+      {
+        "id": 60,
+        "title": "Compare Two Strings",
+        "description": "Compare two strings without using strcmp()",
+        "difficulty": "easy-medium",
+        "category": "string",
+        "solution": "#include <stdio.h>\n\nint main() {\n  char str1[] = \"Hello\", str2[] = \"Hello\";\n  int i = 0, isEqual = 1;\n  while (str1[i] != '\\0' || str2[i] != '\\0') {\n    if (str1[i] != str2[i]) {\n      isEqual = 0;\n      break;\n    }\n    i++;\n  }\n  if (isEqual)\n    printf(\"Strings are equal\\n\");\n  else\n    printf(\"Strings are not equal\\n\");\n  return 0;\n}",
+        "explanation": "This program compares two strings character by character and checks if they are equal without using any built-in functions."
+      },
+      {
+        "id": 61,
+        "title": "Right Triangle Star Pattern",
+        "description": "Print a right triangle pattern made of stars.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printRightTriangle(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= i; j++) {\n      printf(\"* \");\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Right Triangle Star Pattern:\\n\");\n  printRightTriangle(numRows);\n  return 0;\n}",
+        "explanation": "The `printRightTriangle` function uses nested loops to print the pattern. The outer loop iterates through the rows, and the inner loop prints the stars for each row. The number of stars in each row increases with the row number."
+      },
+      {
+        "id": 62,
+        "title": "Hollow Rectangle Pattern",
+        "description": "Print a hollow rectangle pattern made of stars.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printHollowRectangle(int rows, int cols) {\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= cols; j++) {\n      if (i == 1 || i == rows || j == 1 || j == cols) {\n        printf(\"* \");\n      } else {\n        printf(\"  \");\n      }\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5, numCols = 10;\n  printf(\"Hollow Rectangle Star Pattern:\\n\");\n  printHollowRectangle(numRows, numCols);\n  return 0;\n}",
+        "explanation": "The `printHollowRectangle` function prints a rectangle where only the border consists of stars, and the inside is filled with spaces. The conditions in the inner loop check if the current position is on any of the four borders (first row, last row, first column, or last column)."
+      },
+      {
+        "id": 63,
+        "title": "Pyramid Star Pattern",
+        "description": "Print a pyramid pattern made of stars.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printPyramid(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    // Print leading spaces\n    for (int j = 1; j <= rows - i; j++) {\n      printf(\"  \");\n    }\n    // Print stars\n    for (int k = 1; k <= 2 * i - 1; k++) {\n      printf(\"* \");\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Pyramid Star Pattern:\\n\");\n  printPyramid(numRows);\n  return 0;\n}",
+        "explanation": "The `printPyramid` function prints a pyramid pattern. For each row, it first prints leading spaces to center the stars, and then it prints an odd number of stars that increases with the row number. The number of spaces decreases as the number of stars increases."
+      },
+      {
+        "id": 64,
+        "title": "Diamond Pattern",
+        "description": "Print a diamond pattern made of stars.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid printDiamond(int rows) {\n  if (rows % 2 == 0) rows++; // Ensure odd number of rows for a perfect diamond\n  int midRow = (rows + 1) / 2;\n\n  // Upper part of the diamond\n  for (int i = 1; i <= midRow; i++) {\n    for (int j = 1; j <= midRow - i; j++) {\n      printf(\"  \");\n    }\n    for (int k = 1; k <= 2 * i - 1; k++) {\n      printf(\"* \");\n    }\n    printf(\"\\n\");\n  }\n\n  // Lower part of the diamond\n  for (int i = midRow - 1; i >= 1; i--) {\n    for (int j = 1; j <= midRow - i; j++) {\n      printf(\"  \");\n    }\n    for (int k = 1; k <= 2 * i - 1; k++) {\n      printf(\"* \");\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Diamond Star Pattern:\\n\");\n  printDiamond(numRows);\n  return 0;\n}",
+        "explanation": "The `printDiamond` function prints a diamond pattern. It first ensures an odd number of rows for a symmetrical diamond. It then prints the upper half (a pyramid) and the lower half (an inverted pyramid) using nested loops, adjusting the number of spaces and stars in each row."
+      },
+      {
+        "id": 65,
+        "title": "Number Pyramid",
+        "description": "Print a pyramid pattern made of numbers.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printNumberPyramid(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    // Print leading spaces\n    for (int j = 1; j <= rows - i; j++) {\n      printf(\"  \");\n    }\n    // Print numbers\n    for (int k = 1; k <= i; k++) {\n      printf(\"%d   \", i);\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Number Pyramid Pattern:\\n\");\n  printNumberPyramid(numRows);\n  return 0;\n}",
+        "explanation": "The `printNumberPyramid` function prints a pyramid pattern where each row consists of the row number repeated. It uses nested loops to print the leading spaces and then the numbers for each row."
+      },
+      {
+        "id": 66,
+        "title": "Floyd's Triangle",
+        "description": "Print Floyd's triangle pattern.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printFloydsTriangle(int rows) {\n  int number = 1;\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= i; j++) {\n      printf(\"%d \", number);\n      number++;\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Floyd's Triangle Pattern:\\n\");\n  printFloydsTriangle(numRows);\n  return 0;\n}",
+        "explanation": "The `printFloydsTriangle` function prints Floyd's triangle. It uses nested loops, and a counter `number` is incremented and printed for each position in the triangle. Each row contains one more number than the previous row."
+      },
+      {
+        "id": 67,
+        "title": "Pascal's Triangle",
+        "description": "Print Pascal's triangle pattern.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nint binomialCoeff(int n, int k) {\n  if (k == 0 || k == n)\n    return 1;\n  else\n    return binomialCoeff(n - 1, k - 1) + binomialCoeff(n - 1, k);\n}\n\nvoid printPascalsTriangle(int rows) {\n  for (int i = 0; i < rows; i++) {\n    // Print leading spaces\n    for (int j = 0; j < rows - i - 1; j++) {\n      printf(\"  \");\n    }\n    // Print numbers (binomial coefficients)\n    for (int k = 0; k <= i; k++) {\n      printf(\"%d   \", binomialCoeff(i, k));\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Pascal's Triangle Pattern:\\n\");\n  printPascalsTriangle(numRows);\n  return 0;\n}",
+        "explanation": "The `printPascalsTriangle` function prints Pascal's triangle. It uses a helper function `binomialCoeff` to calculate the binomial coefficient $C(n, k)$, which represents the elements of Pascal's triangle. The outer loop iterates through the rows, and the inner loops handle the leading spaces and the printing of the binomial coefficients for each row."
+      },
+      {
+        "id": 68,
+        "title": "Binary Number Pattern",
+        "description": "Print a binary number pattern.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printBinaryPattern(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= i; j++) {\n      if ((i + j) % 2 == 0) {\n        printf(\"1 \");\n      } else {\n        printf(\"0 \");\n      }\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Binary Number Pattern:\\n\");\n  printBinaryPattern(numRows);\n  return 0;\n}",
+        "explanation": "The `printBinaryPattern` function prints a pattern of 0s and 1s. It uses nested loops, and the value printed at each position depends on the sum of the row number (`i`) and the column number (`j`). If the sum is even, it prints 1; otherwise, it prints 0."
+      },
+      {
+        "id": 69,
+        "title": "Alphabet Pattern (A AB ABC)",
+        "description": "Print an alphabet pattern like 'A', 'AB', 'ABC', ...",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n\nvoid printAlphabetPattern(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    for (int j = 1; j <= i; j++) {\n      printf(\"%c \", 'A' + j - 1);\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Alphabet Pattern:\\n\");\n  printAlphabetPattern(numRows);\n  return 0;\n}",
+        "explanation": "The `printAlphabetPattern` function prints a pattern where each row contains a sequence of alphabets starting from 'A'. The number of alphabets in each row increases with the row number. The character to be printed is calculated using the ASCII value of 'A' and the inner loop counter `j`."
+      },
+      {
+        "id": 70,
+        "title": "Rhombus Pattern",
+        "description": "Print a rhombus pattern made of stars.",
+        "difficulty": "medium",
+        "category": "pattern",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nvoid printRhombus(int rows) {\n  for (int i = 1; i <= rows; i++) {\n    // Print leading spaces\n    for (int j = 1; j <= rows - i; j++) {\n      printf(\"  \");\n    }\n    // Print stars\n    for (int k = 1; k <= rows; k++) {\n      printf(\"* \");\n    }\n    printf(\"\\n\");\n  }\n}\n\nint main() {\n  int numRows = 5;\n  printf(\"Rhombus Star Pattern:\\n\");\n  printRhombus(numRows);\n  return 0;\n}",
+        "explanation": "The `printRhombus` function prints a rhombus pattern. It consists of `rows` number of lines, and each line has leading spaces followed by `rows` number of stars. The number of leading spaces decreases with each row, creating the rhombus shape."
+      },
+      {
+        "id": 71,
+        "title": "Swap Using Pointers",
+        "description": "Swap the values of two variables using pointers.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n  int temp = *a;\n  *a = *b;\n  *b = temp;\n}\n\nint main() {\n  int num1 = 10, num2 = 20;\n  printf(\"Before swap: num1 = %d, num2 = %d\\n\", num1, num2);\n  swap(&num1, &num2);\n  printf(\"After swap: num1 = %d, num2 = %d\\n\", num1, num2);\n  return 0;\n}",
+        "explanation": "The `swap` function takes pointers to two integers as arguments. It uses a temporary variable to exchange the values pointed to by the pointers. In `main`, the addresses of `num1` and `num2` are passed to the `swap` function."
+      },
+      {
+        "id": 72,
+        "title": "Array Access Using Pointers",
+        "description": "Access and manipulate array elements using pointers.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int arr[] = {10, 20, 30, 40, 50};\n  int *ptr = arr; // ptr points to the first element of arr\n  int size = sizeof(arr) / sizeof(arr[0]);\n\n  printf(\"Array elements:\\n\");\n  for (int i = 0; i < size; i++) {\n    printf(\"arr[%d] = %d, *(ptr + %d) = %d\\n\", i, arr[i], i, *(ptr + i));\n  }\n\n  // Modify array elements using pointer arithmetic\n  for (int i = 0; i < size; i++) {\n    *(ptr + i) += 5; // Add 5 to each element\n  }\n\n  printf(\"Modified array elements:\\n\");\n  for (int i = 0; i < size; i++) {\n    printf(\"arr[%d] = %d\\n\", i, arr[i]);\n  }\n\n  return 0;\n}",
+        "explanation": "This program demonstrates how to access array elements using pointers. `ptr` is initialized to point to the beginning of the array. Pointer arithmetic (`ptr + i`) is used to access subsequent elements. The `*` operator dereferences the pointer to access the value at that memory location. The program also shows how to modify array elements using pointer arithmetic."
+      },
+      {
+        "id": 73,
+        "title": "String Operations Using Pointers",
+        "description": "Perform string operations like finding length and copying using pointers.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\n// String length using pointers\nint stringLength(const char *str) {\n  int length = 0;\n  while (*str != '\\0') {\n    length++;\n    str++;\n  }\n  return length;\n}\n\n// String copy using pointers\nchar* stringCopy(const char *source) {\n  int length = stringLength(source);\n  char *destination = (char*)malloc(sizeof(char) * (length + 1));\n  if (destination == NULL) {\n    perror(\"Memory allocation failed\");\n    exit(EXIT_FAILURE);\n  }\n  char *destPtr = destination;\n  while (*source != '\\0') {\n    *destPtr = *source;\n    destPtr++;\n    source++;\n  }\n  *destPtr = '\\0';\n  return destination;\n}\n\nint main() {\n  char str[] = \"Hello\";\n  printf(\"Length of '%s' is: %d\\n\", str, stringLength(str));\n\n  char *copiedString = stringCopy(str);\n  printf(\"Copied string: %s\\n\", copiedString);\n  free(copiedString);\n  return 0;\n}",
+        "explanation": "This program demonstrates string operations using pointers. `stringLength` calculates the length by iterating through the string until the null terminator is encountered. `stringCopy` allocates memory for the copied string and then copies the characters using pointer arithmetic. The caller is responsible for freeing the allocated memory."
+      },
+      {
+        "id": 74,
+        "title": "Pointer to Function (Callback)",
+        "description": "Use a pointer to a function as a callback.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\nint add(int a, int b) {\n  return a + b;\n}\n\nint subtract(int a, int b) {\n  return a - b;\n}\n\n// Function that takes a function pointer as an argument\nint calculate(int a, int b, int (*operation)(int, int)) {\n  return operation(a, b);\n}\n\nint main() {\n  int num1 = 10, num2 = 5;\n  int result;\n\n  // Use add function\n  result = calculate(num1, num2, add);\n  printf(\"%d + %d = %d\\n\", num1, num2, result);\n\n  // Use subtract function\n  result = calculate(num1, num2, subtract);\n  printf(\"%d - %d = %d\\n\", num1, num2, result);\n\n  return 0;\n}",
+        "explanation": "This program demonstrates the use of function pointers. The `calculate` function takes a function pointer as an argument, allowing it to perform different operations based on the passed function. `add` and `subtract` are example functions, and their pointers are passed to `calculate` in `main`."
+      },
+      {
+        "id": 75,
+        "title": "Dynamic Memory Allocation",
+        "description": "Allocate and deallocate memory dynamically using `malloc` and `free`.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  int *arr;\n  int size;\n\n  printf(\"Enter the size of the array: \");\n  scanf(\"%d\", &size);\n\n  // Allocate memory dynamically\n  arr = (int*)malloc(sizeof(int) * size);\n  if (arr == NULL) {\n    perror(\"Memory allocation failed\");\n    return 1;\n  }\n\n  printf(\"Enter %d elements:\\n\", size);\n  for (int i = 0; i < size; i++) {\n    scanf(\"%d\", &arr[i]);\n  }\n\n  printf(\"Array elements:\\n\");\n  for (int i = 0; i < size; i++) {\n    printf(\"%d \", arr[i]);\n  }\n  printf(\"\\n\");\n\n  // Deallocate memory\n  free(arr);\n  arr = NULL; // Good practice to set pointer to NULL after freeing\n\n  return 0;\n}",
+        "explanation": "This program demonstrates dynamic memory allocation using `malloc` and `free`. It prompts the user for the size of an array, allocates memory using `malloc`, and then reads elements into the allocated memory. After using the array, it frees the allocated memory using `free`. It's crucial to free dynamically allocated memory to prevent memory leaks."
+      },
+      {
+        "id": 76,
+        "title": "Matrix Operations Using Pointers",
+        "description": "Perform matrix operations like addition and multiplication using pointers.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\n// Matrix addition\nvoid addMatrices(int rows, int cols, int **mat1, int **mat2, int **result) {\n  for (int i = 0; i < rows; i++) {\n    for (int j = 0; j < cols; j++) {\n      result[i][j] = mat1[i][j] + mat2[i][j];\n    }\n  }\n}\n\n// Matrix multiplication\nvoid multiplyMatrices(int rows1, int cols1, int rows2, int cols2, int **mat1, int **mat2, int **result) {\n    if (cols1 != rows2) {\n        printf(\"Matrices cannot be multiplied.\\n\");\n        return;\n    }\n\n    for (int i = 0; i < rows1; i++) {\n        for (int j = 0; j < cols2; j++) {\n            result[i][j] = 0;\n            for (int k = 0; k < cols1; k++) {\n                result[i][j] += mat1[i][k] * mat2[k][j];\n            }\n        }\n    }\n}\n\n// Function to allocate memory for a 2D array\nint** allocateMatrix(int rows, int cols) {\n    int **matrix = (int**)malloc(rows * sizeof(int*));\n    if (matrix == NULL) {\n        perror(\"Memory allocation failed\");\n        exit(EXIT_FAILURE);\n    }\n    for (int i = 0; i < rows; i++) {\n        matrix[i] = (int*)malloc(cols * sizeof(int));\n        if (matrix[i] == NULL) {\n            perror(\"Memory allocation failed\");\n            exit(EXIT_FAILURE);\n        }\n    }\n    return matrix;\n}\n\n// Function to free memory for a 2D array\nvoid freeMatrix(int **matrix, int rows) {\n    for (int i = 0; i < rows; i++) {\n        free(matrix[i]);\n    }\n    free(matrix);\n}\n\nint main() {\n    int rows1 = 2, cols1 = 3;\n    int rows2 = 3, cols2 = 2;\n\n    // Allocate memory for matrices\n    int **mat1 = allocateMatrix(rows1, cols1);\n    int **mat2 = allocateMatrix(rows2, cols2);\n    int **sum = allocateMatrix(rows1, cols1);\n    int **product = allocateMatrix(rows1, cols2);\n\n    // Initialize matrices (example values)\n    mat1[0][0] = 1; mat1[0][1] = 2; mat1[0][2] = 3;\n    mat1[1][0] = 4; mat1[1][1] = 5; mat1[1][2] = 6;\n\n    mat2[0][0] = 7; mat2[0][1] = 8;\n    mat2[1][0] = 9; mat2[1][1] = 10;\n    mat2[2][0] = 11; mat2[2][1] = 12;\n\n    // Perform matrix addition\n    addMatrices(rows1, cols1, mat1, mat2, sum);\n\n    printf(\"Matrix 1:\\n\");\n    for (int i = 0; i < rows1; i++) {\n        for (int j = 0; j < cols1; j++) {\n            printf(\"%d\\t\", mat1[i][j]);\n        }\n        printf(\"\\n\");\n    }\n\n    printf(\"Matrix 2:\\n\");\n    for (int i = 0; i < rows2; i++) {\n        for (int j = 0; j < cols2; j++) {\n            printf(\"%d\\t\", mat2[i][j]);\n        }\n        printf(\"\\n\");\n    }\n\n    printf(\"Sum of matrices:\\n\");\n    for (int i = 0; i < rows1; i++) {\n        for (int j = 0; j < cols1; j++) {\n            printf(\"%d\\t\", sum[i][j]);\n        }\n        printf(\"\\n\");\n    }\n\n     // Perform matrix multiplication\n    multiplyMatrices(rows1, cols1, rows2, cols2, mat1, mat2, product);\n\n    printf(\"Product of matrices:\\n\");\n    for (int i = 0; i < rows1; i++) {\n        for (int j = 0; j < cols2; j++) {\n            printf(\"%d\\t\", product[i][j]);\n        }\n        printf(\"\\n\");\n    }\n\n    // Free allocated memory\n    freeMatrix(mat1, rows1);\n    freeMatrix(mat2, rows2);\n    freeMatrix(sum, rows1);\n     freeMatrix(product, rows1);\n\n    return 0;\n}",
+        "explanation": "This program demonstrates matrix addition and multiplication using pointers. It allocates memory dynamically for the matrices using a helper function `allocateMatrix`. The `addMatrices` function adds two matrices, and the `multiplyMatrices` function multiplies them. The `freeMatrix` function deallocates the memory.  The program uses double pointers (`int **`) to represent 2D arrays (matrices)."
+      },
+      {
+        "id": 77,
+        "title": "Pointer Arithmetic",
+        "description": "Demonstrate pointer arithmetic operations.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\nint main() {\n  int arr[] = {10, 20, 30, 40, 50};\n  int *ptr = arr; // ptr points to the first element of arr\n\n  printf(\"Address of arr[0]: %p\\n\", (void*)&arr[0]);\n  printf(\"Value of ptr: %p\\n\", (void*)ptr);\n  printf(\"Value pointed to by ptr: %d\\n\", *ptr);\n\n  ptr++; // Increment ptr to point to the next integer\n  printf(\"Address of arr[1]: %p\\n\", (void*)&arr[1]);\n  printf(\"Value of ptr after increment: %p\\n\", (void*)ptr);\n  printf(\"Value pointed to by ptr after increment: %d\\n\", *ptr);\n\n  ptr += 3; // Add 3 to ptr to point to arr[4]\n  printf(\"Address of arr[4]: %p\\n\", (void*)&arr[4]);\n  printf(\"Value of ptr after adding 3: %p\\n\", (void*)ptr);\n  printf(\"Value pointed to by ptr after adding 3: %d\\n\", *ptr);\n\n  ptr--; // Decrement ptr to point to arr[3]\n  printf(\"Address of arr[3]: %p\\n\", (void*)&arr[3]);\n   printf(\"Value of ptr after decrement: %p\\n\", (void*)ptr);\n  printf(\"Value pointed to by ptr after decrement: %d\\n\", *ptr);\n\n  return 0;\n}",
+        "explanation": "This program demonstrates pointer arithmetic. It initializes a pointer to the beginning of an array. It then shows how incrementing and decrementing the pointer changes the memory address it points to and how this affects the value that is dereferenced.  It's important to note that pointer arithmetic is scaled by the size of the data type the pointer points to (e.g., incrementing an `int*` increases the address by `sizeof(int)`)."
+      },
+      {
+        "id": 78,
+        "title": "Array of Pointers to Strings",
+        "description": "Use an array of pointers to store and manipulate strings.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  char *strings[] = {\n    \"Hello\",\n    \"World\",\n    \"This\",\n    \"Is\",\n    \"A\",\n    \"Test\"\n  };\n  int numStrings = sizeof(strings) / sizeof(strings[0]);\n\n  printf(\"Strings:\\n\");\n  for (int i = 0; i < numStrings; i++) {\n    printf(\"strings[%d] = %s\\n\", i, strings[i]);\n  }\n\n  // Modify a string (be careful with string literals)\n  // strings[0] = \"Goodbye\"; // This might cause a problem as string literals are often stored in read-only memory\n  char *newString = (char*)malloc(sizeof(char) * 10); // Allocate memory for a new string\n  if (newString == NULL) {\n    perror(\"Memory allocation failed\");\n    return 1;\n  }\n  strcpy(newString, \"Goodbye\"); // Copy the new string\n  strings[0] = newString; // Assign the pointer to the newly allocated string\n\n  printf(\"Modified strings:\\n\");\n  for (int i = 0; i < numStrings; i++) {\n    printf(\"strings[%d] = %s\\n\", i, strings[i]);\n  }\n\n  free(newString); // Free the allocated memory\n  return 0;\n}",
+        "explanation": "This program demonstrates the use of an array of pointers to strings.  Each element of the `strings` array is a pointer to a character array (a string).  The program shows how to access and print the strings.  It also highlights the importance of allocating memory when modifying strings that are initially string literals, as string literals are often stored in read-only memory.  The allocated memory must be freed."
+      },
+      {
+        "id": 79,
+        "title": "Function Pointers Calculator",
+        "description": "Create a simple calculator using function pointers.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\nint add(int a, int b) {\n  return a + b;\n}\n\nint subtract(int a, int b) {\n  return a - b;\n}\n\nint multiply(int a, int b) {\n  return a * b;\n}\n\nint divide(int a, int b) {\n  if (b == 0) {\n    printf(\"Error: Division by zero!\\n\");\n    return 0; // Or handle the error appropriately\n  }\n  return a / b;\n}\n\nint main() {\n  int num1 = 10, num2 = 5;\n  int choice;\n  int result;\n\n  // Array of function pointers\n  int (*operations[])(int, int) = {add, subtract, multiply, divide};\n\n  printf(\"Choose an operation:\\n\");\n  printf(\"1. Add\\n\");\n  printf(\"2. Subtract\\n\");\n  printf(\"3. Multiply\\n\");\n  printf(\"4. Divide\\n\");\n  scanf(\"%d\", &choice);\n\n  if (choice >= 1 && choice <= 4) {\n    result = operations[choice - 1](num1, num2);\n    printf(\"Result: %d\\n\", result);\n  } else {\n    printf(\"Invalid choice.\\n\");\n  }\n\n  return 0;\n}",
+        "explanation": "This program implements a simple calculator using an array of function pointers. The `operations` array stores pointers to the `add`, `subtract`, `multiply`, and `divide` functions. The user chooses an operation, and the corresponding function is called through the function pointer.  Division by zero is handled."
+      },
+      {
+        "id": 80,
+        "title": "Complex Number Operations",
+        "description": "Perform operations on complex numbers using pointers and structures.",
+        "difficulty": "medium-hard",
+        "category": "pointer",
+        "solution": "#include <stdio.h>\n\n// Structure to represent a complex number\ntypedef struct {\n  float real;\n  float imaginary;\n} Complex;\n\n// Function to add two complex numbers\nvoid addComplex(const Complex *c1, const Complex *c2, Complex *result) {\n  result->real = c1->real + c2->real;\n  result->imaginary = c1->imaginary + c2->imaginary;\n}\n\n// Function to print a complex number\nvoid printComplex(const Complex *c) {\n  printf(\"%.2f + %.2fi\\n\", c->real, c->imaginary);\n}\n\nint main() {\n  Complex num1 = {3.0, 4.0};\n  Complex num2 = {1.0, -2.0};\n  Complex sum;\n\n  addComplex(&num1, &num2, &sum);\n\n  printf(\"Number 1: \");\n  printComplex(&num1);\n  printf(\"Number 2: \");\n  printComplex(&num2);\n  printf(\"Sum: \");\n  printComplex(&sum);\n\n  return 0;\n}",
+        "explanation": "This program defines a structure `Complex` to represent complex numbers. The `addComplex` function adds two complex numbers passed as pointers and stores the result in a pointer to a `Complex` structure. The `printComplex` function prints a complex number. The `main` function demonstrates how to use these functions."
+      },
+      {
+        "id": 81,
+        "title": "Student Record System",
+        "description": "Create a structure to store student information and display the records.",
+        "difficulty": "medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\nstruct Student {\n  int id;\n  char name[50];\n  float marks;\n};\n\nint main() {\n  struct Student s = {1, \"John\", 87.5};\n  printf(\"ID: %d\\nName: %s\\nMarks: %.2f\\n\", s.id, s.name, s.marks);\n  return 0;\n}",
+        "explanation": "This program defines a structure for a student and initializes it with data, then prints the student's information."
+      },
+      {
+        "id": 82,
+        "title": "Complex Number Addition",
+        "description": "Add two complex numbers using structure.",
+        "difficulty": "easy-medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\ntypedef struct {\n  int real;\n  int imag;\n} Complex;\n\nint main() {\n  Complex a = {3, 4}, b = {1, 2}, sum;\n  sum.real = a.real + b.real;\n  sum.imag = a.imag + b.imag;\n  printf(\"Sum = %d + %di\\n\", sum.real, sum.imag);\n  return 0;\n}",
+        "explanation": "This program adds two complex numbers by separately summing their real and imaginary parts."
+      },
+      {
+        "id": 83,
+        "title": "Distance Between Points",
+        "description": "Calculate the distance between two points using structure.",
+        "difficulty": "medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n#include <math.h>\n\ntypedef struct {\n  float x, y;\n} Point;\n\nint main() {\n  Point p1 = {0, 0}, p2 = {3, 4};\n  float distance = sqrt(pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2));\n  printf(\"Distance: %.2f\\n\", distance);\n  return 0;\n}",
+        "explanation": "The program uses the distance formula √((x2 - x1)² + (y2 - y1)²) to calculate the distance between two points."
+      },
+      {
+        "id": 84,
+        "title": "Time Difference Calculation",
+        "description": "Calculate difference between two time periods using structure.",
+        "difficulty": "medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\ntypedef struct {\n  int hours;\n  int minutes;\n  int seconds;\n} Time;\n\nTime difference(Time t1, Time t2) {\n  Time diff;\n  int t1_sec = t1.hours * 3600 + t1.minutes * 60 + t1.seconds;\n  int t2_sec = t2.hours * 3600 + t2.minutes * 60 + t2.seconds;\n  int diff_sec = t1_sec - t2_sec;\n\n  diff.hours = diff_sec / 3600;\n  diff_sec %= 3600;\n  diff.minutes = diff_sec / 60;\n  diff.seconds = diff_sec % 60;\n\n  return diff;\n}\n\nint main() {\n  Time t1 = {2, 45, 30}, t2 = {1, 20, 15};\n  Time diff = difference(t1, t2);\n  printf(\"Difference = %02d:%02d:%02d\\n\", diff.hours, diff.minutes, diff.seconds);\n  return 0;\n}",
+        "explanation": "This program converts both time periods to seconds, finds their difference, and converts it back to hours:minutes:seconds format."
+      },
+      {
+        "id": 85,
+        "title": "Nested Structure Example",
+        "description": "Demonstrate nested structures in C.",
+        "difficulty": "medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\nstruct Date {\n  int day, month, year;\n};\n\nstruct Student {\n  int id;\n  char name[50];\n  struct Date dob;\n};\n\nint main() {\n  struct Student s = {1, \"Alice\", {10, 5, 2000}};\n  printf(\"ID: %d\\nName: %s\\nDOB: %02d/%02d/%d\\n\", s.id, s.name, s.dob.day, s.dob.month, s.dob.year);\n  return 0;\n}",
+        "explanation": "This example shows how a structure can contain another structure as a member (nested structure)."
+      },
+      {
+        "id": 86,
+        "title": "Union Memory Demonstration",
+        "description": "Show how memory is shared in union.",
+        "difficulty": "easy-medium",
+        "category": "union",
+        "solution": "#include <stdio.h>\n\nunion Data {\n  int i;\n  float f;\n  char str[20];\n};\n\nint main() {\n  union Data data;\n  printf(\"Memory size of union = %lu\\n\", sizeof(data));\n  return 0;\n}",
+        "explanation": "A union uses a shared memory space; the size of the union is equal to the size of its largest member."
+      },
+      {
+        "id": 87,
+        "title": "Structure Array Sorting",
+        "description": "Sort array of structures by marks.",
+        "difficulty": "medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\nstruct Student {\n  char name[50];\n  float marks;\n};\n\nint main() {\n  struct Student s[3] = {{\"John\", 85}, {\"Alice\", 95}, {\"Bob\", 75}};\n  for (int i = 0; i < 2; i++) {\n    for (int j = i + 1; j < 3; j++) {\n      if (s[i].marks > s[j].marks) {\n        struct Student temp = s[i];\n        s[i] = s[j];\n        s[j] = temp;\n      }\n    }\n  }\n  for (int i = 0; i < 3; i++) {\n    printf(\"%s: %.2f\\n\", s[i].name, s[i].marks);\n  }\n  return 0;\n}",
+        "explanation": "This program sorts students based on marks using a simple bubble sort algorithm."
+      },
+      {
+        "id": 88,
+        "title": "Pass Structure to Function",
+        "description": "Pass structure as an argument to function.",
+        "difficulty": "easy",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\nstruct Student {\n  char name[50];\n  int roll;\n};\n\nvoid printStudent(struct Student s) {\n  printf(\"Name: %s\\nRoll: %d\\n\", s.name, s.roll);\n}\n\nint main() {\n  struct Student s1 = {\"John\", 101};\n  printStudent(s1);\n  return 0;\n}",
+        "explanation": "This program demonstrates how a structure can be passed to a function by value."
+      },
+      {
+        "id": 89,
+        "title": "Pointer to Structure",
+        "description": "Access structure members using pointer.",
+        "difficulty": "easy-medium",
+        "category": "structure",
+        "solution": "#include <stdio.h>\n\nstruct Student {\n  char name[50];\n  int roll;\n};\n\nint main() {\n  struct Student s = {\"Alice\", 102};\n  struct Student *ptr = &s;\n  printf(\"Name: %s\\nRoll: %d\\n\", ptr->name, ptr->roll);\n  return 0;\n}",
+        "explanation": "This example shows how to use a pointer to access structure members using the arrow operator (->)."
+      },
+      {
+        "id": 90,
+        "title": "File Handling with Structures",
+        "description": "Write and read structure to/from file.",
+        "difficulty": "medium",
+        "category": "file",
+        "solution": "#include <stdio.h>\n\nstruct Student {\n  char name[50];\n  int roll;\n  float marks;\n};\n\nint main() {\n  struct Student s = {\"Bob\", 103, 88.5};\n  FILE *fptr = fopen(\"student.dat\", \"wb\");\n  fwrite(&s, sizeof(s), 1, fptr);\n  fclose(fptr);\n\n  struct Student s2;\n  fptr = fopen(\"student.dat\", \"rb\");\n  fread(&s2, sizeof(s2), 1, fptr);\n  fclose(fptr);\n\n  printf(\"Name: %s\\nRoll: %d\\nMarks: %.2f\\n\", s2.name, s2.roll, s2.marks);\n  return 0;\n}",
+        "explanation": "This program writes a structure to a file using `fwrite()` and reads it back using `fread()`."
+      },
+      {
+        "id": 91,
+        "title": "Create/Write to File",
+        "description": "Create a new file and write some content to it.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n\nint main() {\n  FILE *fptr;\n  char filename[] = \"my_file.txt\";\n\n  // Open file in write mode ('w')\n  fptr = fopen(filename, \"w\");\n\n  if (fptr == NULL) {\n    printf(\"Error opening file!\\n\");\n    return 1;\n  }\n\n  // Write content to the file\n  fprintf(fptr, \"This is some text.\\n\");\n  fprintf(fptr, \"Writing another line.\\n\");\n\n  // Close the file\n  fclose(fptr);\n\n  printf(\"Data written to %s successfully.\\n\", filename);\n\n  return 0;\n}",
+        "explanation": "This program demonstrates how to create a new file (or overwrite an existing one) and write text to it. The `fopen()` function opens the file in write mode (`\"w\"`). If the file cannot be opened, it returns `NULL`. The `fprintf()` function is used to write formatted output to the file, similar to `printf()` for the console. Finally, `fclose()` closes the file, which is essential to save the changes."
+      },
+      {
+        "id": 92,
+        "title": "Read File Contents",
+        "description": "Read the contents of an existing file and print them to the console.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  FILE *fptr;\n  char filename[] = \"my_file.txt\";\n  char ch;\n\n  // Open file in read mode ('r')\n  fptr = fopen(filename, \"r\");\n\n  if (fptr == NULL) {\n    printf(\"Error opening file!\\n\");\n    return 1;\n  }\n\n  printf(\"Contents of %s:\\n\", filename);\n\n  // Read file character by character until end of file (EOF)\n  while ((ch = fgetc(fptr)) != EOF) {\n    printf(\"%c\", ch);\n  }\n\n  // Close the file\n  fclose(fptr);\n\n  return 0;\n}",
+        "explanation": "This program reads the contents of an existing file. The `fopen()` function opens the file in read mode (`\"r\"`). The `fgetc()` function reads a single character from the file and returns `EOF` (End Of File) when the end of the file is reached. The program continues to read and print characters until `EOF` is encountered. Finally, `fclose()` closes the file."
+      },
+      {
+        "id": 93,
+        "title": "Copy File Contents",
+        "description": "Copy the contents of one file to another.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  FILE *sourceFile, *destFile;\n  char sourceFilename[] = \"source.txt\";\n  char destFilename[] = \"destination.txt\";\n  char ch;\n\n  // Open source file in read mode\n  sourceFile = fopen(sourceFilename, \"r\");\n  if (sourceFile == NULL) {\n    printf(\"Error opening source file!\\n\");\n    return 1;\n  }\n\n  // Open destination file in write mode\n  destFile = fopen(destFilename, \"w\");\n  if (destFile == NULL) {\n    printf(\"Error opening destination file!\\n\");\n    fclose(sourceFile);\n    return 1;\n  }\n\n  // Copy contents character by character\n  while ((ch = fgetc(sourceFile)) != EOF) {\n    fputc(ch, destFile);\n  }\n\n  // Close both files\n  fclose(sourceFile);\n  fclose(destFile);\n\n  printf(\"Contents of %s copied to %s successfully.\\n\", sourceFilename, destFilename);\n\n  return 0;\n}",
+        "explanation": "This program copies the contents of one file (`source.txt`) to another (`destination.txt`). It opens the source file in read mode and the destination file in write mode. It then reads characters from the source file using `fgetc()` and writes them to the destination file using `fputc()` until the end of the source file is reached. Both files are closed after the copying is complete."
+      },
+      {
+        "id": 94,
+        "title": "Count Lines in File",
+        "description": "Count the number of lines in a text file.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n\nint main() {\n  FILE *fptr;\n  char filename[] = \"sample.txt\";\n  char ch;\n  int lineCount = 0;\n\n  // Open file in read mode\n  fptr = fopen(filename, \"r\");\n\n  if (fptr == NULL) {\n    printf(\"Error opening file!\\n\");\n    return 1;\n  }\n\n  // Read file character by character and count newline characters\n  while ((ch = fgetc(fptr)) != EOF) {\n    if (ch == '\\n') {\n      lineCount++;\n    }\n  }\n\n  // If the file is not empty and doesn't end with a newline, increment count\n  if (lineCount > 0 || ch == '\\n') {\n    // Already counted\n  } else if (ftell(fptr) > 0) {\n      lineCount++;\n  }\n\n  // Close the file\n  fclose(fptr);\n\n  printf(\"Number of lines in %s: %d\\n\", filename, lineCount);\n\n  return 0;\n}",
+        "explanation": "This program counts the number of lines in a text file. It opens the file in read mode and iterates through its characters. It increments the `lineCount` whenever a newline character (`'\\n'`) is encountered. It also handles the case where the file might not end with a newline character."
+      },
+      {
+        "id": 95,
+        "title": "Count Words in File",
+        "description": "Count the number of words in a text file.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n#include <ctype.h>\n#include <stdbool.h>\n\nint main() {\n  FILE *fptr;\n  char filename[] = \"document.txt\";\n  char ch;\n  int wordCount = 0;\n  bool inWord = false;\n\n  // Open file in read mode\n  fptr = fopen(filename, \"r\");\n\n  if (fptr == NULL) {\n    printf(\"Error opening file!\\n\");\n    return 1;\n  }\n\n  // Read file character by character and count words\n  while ((ch = fgetc(fptr)) != EOF) {\n    if (isspace(ch)) {\n      inWord = false;\n    } else if (!inWord) {\n      wordCount++;\n      inWord = true;\n    }\n  }\n\n  // Close the file\n  fclose(fptr);\n\n  printf(\"Number of words in %s: %d\\n\", filename, wordCount);\n\n  return 0;\n}",
+        "explanation": "This program counts the number of words in a text file. It opens the file in read mode and reads characters. It uses a boolean flag `inWord` to track whether the current position is inside a word. A word is considered to start when a non-space character is encountered after a space or at the beginning of the file. The `wordCount` is incremented each time a new word begins."
+      },
+      {
+        "id": 96,
+        "title": "Find Word in File",
+        "description": "Check if a specific word exists in a text file.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <string.h>\n#include <stdlib.h>\n#include <stdbool.h>\n\nint main() {\n  FILE *fptr;\n  char filename[] = \"story.txt\";\n  char searchWord[] = \"example\";\n  char buffer[100]; // Assuming words are no longer than 99 characters\n  bool found = false;\n\n  // Open file in read mode\n  fptr = fopen(filename, \"r\");\n\n  if (fptr == NULL) {\n    printf(\"Error opening file!\\n\");\n    return 1;\n  }\n\n  // Read file word by word\n  while (fscanf(fptr, \"%s\", buffer) == 1) {\n    if (strcmp(buffer, searchWord) == 0) {\n      found = true;\n      break;\n    }\n  }\n\n  // Close the file\n  fclose(fptr);\n\n  if (found) {\n    printf(\"The word '%s' was found in %s.\\n\", searchWord, filename);\n  } else {\n    printf(\"The word '%s' was not found in %s.\\n\", searchWord, filename);\n  }\n\n  return 0;\n}",
+        "explanation": "This program checks if a specific word exists in a text file. It opens the file in read mode and uses `fscanf()` to read words from the file into a buffer. The `strcmp()` function is used to compare the read word with the `searchWord`. If a match is found, the `found` flag is set to true, and the loop breaks. Finally, a message is printed indicating whether the word was found."
+      },
+      {
+        "id": 97,
+        "title": "Merge Two Files",
+        "description": "Merge the contents of two text files into a third file.",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\nint main() {\n  FILE *file1, *file2, *mergedFile;\n  char file1Name[] = \"file1.txt\";\n  char file2Name[] = \"file2.txt\";\n  char mergedFileName[] = \"merged.txt\";\n  char ch;\n\n  // Open file1 in read mode\n  file1 = fopen(file1Name, \"r\");\n  if (file1 == NULL) {\n    printf(\"Error opening %s!\\n\", file1Name);\n    return 1;\n  }\n\n  // Open file2 in read mode\n  file2 = fopen(file2Name, \"r\");\n  if (file2 == NULL) {\n    printf(\"Error opening %s!\\n\", file2Name);\n    fclose(file1);\n    return 1;\n  }\n\n  // Open mergedFile in write mode\n  mergedFile = fopen(mergedFileName, \"w\");\n  if (mergedFile == NULL) {\n    printf(\"Error opening %s!\\n\", mergedFileName);\n    fclose(file1);\n    fclose(file2);\n    return 1;\n  }\n\n  printf(\"Merging %s and %s into %s...\\n\", file1Name, file2Name, mergedFileName);\n\n  // Copy contents of file1 to mergedFile\n  while ((ch = fgetc(file1)) != EOF) {\n    fputc(ch, mergedFile);\n  }\n\n  // Copy contents of file2 to mergedFile\n  while ((ch = fgetc(file2)) != EOF) {\n    fputc(ch, mergedFile);\n  }\n\n  // Close all files\n  fclose(file1);\n  fclose(file2);\n  fclose(mergedFile);\n\n  printf(\"Files merged successfully into %s.\\n\", mergedFileName);\n\n  return 0;\n}",
+        "explanation": "This program merges the contents of two text files (`file1.txt` and `file2.txt`) into a third file (`merged.txt`). It opens both input files in read mode and the output file in write mode. It then reads characters from the first file and writes them to the merged file, followed by reading characters from the second file and writing them to the merged file. Finally, all files are closed."
+      },
+      {
+        "id": 98,
+        "title": "Encrypt/Decrypt File",
+        "description": "Implement basic file encryption and decryption (e.g., using XOR).",
+        "difficulty": "medium-hard",
+        "category": "file handling",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\n\n// Simple XOR encryption/decryption function\nchar encryptDecrypt(char data, char key) {\n  return data ^ key;\n}\n\nvoid processFile(char *inputFilename, char *outputFilename, char key) {\n  FILE *inputFile, *outputFile;\n  char ch;\n\n  // Open input file in binary read mode ('rb')\n  inputFile = fopen(inputFilename, \"rb\");\n  if (inputFile == NULL) {\n    printf(\"Error opening input file %s!\\n\", inputFilename);\n    return;\n  }\n\n  // Open output file in binary write mode ('wb')\n  outputFile = fopen(outputFilename, \"wb\");\n  if (outputFile == NULL) {\n    printf(\"Error opening output file %s!\\n\", outputFilename);\n    fclose(inputFile);\n    return;\n  }\n\n  // Read from input file, encrypt/decrypt, and write to output file\n  while ((ch = fgetc(inputFile)) != EOF) {\n    char processedCh = encryptDecrypt(ch, key);\n    fputc(processedCh, outputFile);\n  }\n\n  // Close files\n  fclose(inputFile);\n  fclose(outputFile);\n\n  printf(\"File %s processed to %s successfully with key '%c'.\\n\", inputFilename, outputFilename, key);\n}\n\nint main() {\n  char inputFile[] = \"secret.txt\";\n  char encryptedFile[] = \"encrypted.dat\";\n  char decryptedFile[] = \"decrypted.txt\";\n  char encryptionKey = 'K';\n\n  // Create a sample secret file\n  FILE *secretPtr = fopen(inputFile, \"w\");\n  fprintf(secretPtr, \"This is a secret message.\\n\");\n  fclose(secretPtr);\n\n  // Encrypt the file\n  printf(\"Encrypting %s to %s...\\n\", inputFile, encryptedFile);\n  processFile(inputFile, encryptedFile, encryptionKey);\n\n  // Decrypt the file\n  printf(\"Decrypting %s to %s...\\n\", encryptedFile, decryptedFile);\n  processFile(encryptedFile, decryptedFile, encryptionKey);\n\n  return 0;\n}",
+        "explanation": "This program demonstrates a simple file encryption and decryption using the XOR operation with a key. The `encryptDecrypt` function performs the XOR operation. The `processFile` function reads the input file in binary mode (`\"rb\"`), encrypts/decrypts each byte, and writes the result to the output file in binary mode (`\"wb\"`). The same key is used for both encryption and decryption. Binary mode is important to handle all types of files correctly."
+      },
+      {
+        "id": 101,
+        "title": "Stack Implementation (Array)",
+        "description": "Implement a stack using arrays in C with push, pop, and display operations.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "/* C program to implement stack using arrays */\n#include <stdio.h>\n#define SIZE 100\nint stack[SIZE];\nint top = -1;\nvoid push(int value) {\n    if(top == SIZE - 1) printf(\"Stack Overflow\\n\");\n    else stack[++top] = value;\n}\nint pop() {\n    if(top == -1) return -1;\n    return stack[top--];\n}\nvoid display() {\n    for(int i = top; i >= 0; i--) printf(\"%d \", stack[i]);\n    printf(\"\\n\");\n}",
+        "explanation": "A stack uses LIFO logic. Push adds to the top, pop removes from the top, and display shows all elements."
+      },
+      {
+        "id": 102,
+        "title": "Queue Implementation (Array)",
+        "description": "Implement a queue using arrays in C with enqueue, dequeue, and display operations.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "/* C program to implement queue using arrays */\n#include <stdio.h>\n#define SIZE 100\nint queue[SIZE];\nint front = -1, rear = -1;\nvoid enqueue(int value) {\n    if(rear == SIZE - 1) printf(\"Queue Overflow\\n\");\n    else {\n        if(front == -1) front = 0;\n        queue[++rear] = value;\n    }\n}\nint dequeue() {\n    if(front == -1 || front > rear) return -1;\n    return queue[front++];\n}\nvoid display() {\n    for(int i = front; i <= rear; i++) printf(\"%d \", queue[i]);\n    printf(\"\\n\");\n}",
+        "explanation": "A queue uses FIFO logic. Enqueue adds at rear, dequeue removes from front, display shows all elements."
+      },
+      {
+        "id": 103,
+        "title": "Linked List Implementation",
+        "description": "Implement a singly linked list with insert and display operations.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node {\n    int data;\n    struct Node *next;\n} Node;\nNode *head = NULL;\nvoid insert(int data) {\n    Node *newNode = malloc(sizeof(Node));\n    newNode->data = data;\n    newNode->next = head;\n    head = newNode;\n}\nvoid display() {\n    Node *temp = head;\n    while(temp != NULL) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}",
+        "explanation": "A linked list consists of nodes with data and a next pointer. Insert adds to the beginning."
+      },
+      {
+        "id": 104,
+        "title": "Doubly Linked List",
+        "description": "Create and display a doubly linked list.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node {\n    int data;\n    struct Node *prev, *next;\n} Node;\nNode *head = NULL;\nvoid insert(int data) {\n    Node *newNode = malloc(sizeof(Node));\n    newNode->data = data;\n    newNode->prev = NULL;\n    newNode->next = head;\n    if(head != NULL) head->prev = newNode;\n    head = newNode;\n}\nvoid display() {\n    Node *temp = head;\n    while(temp) {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    }\n    printf(\"\\n\");\n}",
+        "explanation": "Doubly linked lists have both prev and next pointers to traverse in both directions."
+      },
+      {
+        "id": 105,
+        "title": "Circular Linked List",
+        "description": "Create a circular linked list and traverse it.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node {\n    int data;\n    struct Node *next;\n} Node;\nNode *last = NULL;\nvoid insert(int data) {\n    Node *newNode = malloc(sizeof(Node));\n    newNode->data = data;\n    if(last == NULL) {\n        newNode->next = newNode;\n        last = newNode;\n    } else {\n        newNode->next = last->next;\n        last->next = newNode;\n        last = newNode;\n    }\n}\nvoid display() {\n    if(last == NULL) return;\n    Node *temp = last->next;\n    do {\n        printf(\"%d \", temp->data);\n        temp = temp->next;\n    } while(temp != last->next);\n    printf(\"\\n\");\n}",
+        "explanation": "In a circular list, the last node links back to the first. Traversal ends when we reach the starting node again."
+      },
+      {
+        "id": 106,
+        "title": "Binary Search Tree Operations",
+        "description": "Insert and traverse a binary search tree in-order.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#include <stdlib.h>\ntypedef struct Node {\n    int data;\n    struct Node *left, *right;\n} Node;\nNode* insert(Node* root, int data) {\n    if(root == NULL) {\n        root = malloc(sizeof(Node));\n        root->data = data;\n        root->left = root->right = NULL;\n    } else if(data < root->data) root->left = insert(root->left, data);\n    else root->right = insert(root->right, data);\n    return root;\n}\nvoid inorder(Node* root) {\n    if(root) {\n        inorder(root->left);\n        printf(\"%d \", root->data);\n        inorder(root->right);\n    }\n}",
+        "explanation": "BST maintains sorted order. Left child < root < right child. Inorder traversal returns sorted data."
+      },
+      {
+        "id": 107,
+        "title": "Graph Representation (Adj Matrix)",
+        "description": "Represent a graph using an adjacency matrix.",
+        "difficulty": "Medium",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#define V 5\nvoid addEdge(int graph[V][V], int src, int dest) {\n    graph[src][dest] = 1;\n    graph[dest][src] = 1;\n}\nvoid printGraph(int graph[V][V]) {\n    for(int i = 0; i < V; i++) {\n        for(int j = 0; j < V; j++) {\n            printf(\"%d \", graph[i][j]);\n        }\n        printf(\"\\n\");\n    }\n}",
+        "explanation": "Adjacency matrix stores edge information. 1 indicates edge, 0 indicates no edge."
+      },
+      {
+        "id": 108,
+        "title": "Breadth First Search (BFS)",
+        "description": "Perform BFS on a graph represented with adjacency matrix.",
+        "difficulty": "Hard",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#define V 5\nint graph[V][V];\nint visited[V];\nvoid bfs(int start) {\n    int queue[V], front = 0, rear = 0;\n    visited[start] = 1;\n    queue[rear++] = start;\n    while(front < rear) {\n        int node = queue[front++];\n        printf(\"%d \", node);\n        for(int i = 0; i < V; i++) {\n            if(graph[node][i] && !visited[i]) {\n                visited[i] = 1;\n                queue[rear++] = i;\n            }\n        }\n    }\n}",
+        "explanation": "BFS explores all neighbors before going to the next level, using a queue."
+      },
+      {
+        "id": 109,
+        "title": "Depth First Search (DFS)",
+        "description": "Perform DFS on a graph represented with adjacency matrix.",
+        "difficulty": "Hard",
+        "category": "Data Structures",
+        "solution": "#include <stdio.h>\n#define V 5\nint graph[V][V];\nint visited[V];\nvoid dfs(int start) {\n    visited[start] = 1;\n    printf(\"%d \", start);\n    for(int i = 0; i < V; i++) {\n        if(graph[start][i] && !visited[i]) dfs(i);\n    }\n}",
+        "explanation": "DFS explores as far as possible down each path before backtracking, using recursion or a stack."
+      },
+      {
+        "id": 110,
+        "title": "Heap Sort Implementation",
+        "description": "Sort an array using heap sort algorithm.",
+        "difficulty": "Hard",
+        "category": "Data Structures",
+        "solution": "void heapify(int arr[], int n, int i) {\n    int largest = i, l = 2*i+1, r = 2*i+2;\n    if(l < n && arr[l] > arr[largest]) largest = l;\n    if(r < n && arr[r] > arr[largest]) largest = r;\n    if(largest != i) {\n        int temp = arr[i]; arr[i] = arr[largest]; arr[largest] = temp;\n        heapify(arr, n, largest);\n    }\n}\nvoid heapSort(int arr[], int n) {\n    for(int i = n/2 - 1; i >= 0; i--) heapify(arr, n, i);\n    for(int i = n-1; i > 0; i--) {\n        int temp = arr[0]; arr[0] = arr[i]; arr[i] = temp;\n        heapify(arr, i, 0);\n    }\n}",
+        "explanation": "Heap sort builds a max-heap and repeatedly places the root at the end, then re-heapifies."
+      }
+
+  ]
+  

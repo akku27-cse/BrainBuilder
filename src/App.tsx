@@ -7,7 +7,8 @@ import CTutorialScreen from './components/C-Tutorial/CTutorialScreen';
 import CTutorialContent from './components/C-Tutorial/CTutorialContent';
 import CTopicDetail from './components/C-Tutorial/CTopicDetail';
 import CInterview from './components/C-Tutorial/CInterview';
-
+import CPracticeListScreen from './components/C-Tutorial/CPracticeListScreen';
+import CPracticeDetailScreen from './components/C-Tutorial/CPracticeDetailScreen';
 // Define the type for your navigation stack parameters
 export type RootStackParamList = {
   NotificationSplash: undefined;
@@ -15,6 +16,8 @@ export type RootStackParamList = {
   CTutorialContent: undefined;
   CTopicDetail: { topic: string };
   CInterview: undefined;
+  CPractice: undefined;
+  CPracticeDetail: { problemId: number };
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -78,6 +81,28 @@ const App = () => {
             headerTintColor: '#fff',
           }}
         />
+         <Stack.Screen 
+  name="CPractice" 
+  component={CPracticeListScreen} 
+  options={{ 
+    title: 'Practice Programs',
+    headerStyle: {
+      backgroundColor: '#3498db',
+    },
+    headerTintColor: '#fff',
+  }}
+/>
+<Stack.Screen 
+  name="CPracticeDetail" 
+  component={CPracticeDetailScreen} 
+  options={{ 
+    title: 'Program Details',
+    headerStyle: {
+      backgroundColor: '#3498db',
+    },
+    headerTintColor: '#fff',
+  }}
+/>
       </Stack.Navigator>
     </NavigationContainer>
   );
