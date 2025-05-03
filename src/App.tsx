@@ -6,6 +6,7 @@ import AppNavigator from './components/navigation/AppNavigator';
 import CTutorialScreen from './components/C-Tutorial/CTutorialScreen';
 import CTutorialContent from './components/C-Tutorial/CTutorialContent';
 import CTopicDetail from './components/C-Tutorial/CTopicDetail';
+import CInterview from './components/C-Tutorial/CInterview';
 
 // Define the type for your navigation stack parameters
 export type RootStackParamList = {
@@ -13,6 +14,7 @@ export type RootStackParamList = {
   CTutorial: undefined;
   CTutorialContent: undefined;
   CTopicDetail: { topic: string };
+  CInterview: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -62,6 +64,19 @@ const App = () => {
             title: route.params.topic,
             headerBackTitle: 'Back',
           })}
+        />
+
+
+<Stack.Screen 
+          name="CInterview" 
+          component={CInterview} 
+          options={{ 
+            headerShown: false,
+            headerStyle: {
+              backgroundColor: '#1a1a2e', 
+            },
+            headerTintColor: '#fff',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
