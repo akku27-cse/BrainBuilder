@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,8 @@ import {
   TouchableOpacity,
   ScrollView,
   Dimensions,
+  BackHandler,
+  Platform,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -16,8 +18,8 @@ const { width } = Dimensions.get('window');
 const CARD_WIDTH = (width - 40) / 2 - 10;
 
 const languages = [
-    { name: 'C Tutorial', icon: 'language-c', iconSet: 'MaterialCommunityIcons', color: '#6495ED', screen: 'CTutorial' },
-  { name: 'C++ Tutorial', icon: 'language-cpp', iconSet: 'MaterialCommunityIcons', color: '#00599C' },
+  { name: 'C Tutorial', icon: 'language-c', iconSet: 'MaterialCommunityIcons', color: '#6495ED', screen: 'CTutorial' },
+  { name: 'C++ Tutorial', icon: 'language-cpp', iconSet: 'MaterialCommunityIcons', color: '#00599C', screen: 'CppTutorial' },
   { name: 'Java Tutorial', icon: 'language-java', iconSet: 'MaterialCommunityIcons', color: '#007396' },
   { name: 'Python Tutorial', icon: 'language-python', iconSet: 'MaterialCommunityIcons', color: '#3776AB' },
   { name: 'JavaScript Tutorial', icon: 'language-javascript', iconSet: 'MaterialCommunityIcons', color: '#F7DF1E' },
@@ -29,9 +31,41 @@ const languages = [
 ];
 
 const HomeScreen = ({ navigation }: any) => {
-    const handleCardPress = (screenName: string) => {
-        navigation.navigate(screenName);
-      };
+  const [showExitToast, setShowExitToast] = useState(false);
+  let backPressCount = 0;
+
+  const handleCardPress = (screenName: string) => {
+    navigation.navigate(screenName);
+  };
+
+  useEffect(() => {
+    const backAction = () => {
+      if (backPressCount === 0) {
+        backPressCount += 1;
+        setShowExitToast(true);
+        
+        // Reset after 2 seconds
+        setTimeout(() => {
+          backPressCount = 0;
+          setShowExitToast(false);
+        }, 2000);
+        
+        return true;
+      } else if (backPressCount === 1) {
+        BackHandler.exitApp();
+        return true;
+      }
+      return false;
+    };
+
+    const backHandler = BackHandler.addEventListener(
+      'hardwareBackPress',
+      backAction
+    );
+
+    return () => backHandler.remove();
+  }, []);
+
   const renderIcon = (iconSet: string, iconName: string, size: number, color: string) => {
     switch (iconSet) {
       case 'MaterialCommunityIcons':
@@ -45,53 +79,64 @@ const HomeScreen = ({ navigation }: any) => {
 
   return (
     <View style={styles.container}>
-    {/* Header */}
-    <View style={styles.header}>
-      <TouchableOpacity
-        style={styles.menuButton}
-        onPress={() => navigation.toggleDrawer()}
-      >
-        <Icon name="bars" size={24} color="#000" />
-      </TouchableOpacity>
-      <Text style={styles.headerTitle}>BrainBuilder</Text>
-    </View>
-
-    {/* Animated Cards */}
-    <ScrollView contentContainerStyle={styles.scrollContent}>
-      <View style={styles.cardContainer}>
-        {languages.map((lang, index) => (
-          <TouchableOpacity 
-            key={index} 
-            onPress={() => handleCardPress(lang.screen)}
-            activeOpacity={0.8}
-          >
-            <Animatable.View
-              animation="zoomIn"
-              delay={index * 150}
-              duration={600}
-              useNativeDriver
-              style={[
-                styles.card,
-                {
-                  backgroundColor: lang.color,
-                  transform: [
-                    { perspective: 1000 },
-                    { rotateX: '5deg' },
-                    { rotateY: '3deg' },
-                  ],
-                },
-              ]}
-            >
-              <View style={styles.iconContainer}>
-                {renderIcon(lang.iconSet, lang.icon, 40, '#fff')}
-              </View>
-              <Text style={styles.cardText}>{lang.name}</Text>
-            </Animatable.View>
-          </TouchableOpacity>
-        ))}
+      {/* Header */}
+      <View style={styles.header}>
+        <TouchableOpacity
+          style={styles.menuButton}
+          onPress={() => navigation.toggleDrawer()}
+        >
+          <Icon name="bars" size={24} color="#000" />
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>BrainBuilder</Text>
       </View>
-    </ScrollView>
-  </View>
+
+      {/* Animated Cards */}
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <View style={styles.cardContainer}>
+          {languages.map((lang, index) => (
+            <TouchableOpacity 
+              key={index} 
+              onPress={() => handleCardPress(lang.screen)}
+              activeOpacity={0.8}
+            >
+              <Animatable.View
+                animation="zoomIn"
+                delay={index * 150}
+                duration={600}
+                useNativeDriver
+                style={[
+                  styles.card,
+                  {
+                    backgroundColor: lang.color,
+                    transform: [
+                      { perspective: 1000 },
+                      { rotateX: '5deg' },
+                      { rotateY: '3deg' },
+                    ],
+                  },
+                ]}
+              >
+                <View style={styles.iconContainer}>
+                  {renderIcon(lang.iconSet, lang.icon, 40, '#fff')}
+                </View>
+                <Text style={styles.cardText}>{lang.name}</Text>
+              </Animatable.View>
+            </TouchableOpacity>
+          ))}
+        </View>
+      </ScrollView>
+
+      {/* Custom Exit Toast */}
+      {showExitToast && (
+        <Animatable.View 
+          animation="fadeInUp"
+          duration={300}
+          style={styles.exitToast}
+        >
+          <Text style={styles.exitToastText}>Press back again to exit</Text>
+        </Animatable.View>
+      )}
+    </View>
   );
 };
 
@@ -144,6 +189,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  exitToast: {
+    position: 'absolute',
+    bottom: 50,
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0.8)',
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    borderRadius: 25,
+    zIndex: 999,
+  },
+  exitToastText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '500',
+    fontFamily: Platform.OS === 'android' ? 'Roboto' : 'San Francisco',
   },
 });
 
