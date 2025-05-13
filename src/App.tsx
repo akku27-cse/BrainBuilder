@@ -10,6 +10,9 @@ import CInterview from './components/C-Tutorial/CInterview';
 import CPracticeListScreen from './components/C-Tutorial/CPracticeListScreen';
 import CPracticeDetailScreen from './components/C-Tutorial/CPracticeDetailScreen';
 import CppTutorialScreen from './components/cpp/CppTutorialScreen';
+import CppTutorialContent from './components/cpp/CppTutorialContent';
+import CppContentDetail from './components/cpp/CppContentDetail';
+
 // Define the type for your navigation stack parameters
 export type RootStackParamList = {
   NotificationSplash: undefined;
@@ -20,6 +23,8 @@ export type RootStackParamList = {
   CPractice: undefined;
   CPracticeDetail: { problemId: number };
   CppTutorial: undefined;
+  CppTutorialContent: { section: any }; 
+  CppContentDetail: { contentItem: any }; 
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -37,7 +42,6 @@ const App = () => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-          
         }}
       >
         <Stack.Screen 
@@ -51,7 +55,7 @@ const App = () => {
           options={{ 
             headerShown: false,
             title: 'C Programming',
-            headerBackVisible: false // If you want to hide back button on this screen
+            headerBackVisible: false
           }}  
         />
         <Stack.Screen 
@@ -66,14 +70,11 @@ const App = () => {
           name="CTopicDetail" 
           component={CTopicDetail} 
           options={({ route }) => ({ 
-             headerShown: false,
+            headerShown: false,
             headerBackTitle: 'Back',
-            
           })}
         />
-
-
-<Stack.Screen 
+        <Stack.Screen 
           name="CInterview" 
           component={CInterview} 
           options={{ 
@@ -84,37 +85,41 @@ const App = () => {
             headerTintColor: '#fff',
           }}
         />
-         <Stack.Screen 
-  name="CPractice" 
-  component={CPracticeListScreen} 
-  options={{ 
-    headerShown: false,
-    headerStyle: {
-      backgroundColor: '#3498db',
-    },
-    headerTintColor: '#fff',
-  }}
-/>
-<Stack.Screen 
-  name="CPracticeDetail" 
-  component={CPracticeDetailScreen} 
-  options={{ 
-    headerShown: false,
-    headerStyle: {
-      backgroundColor: '#3498db',
-    },
-    headerTintColor: '#fff',
-  }}
-/>
-
-
-
-
-
-        {/* Add other screens here */}  
+        <Stack.Screen 
+          name="CPractice" 
+          component={CPracticeListScreen} 
+          options={{ 
+            headerShown: false,
+            headerStyle: {
+              backgroundColor: '#3498db',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
+        <Stack.Screen 
+          name="CPracticeDetail" 
+          component={CPracticeDetailScreen} 
+          options={{ 
+            headerShown: false,
+            headerStyle: {
+              backgroundColor: '#3498db',
+            },
+            headerTintColor: '#fff',
+          }}
+        />
         <Stack.Screen 
           name="CppTutorial" 
           component={CppTutorialScreen} 
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="CppTutorialContent" 
+          component={CppTutorialContent} 
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="CppContentDetail" 
+          component={CppContentDetail} 
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
