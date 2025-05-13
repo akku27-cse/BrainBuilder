@@ -1,0 +1,249 @@
+{
+    "sections": [
+      {
+        "id": 1,
+        "title": "Basics of C++",
+        "description": "Fundamental concepts of C++ programming",
+        "content": [
+          {
+            "id": 1.1,
+            "title": "Introduction to C++",
+            "description": "Overview of C++ programming language",
+            "code": "// Simple C++ Program\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout << \"Welcome to C++ Programming!\";\n    return 0;\n}",
+            "explanation": "This is a basic C++ program that demonstrates the structure of a simple program with main function and output using cout."
+          },
+          {
+            "id": 1.2,
+            "title": "Structure of a C++ Program",
+            "description": "Basic components of a C++ program",
+            "code": "// Preprocessor Directives\n#include <iostream>\n\n// Namespace Declaration\nusing namespace std;\n\n// Main Function\nint main() {\n    // Statements\n    cout << \"Hello World!\";\n    \n    // Return Statement\n    return 0;\n}",
+            "explanation": "A C++ program consists of preprocessor directives, namespace declaration, main function, statements, and return statement."
+          },
+          {
+            "id": 1.3,
+            "title": "Input/Output (cin, cout)",
+            "description": "Basic input and output operations",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int age;\n    cout << \"Enter your age: \";\n    cin >> age;\n    cout << \"You are \" << age << \" years old\";\n    return 0;\n}",
+            "explanation": "cin is used for input and cout for output. The extraction operator (>>) is used with cin and insertion operator (<<) with cout."
+          },
+          {
+            "id": 1.4,
+            "title": "Variables and Data Types",
+            "description": "Declaration and use of variables",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Variable declarations\n    int integerVar = 10;\n    float floatVar = 3.14;\n    char charVar = 'A';\n    bool boolVar = true;\n    \n    // Output variables\n    cout << \"Integer: \" << integerVar << endl;\n    cout << \"Float: \" << floatVar << endl;\n    cout << \"Character: \" << charVar << endl;\n    cout << \"Boolean: \" << boolVar << endl;\n    \n    return 0;\n}",
+            "explanation": "C++ supports various data types including int, float, double, char, bool, etc. Variables must be declared before use."
+          },
+          {
+            "id": 1.5,
+            "title": "Operators and Expressions",
+            "description": "Different types of operators in C++",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int a = 10, b = 3;\n    \n    // Arithmetic operators\n    cout << \"a + b = \" << a + b << endl;\n    cout << \"a - b = \" << a - b << endl;\n    \n    // Relational operators\n    cout << \"a == b: \" << (a == b) << endl;\n    \n    // Logical operators\n    cout << \"a > 5 && b < 5: \" << (a > 5 && b < 5) << endl;\n    \n    return 0;\n}",
+            "explanation": "C++ supports arithmetic, relational, logical, assignment, and bitwise operators for forming expressions."
+          },
+          {
+            "id": 1.6,
+            "title": "Conditional Statements (if, else, switch)",
+            "description": "Decision making in C++",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int num = 10;\n    \n    // if-else\n    if(num > 0) {\n        cout << \"Positive number\";\n    } else {\n        cout << \"Non-positive number\";\n    }\n    \n    // switch-case\n    char grade = 'B';\n    switch(grade) {\n        case 'A': cout << \"Excellent!\"; break;\n        case 'B': cout << \"Good!\"; break;\n        default: cout << \"Invalid grade\";\n    }\n    \n    return 0;\n}",
+            "explanation": "Conditional statements allow different code blocks to be executed based on different conditions."
+          },
+          {
+            "id": 1.7,
+            "title": "Loops (for, while, do-while)",
+            "description": "Looping constructs in C++",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // for loop\n    cout << \"For loop: \";\n    for(int i = 1; i <= 5; i++) {\n        cout << i << \" \";\n    }\n    \n    // while loop\n    cout << \"\\nWhile loop: \";\n    int j = 1;\n    while(j <= 5) {\n        cout << j << \" \";\n        j++;\n    }\n    \n    // do-while loop\n    cout << \"\\nDo-while loop: \";\n    int k = 1;\n    do {\n        cout << k << \" \";\n        k++;\n    } while(k <= 5);\n    \n    return 0;\n}",
+            "explanation": "Loops are used to execute a block of code repeatedly until a condition is met."
+          },
+          {
+            "id": 1.8,
+            "title": "Arrays and Strings",
+            "description": "Working with arrays and strings",
+            "code": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    // Array example\n    int numbers[5] = {1, 2, 3, 4, 5};\n    cout << \"Array elements: \";\n    for(int i = 0; i < 5; i++) {\n        cout << numbers[i] << \" \";\n    }\n    \n    // String example\n    string greeting = \"Hello, World!\";\n    cout << \"\\nString: \" << greeting << endl;\n    cout << \"String length: \" << greeting.length() << endl;\n    \n    return 0;\n}",
+            "explanation": "Arrays store multiple values of same type. Strings are used to store text and have various built-in functions."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Functions",
+        "description": "Working with functions in C++",
+        "content": [
+          {
+            "id": 2.1,
+            "title": "Function Definition & Declaration",
+            "description": "Creating and using functions",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Function declaration\nint addNumbers(int a, int b);\n\nint main() {\n    int result = addNumbers(5, 7);\n    cout << \"Sum: \" << result;\n    return 0;\n}\n\n// Function definition\nint addNumbers(int a, int b) {\n    return a + b;\n}",
+            "explanation": "Functions are declared before main() and defined either before or after main(). They help in code reusability."
+          },
+          {
+            "id": 2.2,
+            "title": "Pass by Value vs Reference",
+            "description": "Different parameter passing methods",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Pass by value\nvoid squareByValue(int num) {\n    num = num * num;\n}\n\n// Pass by reference\nvoid squareByReference(int &num) {\n    num = num * num;\n}\n\nint main() {\n    int x = 5, y = 5;\n    \n    squareByValue(x);\n    cout << \"After pass by value: \" << x << endl;\n    \n    squareByReference(y);\n    cout << \"After pass by reference: \" << y << endl;\n    \n    return 0;\n}",
+            "explanation": "Pass by value creates a copy of the argument, while pass by reference works with the original variable."
+          },
+          {
+            "id": 2.3,
+            "title": "Recursion",
+            "description": "Functions calling themselves",
+            "code": "#include <iostream>\nusing namespace std;\n\nint factorial(int n) {\n    if(n <= 1) return 1;\n    return n * factorial(n - 1);\n}\n\nint main() {\n    int num = 5;\n    cout << \"Factorial of \" << num << \" is \" << factorial(num);\n    return 0;\n}",
+            "explanation": "Recursion is when a function calls itself. It must have a base case to terminate the recursion."
+          },
+          {
+            "id": 2.4,
+            "title": "Inline Functions",
+            "description": "Functions expanded at compile time",
+            "code": "#include <iostream>\nusing namespace std;\n\ninline int max(int a, int b) {\n    return (a > b) ? a : b;\n}\n\nint main() {\n    cout << \"Max (10, 20): \" << max(10, 20);\n    return 0;\n}",
+            "explanation": "Inline functions are expanded at compile time to reduce function call overhead. Best for small functions."
+          },
+          {
+            "id": 2.5,
+            "title": "Function Overloading",
+            "description": "Multiple functions with same name",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Overloaded functions\nvoid print(int i) {\n    cout << \"Integer: \" << i << endl;\n}\n\nvoid print(double f) {\n    cout << \"Float: \" << f << endl;\n}\n\nvoid print(string s) {\n    cout << \"String: \" << s << endl;\n}\n\nint main() {\n    print(5);\n    print(3.14);\n    print(\"Hello\");\n    return 0;\n}",
+            "explanation": "Function overloading allows multiple functions with same name but different parameters."
+          },
+          {
+            "id": 2.6,
+            "title": "Default Arguments",
+            "description": "Parameters with default values",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Function with default arguments\nvoid display(char c = '*', int count = 5) {\n    for(int i = 0; i < count; i++) {\n        cout << c;\n    }\n    cout << endl;\n}\n\nint main() {\n    display();          // Uses both defaults\n    display('#');       // Uses default count\n    display('$', 10);   // Uses both provided values\n    return 0;\n}",
+            "explanation": "Default arguments allow parameters to take default values if no argument is provided."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Object-Oriented Programming (OOP)",
+        "description": "Core OOP concepts in C++",
+        "content": [
+          {
+            "id": 3.1,
+            "title": "Classes and Objects",
+            "description": "Creating classes and objects",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Class definition\nclass Rectangle {\n    public:\n        double length;\n        double width;\n        \n        double area() {\n            return length * width;\n        }\n};\n\nint main() {\n    // Create object\n    Rectangle rect;\n    \n    // Access members\n    rect.length = 10;\n    rect.width = 5;\n    \n    cout << \"Area: \" << rect.area();\n    return 0;\n}",
+            "explanation": "A class is a blueprint for objects. Objects are instances of classes with their own data and functions."
+          },
+          {
+            "id": 3.2,
+            "title": "Constructors and Destructors",
+            "description": "Special member functions",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass Book {\n    public:\n        string title;\n        string author;\n        \n        // Constructor\n        Book(string t, string a) {\n            title = t;\n            author = a;\n            cout << \"Book created: \" << title << endl;\n        }\n        \n        // Destructor\n        ~Book() {\n            cout << \"Book destroyed: \" << title << endl;\n        }\n};\n\nint main() {\n    Book book1(\"C++ Programming\", \"Bjarne Stroustrup\");\n    return 0;\n}",
+            "explanation": "Constructors initialize objects when created. Destructors clean up when objects are destroyed."
+          },
+          {
+            "id": 3.3,
+            "title": "Access Specifiers",
+            "description": "Controlling access to class members",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass Student {\n    private:\n        string name;\n        int age;\n    \n    public:\n        void setName(string n) { name = n; }\n        void setAge(int a) { age = a; }\n        \n        void display() {\n            cout << \"Name: \" << name << \", Age: \" << age << endl;\n        }\n};\n\nint main() {\n    Student s;\n    s.setName(\"Alice\");\n    s.setAge(20);\n    s.display();\n    \n    // s.name = \"Bob\"; // Error: private member\n    return 0;\n}",
+            "explanation": "Access specifiers (public, private, protected) control the accessibility of class members."
+          },
+          {
+            "id": 3.4,
+            "title": "Inheritance",
+            "description": "Creating derived classes",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Base class\nclass Animal {\n    public:\n        void eat() {\n            cout << \"I can eat!\" << endl;\n        }\n};\n\n// Derived class\nclass Dog : public Animal {\n    public:\n        void bark() {\n            cout << \"I can bark! Woof woof!\" << endl;\n        }\n};\n\nint main() {\n    Dog dog;\n    dog.eat();  // From Animal\n    dog.bark(); // From Dog\n    return 0;\n}",
+            "explanation": "Inheritance allows a class to inherit features from another class. Promotes code reusability."
+          },
+          {
+            "id": 3.5,
+            "title": "Polymorphism (Compile-Time and Run-Time)",
+            "description": "Multiple forms of functions",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Compile-time (Function Overloading)\nvoid print(int i) {\n    cout << \"Integer: \" << i << endl;\n}\n\nvoid print(double f) {\n    cout << \"Float: \" << f << endl;\n}\n\n// Run-time (Virtual Functions)\nclass Base {\n    public:\n        virtual void show() {\n            cout << \"Base class show\" << endl;\n        }\n};\n\nclass Derived : public Base {\n    public:\n        void show() override {\n            cout << \"Derived class show\" << endl;\n        }\n};\n\nint main() {\n    // Compile-time polymorphism\n    print(5);\n    print(3.14);\n    \n    // Run-time polymorphism\n    Base* b = new Derived();\n    b->show(); // Calls Derived::show()\n    \n    return 0;\n}",
+            "explanation": "Polymorphism allows functions to take multiple forms. Compile-time (overloading) and run-time (virtual functions)."
+          },
+          {
+            "id": 3.6,
+            "title": "Encapsulation",
+            "description": "Bundling data and functions",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass BankAccount {\n    private:\n        double balance;\n    \n    public:\n        void deposit(double amount) {\n            if(amount > 0) balance += amount;\n        }\n        \n        void withdraw(double amount) {\n            if(amount > 0 && amount <= balance) balance -= amount;\n        }\n        \n        double getBalance() {\n            return balance;\n        }\n};\n\nint main() {\n    BankAccount account;\n    account.deposit(1000);\n    account.withdraw(500);\n    cout << \"Balance: \" << account.getBalance();\n    return 0;\n}",
+            "explanation": "Encapsulation binds data and functions together, hiding internal details from outside world."
+          },
+          {
+            "id": 3.7,
+            "title": "Abstraction",
+            "description": "Hiding implementation details",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass AbstractCalculator {\n    public:\n        // Pure virtual function (abstract)\n        virtual int calculate(int a, int b) = 0;\n};\n\nclass Adder : public AbstractCalculator {\n    public:\n        int calculate(int a, int b) override {\n            return a + b;\n        }\n};\n\nclass Multiplier : public AbstractCalculator {\n    public:\n        int calculate(int a, int b) override {\n            return a * b;\n        }\n};\n\nint main() {\n    AbstractCalculator* calc = new Adder();\n    cout << \"Addition: \" << calc->calculate(5, 3) << endl;\n    \n    calc = new Multiplier();\n    cout << \"Multiplication: \" << calc->calculate(5, 3) << endl;\n    \n    return 0;\n}",
+            "explanation": "Abstraction shows only essential features while hiding implementation details."
+          },
+          {
+            "id": 3.8,
+            "title": "Virtual Functions",
+            "description": "Dynamic method dispatch",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass Shape {\n    public:\n        virtual void draw() {\n            cout << \"Drawing a shape\" << endl;\n        }\n};\n\nclass Circle : public Shape {\n    public:\n        void draw() override {\n            cout << \"Drawing a circle\" << endl;\n        }\n};\n\nclass Square : public Shape {\n    public:\n        void draw() override {\n            cout << \"Drawing a square\" << endl;\n        }\n};\n\nint main() {\n    Shape* shape;\n    \n    Circle circle;\n    Square square;\n    \n    shape = &circle;\n    shape->draw(); // Calls Circle::draw()\n    \n    shape = &square;\n    shape->draw(); // Calls Square::draw()\n    \n    return 0;\n}",
+            "explanation": "Virtual functions allow dynamic method dispatch - calling the appropriate function at runtime."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Advanced Concepts",
+        "description": "Advanced C++ programming techniques",
+        "content": [
+          {
+            "id": 4.1,
+            "title": "Pointers",
+            "description": "Working with memory addresses",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int var = 20;\n    int* ptr = &var;\n    \n    cout << \"Value of var: \" << var << endl;\n    cout << \"Address of var: \" << &var << endl;\n    cout << \"Value of ptr: \" << ptr << endl;\n    cout << \"Value at ptr: \" << *ptr << endl;\n    \n    *ptr = 30;\n    cout << \"New value of var: \" << var << endl;\n    \n    return 0;\n}",
+            "explanation": "Pointers store memory addresses. The dereference operator (*) accesses the value at the address."
+          },
+          {
+            "id": 4.2,
+            "title": "Dynamic Memory Allocation",
+            "description": "Memory management with new/delete",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // Allocate memory for single int\n    int* p = new int;\n    *p = 100;\n    cout << \"Value: \" << *p << endl;\n    delete p;\n    \n    // Allocate memory for array\n    int size = 5;\n    int* arr = new int[size];\n    \n    for(int i = 0; i < size; i++) {\n        arr[i] = i * 10;\n    }\n    \n    cout << \"Array elements: \";\n    for(int i = 0; i < size; i++) {\n        cout << arr[i] << \" \";\n    }\n    \n    delete[] arr;\n    return 0;\n}",
+            "explanation": "new allocates memory at runtime, delete frees it. For arrays, use new[] and delete[]."
+          },
+          {
+            "id": 4.3,
+            "title": "References",
+            "description": "Alias for variables",
+            "code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 10;\n    \n    // Reference variable\n    int &ref = x;\n    \n    cout << \"x = \" << x << endl;\n    cout << \"ref = \" << ref << endl;\n    \n    ref = 20;\n    cout << \"After change, x = \" << x << endl;\n    \n    return 0;\n}",
+            "explanation": "References are aliases for existing variables. They must be initialized when declared."
+          },
+          {
+            "id": 4.4,
+            "title": "Friend Functions and Classes",
+            "description": "Accessing private members",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass Box {\n    private:\n        double width;\n    \n    public:\n        Box(double w) : width(w) {}\n        \n        // Friend function\n        friend void printWidth(Box box);\n        \n        // Friend class\n        friend class BoxPrinter;\n};\n\n// Friend function definition\nvoid printWidth(Box box) {\n    cout << \"Width: \" << box.width << endl;\n}\n\n// Friend class\nclass BoxPrinter {\n    public:\n        void print(Box box) {\n            cout << \"Box width: \" << box.width << endl;\n        }\n};\n\nint main() {\n    Box box(10);\n    \n    printWidth(box); // Friend function\n    \n    BoxPrinter printer;\n    printer.print(box); // Friend class\n    \n    return 0;\n}",
+            "explanation": "Friend functions/classes can access private members of a class. They are declared with friend keyword."
+          },
+          {
+            "id": 4.5,
+            "title": "Operator Overloading",
+            "description": "Defining operators for classes",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass Complex {\n    private:\n        float real;\n        float imag;\n    \n    public:\n        Complex(float r = 0, float i = 0) : real(r), imag(i) {}\n        \n        // Overload + operator\n        Complex operator+(const Complex& obj) {\n            Complex temp;\n            temp.real = real + obj.real;\n            temp.imag = imag + obj.imag;\n            return temp;\n        }\n        \n        void display() {\n            cout << real << \" + i\" << imag << endl;\n        }\n};\n\nint main() {\n    Complex c1(3, 4), c2(5, 6);\n    Complex c3 = c1 + c2; // Uses overloaded +\n    \n    c3.display();\n    return 0;\n}",
+            "explanation": "Operator overloading allows defining how operators work with user-defined types."
+          },
+          {
+            "id": 4.6,
+            "title": "File Handling",
+            "description": "Reading and writing files",
+            "code": "#include <iostream>\n#include <fstream>\nusing namespace std;\n\nint main() {\n    // Writing to file\n    ofstream outFile(\"example.txt\");\n    if(outFile.is_open()) {\n        outFile << \"Hello, File Handling in C++!\" << endl;\n        outFile << \"This is a second line.\" << endl;\n        outFile.close();\n    }\n    \n    // Reading from file\n    ifstream inFile(\"example.txt\");\n    string line;\n    \n    if(inFile.is_open()) {\n        while(getline(inFile, line)) {\n            cout << line << endl;\n        }\n        inFile.close();\n    }\n    \n    return 0;\n}",
+            "explanation": "File handling uses ifstream for input, ofstream for output, and fstream for both."
+          },
+          {
+            "id": 4.7,
+            "title": "Templates (Function and Class)",
+            "description": "Generic programming",
+            "code": "#include <iostream>\nusing namespace std;\n\n// Function template\ntemplate <typename T>\nT max(T a, T b) {\n    return (a > b) ? a : b;\n}\n\n// Class template\ntemplate <class T>\nclass Stack {\n    private:\n        T elements[100];\n        int top;\n    \n    public:\n        Stack() : top(-1) {}\n        \n        void push(T const& elem) {\n            elements[++top] = elem;\n        }\n        \n        T pop() {\n            return elements[top--];\n        }\n};\n\nint main() {\n    // Using function template\n    cout << \"Max (5, 10): \" << max(5, 10) << endl;\n    cout << \"Max (3.14, 2.71): \" << max(3.14, 2.71) << endl;\n    \n    // Using class template\n    Stack<int> intStack;\n    intStack.push(10);\n    intStack.push(20);\n    cout << \"Popped: \" << intStack.pop() << endl;\n    \n    return 0;\n}",
+            "explanation": "Templates allow writing generic functions and classes that work with different data types."
+          },
+          {
+            "id": 4.8,
+            "title": "Exception Handling",
+            "description": "Dealing with runtime errors",
+            "code": "#include <iostream>\nusing namespace std;\n\nint divide(int a, int b) {\n    if(b == 0) {\n        throw \"Division by zero!\";\n    }\n    return a / b;\n}\n\nint main() {\n    try {\n        int result = divide(10, 0);\n        cout << \"Result: \" << result << endl;\n    }\n    catch(const char* msg) {\n        cerr << \"Error: \" << msg << endl;\n    }\n    \n    return 0;\n}",
+            "explanation": "Exception handling uses try, catch, and throw to handle runtime errors gracefully."
+          },
+          {
+            "id": 4.9,
+            "title": "STL (Standard Template Library)",
+            "description": "Containers, algorithms, iterators",
+            "code": "#include <iostream>\n#include <vector>\n#include <map>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    // Vector example\n    vector<int> nums = {5, 2, 8, 1, 9};\n    \n    cout << \"Vector elements: \";\n    for(int num : nums) {\n        cout << num << \" \";\n    }\n    \n    // Sort vector\n    sort(nums.begin(), nums.end());\n    \n    cout << \"\\nSorted vector: \";\n    for(int num : nums) {\n        cout << num << \" \";\n    }\n    \n    // Map example\n    map<string, int> ages;\n    ages[\"Alice\"] = 25;\n    ages[\"Bob\"] = 30;\n    \n    cout << \"\\n\\nMap elements: \" << endl;\n    for(auto& pair : ages) {\n        cout << pair.first << \": \" << pair.second << endl;\n    }\n    \n    return 0;\n}",
+            "explanation": "STL provides containers (vector, map), algorithms (sort), and iterators for efficient programming."
+          }
+        ]
+      }
+    ]
+  }

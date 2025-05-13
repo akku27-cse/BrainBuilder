@@ -1,0 +1,23 @@
+name: React Native Test Pipeline
+
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    name: Run Unit & Component Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Run Tests
+        run: yarn test --ci --coverage
