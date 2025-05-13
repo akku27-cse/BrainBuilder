@@ -1,18 +1,18 @@
-name: React Native Test Pipeline
+name: React Native Test CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
+    branches: [main]
 
 jobs:
   test:
-    name: Run Unit & Component Tests
+    name: Run Jest Tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -23,5 +23,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Tests
-        run: npm test --ci --coverage
+      - name: Run Tests with Coverage
+        run: npm test -- --ci --coverage
