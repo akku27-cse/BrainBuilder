@@ -21,7 +21,7 @@ jobs:
           node-version: 18
 
       - name: Install Dependencies
-        run: yarn install
+        run: npm install
 
       - name: Run Tests
-        run: yarn test --ci --coverage
+        run: npm test --ci --coverage
