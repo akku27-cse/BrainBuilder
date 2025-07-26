@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 interface PracticeProblem {
   id: number;
   title: string;
@@ -19,7 +23,35 @@ const JavaScriptPracticeListScreen = () => {
   if (loading) { /* ... */ }
 
   return (
-    // ...UI code...
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <Text style={{ color: '#fff', fontWeight: 'bold' }}>Home</Text>
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>JavaScript Practice Problems</Text>
+        <View style={{ width: 40 }} />
+      </View>
+      <ScrollView contentContainerStyle={styles.listContent}>
+        {problems.map((problem: PracticeProblem) => (
+          <TouchableOpacity
+            key={problem.id}
+            style={styles.problemCard}
+            onPress={() => navigateToDetail(problem.id)}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.problemTitle}>{problem.title}</Text>
+            <Text style={styles.problemDescription}>{problem.description}</Text>
+            <View style={styles.difficultyContainer}>
+              <Text style={[styles.difficultyText, { color: problem.difficulty === 'easy' ? 'green' : problem.difficulty === 'medium' ? 'orange' : 'red' }]}>
+                {problem.difficulty.toUpperCase()}
+              </Text>
+              <Text style={styles.categoryText}>{problem.category}</Text>
+            </View>
+            <Text style={styles.arrowIcon}>{'>'}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 

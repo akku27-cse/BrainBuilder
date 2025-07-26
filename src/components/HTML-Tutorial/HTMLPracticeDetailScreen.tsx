@@ -6,6 +6,8 @@ interface PracticeProblem {
 
 const HTMLPracticeDetailScreen = () => { /* ...implementation... */ };
 
+import { StyleSheet } from 'react-native';
+
 const styles = StyleSheet.create({
   mainContainer: { flex: 1, backgroundColor: '#fff' },
   container: { flex: 1, padding: 16 },

@@ -1,3 +1,11 @@
+
+
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../../App';
+
 interface PracticeProblem {
   id: number;
   title: string;
@@ -7,19 +15,69 @@ interface PracticeProblem {
 }
 
 const JavaPracticeListScreen = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const [problems, setProblems] = useState<PracticeProblem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => { /* ...fetch logic... */ }, []);
+  useEffect(() => {
+    // Simulate fetching problems from JSON
+    const fetchProblems = async () => {
+      try {
+        const data = await require('./practicePrograms.json');
+        setProblems(data);
+      } catch (error) {
+        setProblems([]);
+      }
+      setLoading(false);
+    };
+    fetchProblems();
+  }, []);
 
-  const navigateToDetail = (problemId: number) => { /* ... */ };
-  const handleHomePress = () => { /* ... */ };
+  const navigateToDetail = (problemId: number) => {
+    navigation.navigate('JavaPracticeDetail', { problemId });
+  };
+  const handleHomePress = () => {
+    navigation.navigate('NotificationSplash');
+  };
 
-  if (loading) { /* ... */ }
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <Text>Loading problems...</Text>
+      </View>
+    );
+  }
 
   return (
-    // ...UI code...
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <TouchableOpacity onPress={handleHomePress} style={styles.homeButton}>
+          <Text style={{ color: '#fff', fontWeight: 'bold' }}>Home</Text>
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Java Practice Problems</Text>
+        <View style={{ width: 40 }} />
+      </View>
+      <ScrollView contentContainerStyle={styles.listContent}>
+        {problems.map((problem: PracticeProblem) => (
+          <TouchableOpacity
+            key={problem.id}
+            style={styles.problemCard}
+            onPress={() => navigateToDetail(problem.id)}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.problemTitle}>{problem.title}</Text>
+            <Text style={styles.problemDescription}>{problem.description}</Text>
+            <View style={styles.difficultyContainer}>
+              <Text style={[styles.difficultyText, { color: problem.difficulty === 'easy' ? 'green' : problem.difficulty === 'medium' ? 'orange' : 'red' }]}>
+                {problem.difficulty.toUpperCase()}
+              </Text>
+              <Text style={styles.categoryText}>{problem.category}</Text>
+            </View>
+            <Text style={styles.arrowIcon}>{'>'}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </View>
   );
 };
 

@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { StyleSheet } from 'react-native';
+
 interface Question {
   id: number;
   question: string;
