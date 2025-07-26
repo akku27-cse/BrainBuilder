@@ -1,0 +1,13 @@
+{
+  "Java HOME": { "notes": "Explore the different sections to learn about Java concepts, syntax, and best practices." },
+  "Java Intro": { "notes": "Java is a high-level, class-based, object-oriented programming language." },
+  "Java Syntax": { "notes": "Java syntax is similar to C/C++ and uses curly braces to define code blocks." },
+  "Java Variables": { "notes": "Variables must be declared with a type before use." },
+  "Java Data Types": { "notes": "Java supports primitive types like int, float, char, boolean, and reference types." },
+  "Java Methods": { "notes": "Methods are blocks of code that perform a specific task." },
+  "Java Classes": { "notes": "Classes are blueprints for creating objects." },
+  "Java Inheritance": { "notes": "Inheritance allows one class to inherit fields and methods from another." },
+  "Java Interfaces": { "notes": "Interfaces specify what a class must do, but not how." },
+  "Java Exceptions": { "notes": "Exceptions are events that disrupt the normal flow of a program's instructions." },
+  "Java Packages": { "notes": "Packages are used to group related classes." }
+}

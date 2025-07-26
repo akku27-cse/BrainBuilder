@@ -1,0 +1,55 @@
+{
+  "Introduction": {
+    "icon": "information",
+    "description": "React JS is a JavaScript library for building user interfaces.",
+    "notes": "React is declarative, efficient, and flexible."
+  },
+  "JSX": {
+    "icon": "code-braces",
+    "description": "JSX is a syntax extension for JavaScript, used with React to describe UI structure.",
+    "example": "const element = <h1>Hello, world!</h1>;",
+    "notes": "JSX looks like HTML but is actually syntactic sugar for React.createElement."
+  },
+  "Components": {
+    "icon": "cube-outline",
+    "description": "Components are the building blocks of a React app.",
+    "example": "function Welcome(props) { return <h1>Hello, {props.name}</h1>; }",
+    "notes": "Components can be functional or class-based."
+  },
+  "Props": {
+    "icon": "package-variant",
+    "description": "Props are used to pass data from parent to child components.",
+    "example": "<Welcome name=\"Sara\" />",
+    "notes": "Props are read-only."
+  },
+  "State": {
+    "icon": "database",
+    "description": "State is used to manage data that changes over time in a component.",
+    "example": "const [count, setCount] = useState(0);",
+    "notes": "State is local to the component."
+  },
+  "Events": {
+    "icon": "gesture-tap",
+    "description": "Events are used to handle user interactions in React.",
+    "example": "<button onClick={handleClick}>Click me</button>",
+    "notes": "Event handlers are camelCase in React."
+  },
+  "Hooks": {
+    "icon": "hook",
+    "description": "Hooks let you use state and other React features in functional components.",
+    "example": "useEffect(() => { /* side effect */ }, []);",
+    "notes": "Hooks are only available in functional components."
+  },
+  "Context API": {
+    "icon": "account-group",
+    "description": "Context provides a way to pass data through the component tree without having to pass props down manually at every level.",
+    "example": "const MyContext = React.createContext();",
+    "notes": "Useful for global data like themes or user info."
+  },
+  "Lifecycle": {
+    "icon": "clock-outline",
+    "description": "Lifecycle methods are special methods in class components that run at different points in a component's life.",
+    "example": "componentDidMount, componentDidUpdate, componentWillUnmount",
+    "notes": "Hooks provide similar functionality in functional components."
+  }
+}

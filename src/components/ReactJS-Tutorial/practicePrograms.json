@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Hello World in React JS",
+    "description": "Create a simple React JS app that displays 'Hello, World!' on the screen.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "function App() {\n  return <h1>Hello, World!</h1>;\n}",
+    "explanation": "This is the simplest React JS app that renders a heading with a greeting."
+  },
+  {
+    "id": 2,
+    "title": "Counter App",
+    "description": "Build a simple counter app with increment and decrement buttons.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "import React, { useState } from 'react';\n\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  return (\n    <div>\n      <p>Count: {count}</p>\n      <button onClick={() => setCount(count + 1)}>+</button>\n      <button onClick={() => setCount(count - 1)}>-</button>\n    </div>\n  );\n}",
+    "explanation": "This app uses useState to manage the count and updates it with button clicks."
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "CSS HOME": { "notes": "Explore the different sections to learn about CSS concepts, syntax, and best practices." },
+  "CSS Intro": { "notes": "CSS stands for Cascading Style Sheets and is used to style HTML documents." },
+  "CSS Syntax": { "notes": "A CSS rule consists of a selector and a declaration block." },
+  "CSS Selectors": { "notes": "Selectors are used to target the HTML elements you want to style." },
+  "CSS Colors": { "notes": "CSS supports color names, HEX, RGB, RGBA, HSL, and HSLA values." },
+  "CSS Backgrounds": { "notes": "Background properties allow you to set background color, image, position, and more." },
+  "CSS Borders": { "notes": "Borders can be styled with width, color, and style properties." },
+  "CSS Margins": { "notes": "Margins create space around elements, outside of any defined borders." },
+  "CSS Padding": { "notes": "Padding creates space around content, inside of any defined borders." },
+  "CSS Box Model": { "notes": "The box model describes the design and layout of elements." },
+  "CSS Display": { "notes": "The display property specifies if/how an element is displayed." }
+}

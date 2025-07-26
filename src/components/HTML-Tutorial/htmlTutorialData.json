@@ -1,0 +1,13 @@
+{
+  "HTML HOME": { "notes": "Explore the different sections to learn about HTML concepts, syntax, and best practices." },
+  "HTML Intro": { "notes": "HTML stands for HyperText Markup Language and is the standard markup language for creating web pages." },
+  "HTML Syntax": { "notes": "HTML elements are represented by tags such as <p>, <a>, <div>, etc." },
+  "HTML Elements": { "notes": "Elements are the building blocks of HTML pages." },
+  "HTML Attributes": { "notes": "Attributes provide additional information about elements." },
+  "HTML Headings": { "notes": "Headings are defined with <h1> to <h6> tags." },
+  "HTML Paragraphs": { "notes": "Paragraphs are defined with the <p> tag." },
+  "HTML Links": { "notes": "Links are defined with the <a> tag." },
+  "HTML Images": { "notes": "Images are defined with the <img> tag." },
+  "HTML Lists": { "notes": "Lists can be ordered (<ol>) or unordered (<ul>)." },
+  "HTML Tables": { "notes": "Tables are defined with the <table> tag." }
+}

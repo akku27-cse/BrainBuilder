@@ -1,0 +1,43 @@
+{
+  "Introduction": {
+    "icon": "information",
+    "description": "React Native is a popular framework for building native mobile apps using JavaScript and React.",
+    "notes": "React Native enables code sharing between iOS and Android."
+  },
+  "Environment Setup": {
+    "icon": "tools",
+    "description": "To start with React Native, set up Node.js, npm, and install the React Native CLI or use Expo.",
+    "syntax": "npx react-native init MyApp",
+    "notes": "Expo is a great way to get started quickly."
+  },
+  "Hello World": {
+    "icon": "console",
+    "description": "A simple Hello World app in React Native.",
+    "example": "import React from 'react';\nimport { Text } from 'react-native';\n\nexport default function App() {\n  return <Text>Hello, World!</Text>;\n}",
+    "output": "Hello, World!"
+  },
+  "Components": {
+    "icon": "cube-outline",
+    "description": "Components are the building blocks of a React Native app.",
+    "example": "import React from 'react';\nimport { View, Text } from 'react-native';\n\nconst MyComponent = () => (\n  <View><Text>My Component</Text></View>\n);",
+    "notes": "Components can be functional or class-based."
+  },
+  "Props": {
+    "icon": "package-variant",
+    "description": "Props are used to pass data from parent to child components.",
+    "example": "<MyComponent name=\"John\" />",
+    "notes": "Props are read-only."
+  },
+  "State": {
+    "icon": "database",
+    "description": "State is used to manage data that changes over time in a component.",
+    "example": "const [count, setCount] = useState(0);",
+    "notes": "State is local to the component."
+  },
+  "Styling": {
+    "icon": "palette",
+    "description": "Styling in React Native is done using JavaScript objects, similar to CSS.",
+    "example": "const styles = StyleSheet.create({ container: { flex: 1 } });",
+    "notes": "Use StyleSheet for better performance."
+  }
+}

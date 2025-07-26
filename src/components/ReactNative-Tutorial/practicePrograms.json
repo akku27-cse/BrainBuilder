@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Hello World in React Native",
+    "description": "Create a simple React Native app that displays 'Hello, World!' on the screen.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "import React from 'react';\nimport { Text } from 'react-native';\n\nexport default function App() {\n  return <Text>Hello, World!</Text>;\n}",
+    "explanation": "This is the simplest React Native app that renders a Text component with a greeting."
+  },
+  {
+    "id": 2,
+    "title": "Counter App",
+    "description": "Build a simple counter app with increment and decrement buttons.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "import React, { useState } from 'react';\nimport { View, Text, Button } from 'react-native';\n\nexport default function Counter() {\n  const [count, setCount] = useState(0);\n  return (\n    <View>\n      <Text>Count: {count}</Text>\n      <Button title=\"+\" onPress={() => setCount(count + 1)} />\n      <Button title=\"-\" onPress={() => setCount(count - 1)} />\n    </View>\n  );\n}",
+    "explanation": "This app uses useState to manage the count and updates it with button presses."
+  }
+]

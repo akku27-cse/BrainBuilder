@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Select All Users",
+    "description": "Write an SQL query to select all users from a table named users.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "SELECT * FROM users;",
+    "explanation": "This query selects all columns and rows from the users table."
+  },
+  {
+    "id": 2,
+    "title": "Count Orders",
+    "description": "Write an SQL query to count the number of orders in the orders table.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "SELECT COUNT(*) FROM orders;",
+    "explanation": "COUNT(*) returns the total number of rows in the orders table."
+  }
+]

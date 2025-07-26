@@ -1,0 +1,13 @@
+{
+  "JavaScript HOME": { "notes": "Explore the different sections to learn about JavaScript concepts, syntax, and best practices." },
+  "JavaScript Intro": { "notes": "JavaScript is a versatile scripting language used to create dynamic web content." },
+  "JavaScript Syntax": { "notes": "JavaScript statements are composed of values, operators, expressions, keywords, and comments." },
+  "JavaScript Variables": { "notes": "Variables are containers for storing data values." },
+  "JavaScript Data Types": { "notes": "JavaScript supports various data types including string, number, boolean, object, and more." },
+  "JavaScript Functions": { "notes": "Functions are blocks of code designed to perform a particular task." },
+  "JavaScript Objects": { "notes": "Objects are collections of key-value pairs." },
+  "JavaScript Arrays": { "notes": "Arrays are used to store multiple values in a single variable." },
+  "JavaScript Loops": { "notes": "Loops are used to perform repeated tasks based on a condition." },
+  "JavaScript Events": { "notes": "Events are actions that can be detected by JavaScript." },
+  "JavaScript DOM": { "notes": "The Document Object Model (DOM) represents the structure of web pages." }
+}

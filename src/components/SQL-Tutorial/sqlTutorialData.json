@@ -1,0 +1,66 @@
+{
+  "Introduction": {
+    "icon": "information",
+    "description": "SQL is a standard language for storing, manipulating, and retrieving data in databases.",
+    "notes": "SQL stands for Structured Query Language."
+  },
+  "Database Concepts": {
+    "icon": "database",
+    "description": "Databases store data in tables, which consist of rows and columns.",
+    "notes": "Each table should have a primary key."
+  },
+  "SQL Syntax": {
+    "icon": "code-braces",
+    "description": "SQL syntax is the set of rules for writing SQL statements.",
+    "example": "SELECT column1, column2 FROM table_name;",
+    "notes": "SQL keywords are not case sensitive."
+  },
+  "SELECT Statement": {
+    "icon": "magnify",
+    "description": "The SELECT statement is used to select data from a database.",
+    "example": "SELECT * FROM users;",
+    "output": "All rows from the users table."
+  },
+  "WHERE Clause": {
+    "icon": "filter",
+    "description": "The WHERE clause is used to filter records.",
+    "example": "SELECT * FROM users WHERE age > 18;",
+    "notes": "WHERE is used with SELECT, UPDATE, DELETE."
+  },
+  "ORDER BY": {
+    "icon": "sort",
+    "description": "ORDER BY is used to sort the result set.",
+    "example": "SELECT * FROM users ORDER BY name ASC;",
+    "notes": "Default is ascending order."
+  },
+  "Joins": {
+    "icon": "link",
+    "description": "Joins are used to combine rows from two or more tables.",
+    "example": "SELECT users.name, orders.amount FROM users JOIN orders ON users.id = orders.user_id;",
+    "notes": "Types: INNER, LEFT, RIGHT, FULL."
+  },
+  "Group By": {
+    "icon": "format-list-group",
+    "description": "GROUP BY groups rows that have the same values.",
+    "example": "SELECT COUNT(*), country FROM users GROUP BY country;",
+    "notes": "Often used with aggregate functions."
+  },
+  "Subqueries": {
+    "icon": "subdirectory-arrow-right",
+    "description": "A subquery is a query within another query.",
+    "example": "SELECT name FROM users WHERE id IN (SELECT user_id FROM orders);",
+    "notes": "Subqueries can be used in SELECT, INSERT, UPDATE, DELETE."
+  },
+  "SQL Functions": {
+    "icon": "function",
+    "description": "SQL functions perform operations on data.",
+    "example": "SELECT COUNT(*) FROM users;",
+    "notes": "Common functions: COUNT, SUM, AVG, MIN, MAX."
+  },
+  "SQL Data Types": {
+    "icon": "format-list-bulleted",
+    "description": "SQL data types define the type of value a column can hold.",
+    "example": "INT, VARCHAR(255), DATE, FLOAT, etc.",
+    "notes": "Choose the right data type for each column."
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Change Text Color",
+    "description": "Write a CSS rule to change the color of all paragraphs to blue.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "p { color: blue; }",
+    "explanation": "This rule targets all <p> elements and sets their text color to blue."
+  },
+  {
+    "id": 2,
+    "title": "Center a Div",
+    "description": "Write a CSS rule to horizontally center a div with a fixed width.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": ".center-div { width: 200px; margin: 0 auto; }",
+    "explanation": "margin: 0 auto centers the div horizontally when a width is set."
+  }
+]

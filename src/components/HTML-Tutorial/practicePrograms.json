@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Create a Heading",
+    "description": "Write HTML code to create a heading that says 'Welcome'.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "<h1>Welcome</h1>",
+    "explanation": "The <h1> tag defines the largest heading."
+  },
+  {
+    "id": 2,
+    "title": "Add an Image",
+    "description": "Write HTML code to add an image with the source 'logo.png'.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "<img src=\"logo.png\" alt=\"Logo\">",
+    "explanation": "The <img> tag is used to embed images in HTML."
+  }
+]

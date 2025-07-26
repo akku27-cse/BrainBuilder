@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Print Hello World",
+    "description": "Write a Java program to print 'Hello, World!'.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, World!\");\n    }\n}",
+    "explanation": "This program defines a class with a main method that prints a message."
+  },
+  {
+    "id": 2,
+    "title": "Add Two Numbers",
+    "description": "Write a Java method to add two numbers and return the result.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "public int add(int a, int b) {\n    return a + b;\n}",
+    "explanation": "This method takes two integers and returns their sum."
+  }
+]

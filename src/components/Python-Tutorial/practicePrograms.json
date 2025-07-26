@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Print Hello World",
+    "description": "Write a Python program to print 'Hello, World!'.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "print('Hello, World!')",
+    "explanation": "The print function outputs the specified message to the console."
+  },
+  {
+    "id": 2,
+    "title": "Add Two Numbers",
+    "description": "Write a Python function to add two numbers and return the result.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "def add(a, b):\n    return a + b",
+    "explanation": "This function takes two arguments and returns their sum."
+  }
+]

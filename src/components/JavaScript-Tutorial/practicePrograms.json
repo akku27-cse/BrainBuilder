@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Print Hello World",
+    "description": "Write JavaScript code to print 'Hello, World!' to the console.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "console.log('Hello, World!');",
+    "explanation": "console.log prints the specified message to the browser's console."
+  },
+  {
+    "id": 2,
+    "title": "Add Two Numbers",
+    "description": "Write a function to add two numbers and return the result.",
+    "difficulty": "easy",
+    "category": "basic",
+    "solution": "function add(a, b) { return a + b; }",
+    "explanation": "This function takes two arguments and returns their sum."
+  }
+]

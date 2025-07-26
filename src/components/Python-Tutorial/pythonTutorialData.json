@@ -1,0 +1,13 @@
+{
+  "Python HOME": { "notes": "Explore the different sections to learn about Python concepts, syntax, and best practices." },
+  "Python Intro": { "notes": "Python is a high-level, interpreted programming language known for its readability." },
+  "Python Syntax": { "notes": "Python uses indentation to define code blocks instead of curly braces." },
+  "Python Variables": { "notes": "Variables are created when you assign a value to them." },
+  "Python Data Types": { "notes": "Python supports various data types including int, float, str, list, tuple, dict, and set." },
+  "Python Functions": { "notes": "Functions are defined using the def keyword." },
+  "Python Classes": { "notes": "Classes provide a means of bundling data and functionality together." },
+  "Python Loops": { "notes": "Python supports for and while loops." },
+  "Python Conditionals": { "notes": "if, elif, and else are used for conditional statements." },
+  "Python Modules": { "notes": "Modules are files containing Python code that can be imported." },
+  "Python Exceptions": { "notes": "Exceptions are errors detected during execution." }
+}
