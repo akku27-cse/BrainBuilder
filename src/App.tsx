@@ -69,10 +69,10 @@ const App = () => {
         <Stack.Screen 
           name="CTopicDetail" 
           component={CTopicDetail} 
-          options={({ route }) => ({ 
+          options={{ 
             headerShown: false,
             headerBackTitle: 'Back',
-          })}
+          }}
         />
         <Stack.Screen 
           name="CInterview" 

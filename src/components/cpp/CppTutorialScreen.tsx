@@ -38,8 +38,12 @@ const CppTutorialScreen = ({ navigation }: any) => {
     }
   ];
 
+  const implementedScreens = ['CppTutorialContent'];
+
   const handleCardPress = (screenName: string) => {
-    navigation.navigate(screenName);
+    if (implementedScreens.includes(screenName)) {
+      navigation.navigate(screenName);
+    }
   };
 
   const handleHomePress = () => {
