@@ -156,7 +156,7 @@
             "id": 3.6,
             "title": "Encapsulation",
             "description": "Bundling data and functions",
-            "code": "#include <iostream>\nusing namespace std;\n\nclass BankAccount {\n    private:\n        double balance;\n    \n    public:\n        void deposit(double amount) {\n            if(amount > 0) balance += amount;\n        }\n        \n        void withdraw(double amount) {\n            if(amount > 0 && amount <= balance) balance -= amount;\n        }\n        \n        double getBalance() {\n            return balance;\n        }\n};\n\nint main() {\n    BankAccount account;\n    account.deposit(1000);\n    account.withdraw(500);\n    cout << \"Balance: \" << account.getBalance();\n    return 0;\n}",
+            "code": "#include <iostream>\nusing namespace std;\n\nclass BankAccount {\n    private:\n        double balance;\n    \n    public:\n        BankAccount() : balance(0) {}\n        \n        void deposit(double amount) {\n            if(amount > 0) balance += amount;\n        }\n        \n        void withdraw(double amount) {\n            if(amount > 0 && amount <= balance) balance -= amount;\n        }\n        \n        double getBalance() {\n            return balance;\n        }\n};\n\nint main() {\n    BankAccount account;\n    account.deposit(1000);\n    account.withdraw(500);\n    cout << \"Balance: \" << account.getBalance();\n    return 0;\n}",
             "explanation": "Encapsulation binds data and functions together, hiding internal details from outside world."
           },
           {

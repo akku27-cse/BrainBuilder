@@ -20,14 +20,14 @@ const CARD_WIDTH = (width - 40) / 2 - 10;
 const languages = [
   { name: 'C Tutorial', icon: 'language-c', iconSet: 'MaterialCommunityIcons', color: '#6495ED', screen: 'CTutorial' },
   { name: 'C++ Tutorial', icon: 'language-cpp', iconSet: 'MaterialCommunityIcons', color: '#00599C', screen: 'CppTutorial' },
-  { name: 'Java Tutorial', icon: 'language-java', iconSet: 'MaterialCommunityIcons', color: '#007396' },
-  { name: 'Python Tutorial', icon: 'language-python', iconSet: 'MaterialCommunityIcons', color: '#3776AB' },
-  { name: 'JavaScript Tutorial', icon: 'language-javascript', iconSet: 'MaterialCommunityIcons', color: '#F7DF1E' },
-  { name: 'HTML Tutorial', icon: 'language-html5', iconSet: 'MaterialCommunityIcons', color: '#E34F26' },
-  { name: 'CSS Tutorial', icon: 'language-css3', iconSet: 'MaterialCommunityIcons', color: '#1572B6' },
-  { name: 'SQL Tutorial', icon: 'database', iconSet: 'MaterialCommunityIcons', color: '#4479A1' },
-  { name: 'React JS Tutorial', icon: 'react', iconSet: 'FontAwesome5', color: '#61DAFB' },
-  { name: 'React Native Tutorial', icon: 'react', iconSet: 'FontAwesome5', color: '#61DAFB' },
+  { name: 'Java Tutorial', icon: 'language-java', iconSet: 'MaterialCommunityIcons', color: '#007396', screen: '' },
+  { name: 'Python Tutorial', icon: 'language-python', iconSet: 'MaterialCommunityIcons', color: '#3776AB', screen: '' },
+  { name: 'JavaScript Tutorial', icon: 'language-javascript', iconSet: 'MaterialCommunityIcons', color: '#F7DF1E', screen: '' },
+  { name: 'HTML Tutorial', icon: 'language-html5', iconSet: 'MaterialCommunityIcons', color: '#E34F26', screen: '' },
+  { name: 'CSS Tutorial', icon: 'language-css3', iconSet: 'MaterialCommunityIcons', color: '#1572B6', screen: '' },
+  { name: 'SQL Tutorial', icon: 'database', iconSet: 'MaterialCommunityIcons', color: '#4479A1', screen: '' },
+  { name: 'React JS Tutorial', icon: 'react', iconSet: 'FontAwesome5', color: '#61DAFB', screen: '' },
+  { name: 'React Native Tutorial', icon: 'react', iconSet: 'FontAwesome5', color: '#61DAFB', screen: '' },
 ];
 
 const HomeScreen = ({ navigation }: any) => {
@@ -35,7 +35,9 @@ const HomeScreen = ({ navigation }: any) => {
   let backPressCount = 0;
 
   const handleCardPress = (screenName: string) => {
-    navigation.navigate(screenName);
+    if (screenName) {
+      navigation.navigate(screenName);
+    }
   };
 
   useEffect(() => {
